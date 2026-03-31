@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Mein Fitnessplan">
+<title>Mein 3-Monats-Comeback-Plan</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#111;color:#fff;max-width:480px;margin:0 auto;padding-bottom:80px}
+  h1{text-align:center;padding:18px 16px 6px;font-size:1.15rem;color:#fff}
+  .subtitle{text-align:center;font-size:.75rem;color:#888;padding-bottom:12px}
+  nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#1a1a1a;border-top:1px solid #333;display:flex;z-index:99}
+  nav button{flex:1;padding:10px 4px 12px;background:none;border:none;color:#777;font-size:.65rem;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px}
+  nav button.active{color:#4a9eff}
+  nav button span.ico{font-size:1.3rem}
+  .tab{display:none;padding:0 14px}
+  .tab.active{display:block}
+  .card{background:#1e1e1e;border-radius:14px;padding:14px;margin-bottom:12px}
+  .card h2{font-size:.9rem;font-weight:700;margin-bottom:10px}
+  .badge{display:inline-block;font-size:.7rem;padding:2px 8px;border-radius:20px;margin-bottom:8px}
+  .blue{background:#1a3a5c;color:#4a9eff}
+  .green{background:#1a3a2a;color:#4ade80}
+  .amber{background:#3a2a0a;color:#fbbf24}
+  .red{background:#3a1a1a;color:#f87171}
+  .purple{background:#2a1a3a;color:#c084fc}
+  .row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid #2a2a2a;font-size:.8rem}
+  .row:last-child{border-bottom:none}
+  .row .val{color:#4a9eff;font-weight:700;font-size:.8rem}
+  .row .val.green{color:#4ade80;background:none;padding:0}
+  .row .val.amber{color:#fbbf24;background:none;padding:0}
+  ul.list{list-style:none;padding:0}
+  ul.list li{font-size:.78rem;color:#ccc;padding:4px 0;border-bottom:1px solid #252525;display:flex;gap:8px}
+  ul.list li:last-child{border-bottom:none}
+  ul.list li .dot{color:#4a9eff;flex-shrink:0}
+  ul.list li .dot.g{color:#4ade80}
+  ul.list li .dot.a{color:#fbbf24}
+  ul.list li .dot.r{color:#f87171}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px}
+  .gbox{background:#1e1e1e;border-radius:12px;padding:10px 6px;text-align:center}
+  .gbox .ico{font-size:1.4rem}
+  .gbox .t{font-size:.7rem;font-weight:700;margin-top:4px}
+  .gbox .s{font-size:.65rem;color:#888;margin-top:2px}
+  .week-row{display:flex;align-items:center;gap:10px;background:#252525;border-radius:10px;padding:8px 10px;margin-bottom:6px}
+  .week-row .day{width:28px;font-weight:700;font-size:.8rem;color:#4a9eff;flex-shrink:0}
+  .week-row .txt{font-size:.76rem;color:#ddd}
+  .ex-block{background:#252525;border-radius:10px;padding:10px;margin-bottom:8px}
+  .ex-block h3{font-size:.8rem;color:#4a9eff;margin-bottom:6px}
+  .meal{background:#252525;border-radius:10px;padding:10px;margin-bottom:8px}
+  .meal-head{display:flex;justify-content:space-between;margin-bottom:6px}
+  .meal-head .mt{font-size:.8rem;font-weight:700}
+  .meal-head .mk{font-size:.75rem;color:#4ade80}
+  .time-row{display:flex;gap:10px;align-items:flex-start;background:#252525;border-radius:10px;padding:8px 10px;margin-bottom:6px}
+  .time-row .t{font-size:.72rem;color:#c084fc;width:42px;flex-shrink:0;margin-top:1px}
+  .time-row .txt{font-size:.76rem;color:#ddd}
+  .sup-row{display:flex;gap:8px;padding:5px 0;border-bottom:1px solid #2a2a2a;font-size:.76rem}
+  .sup-row:last-child{border-bottom:none}
+  .highlight{background:#1a2a3a;border-left:3px solid #4a9eff;border-radius:8px;padding:10px 12px;font-size:.8rem;color:#ccc;line-height:1.5}
+  .highlight strong{color:#fff}
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .stat-box{background:#252525;border-radius:10px;padding:10px;text-align:center}
+  .stat-box .sl{font-size:.68rem;color:#888}
+  .stat-box .sv{font-size:.9rem;font-weight:700;color:#4a9eff;margin-top:2px}
+  .stat-box .ss{font-size:.65rem;color:#666;margin-top:1px}
+</style>
+</head>
+<body>
+
+<h1>🏋️ Dein Comeback-Plan</h1>
+<p class="subtitle">45J · 183cm · 82kg · 3-Monats-Programm</p>
+
+<!-- TAB: ÜBERSICHT -->
+<div class="tab active" id="tab0">
+
+  <div class="card">
+    <span class="badge blue">Deine Strategie</span>
+    <p style="font-size:.8rem;color:#ccc;line-height:1.6">Body Recomposition – gleichzeitig Fett abbauen & Muskeln aufbauen. Funktioniert bei dir ideal dank Muskelgedächtnis. Krafttraining als Fundament + Mobilität für Leiste/Adduktoren.</p>
+  </div>
+
+  <div class="grid3">
+    <div class="gbox"><div class="ico">🌱</div><div class="t">Monat 1</div><div class="s">Reaktivierung</div></div>
+    <div class="gbox"><div class="ico">💪</div><div class="t">Monat 2</div><div class="s">Kraft & Aufbau</div></div>
+    <div class="gbox"><div class="ico">🔥</div><div class="t">Monat 3</div><div class="s">Performance</div></div>
+  </div>
+
+  <div class="card">
+    <h2>📊 Ziele nach 3 Monaten</h2>
+    <div class="row"><span>Fettabbau</span><span class="val green">-4 bis -7 kg</span></div>
+    <div class="row"><span>Muskelmasse</span><span class="val green">+2 bis +4 kg</span></div>
+    <div class="row"><span>Push-ups (jetzt 10)</span><span class="val">Ziel: 30+</span></div>
+    <div class="row"><span>Pull-ups (jetzt 5)</span><span class="val">Ziel: 12+</span></div>
+    <div class="row"><span>Beschwerden Leiste</span><span class="val amber">deutlich besser</span></div>
+  </div>
+
+  <div class="card" style="border-left:3px solid #fbbf24">
+    <span class="badge amber">⚠️ Wichtig</span>
+    <p style="font-size:.78rem;color:#ccc;line-height:1.5;margin-top:4px">Deine Leisten-/Adduktorenbeschwerden kommen von verkürztem Hüftbeuger durch langes Sitzen. Die tägliche 10-Min-Mobility jeden Morgen ist genauso wichtig wie das Training – nicht überspringen!</p>
+  </div>
+
+  <div class="card">
+    <h2>⏱️ Zeitaufwand/Woche</h2>
+    <div class="row"><span>Training (3×)</span><span class="val">~2 Std</span></div>
+    <div class="row"><span>Mobility (täglich)</span><span class="val">~1 Std 10 Min</span></div>
+    <div class="row"><span>Spaziergänge</span><span class="val">~1 Std 45 Min</span></div>
+    <div class="row"><span style="font-weight:700">Gesamt</span><span class="val green">~5 Stunden</span></div>
+  </div>
+
+</div>
+
+<!-- TAB: TRAINING -->
+<div class="tab" id="tab1">
+
+  <div class="card">
+    <h2>📅 Wochenstruktur</h2>
+    <div class="week-row"><div class="day">Mo</div><div class="txt">🏠 Kraft A – Hometraining (Push/Core)</div></div>
+    <div class="week-row"><div class="day">Di</div><div class="txt">🧘 Mobility & Spaziergang 30 Min</div></div>
+    <div class="week-row"><div class="day">Mi</div><div class="txt">🏋️ Kraft B – Studio (Ganzkörper)</div></div>
+    <div class="week-row"><div class="day">Do</div><div class="txt">🚶 Aktive Erholung / Gehen</div></div>
+    <div class="week-row"><div class="day">Fr</div><div class="txt">🏠 Kraft C – Hometraining (Pull/Legs)</div></div>
+    <div class="week-row"><div class="day">Sa</div><div class="txt">🚴 Cardio optional (Rad/Schwimmen)</div></div>
+    <div class="week-row"><div class="day">So</div><div class="txt">😴 Ruhe</div></div>
+  </div>
+
+  <div class="card">
+    <span class="badge green">🌱 Monat 1 – Reaktivierung</span>
+    <p style="font-size:.72rem;color:#888;margin-bottom:10px">Kein Gym nötig. Fokus: Technik & Mobilität. ~35 Min/Einheit</p>
+    <div class="ex-block">
+      <h3>Kraft A (Hometraining)</h3>
+      <ul class="list">
+        <li><span class="dot">•</span>Warm-up: 5 Min Mobilität Hüfte/Leiste</li>
+        <li><span class="dot">•</span>Push-ups: 3×max (Knie ok!)</li>
+        <li><span class="dot">•</span>Doorframe Rows / Band-Rows: 3×12</li>
+        <li><span class="dot">•</span>Goblet Squat (tief, langsam): 3×10</li>
+        <li><span class="dot">•</span>Dead Bug: 3×8/Seite</li>
+        <li><span class="dot">•</span>Couch Stretch: 2×60s/Seite</li>
+      </ul>
+    </div>
+    <div class="ex-block">
+      <h3>Kraft B (Studio)</h3>
+      <ul class="list">
+        <li><span class="dot">•</span>Warm-up: Hüftkreisen, Cat-Cow</li>
+        <li><span class="dot">•</span>Pike Push-ups: 3×8</li>
+        <li><span class="dot">•</span>Inverted Rows / Maschine: 3×10</li>
+        <li><span class="dot">•</span>Romanian Deadlift leicht: 3×12</li>
+        <li><span class="dot">•</span>Adduktorenmaschine: 3×15</li>
+        <li><span class="dot">•</span>90/90 Hip Stretch: 2×60s/Seite</li>
+      </ul>
+    </div>
+    <div class="ex-block">
+      <h3>Kraft C (Hometraining)</h3>
+      <ul class="list">
+        <li><span class="dot">•</span>Warm-up: World's Greatest Stretch 5×</li>
+        <li><span class="dot">•</span>Push-up Variante: 3×max</li>
+        <li><span class="dot">•</span>Pull-up Negatives: 3×5 (4s runter)</li>
+        <li><span class="dot">•</span>Bulgarian Split Squat: 3×8/Seite</li>
+        <li><span class="dot">•</span>Plank: 3×30s</li>
+        <li><span class="dot">•</span>Froschpose: 2 Min</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="badge blue">💪 Monat 2 – Kraft & Aufbau</span>
+    <p style="font-size:.72rem;color:#888;margin-bottom:10px">Studio 1×/Woche. Progressive Overload. ~45 Min/Einheit</p>
+    <div class="ex-block">
+      <h3>Kraft A – Push (Home)</h3>
+      <ul class="list">
+        <li><span class="dot">•</span>Push-up Varianten: 4×max</li>
+        <li><span class="dot">•</span>Pike Push-ups gewichtet: 3×10</li>
+        <li><span class="dot">•</span>Dips (Stuhl): 3×10</li>
+        <li><span class="dot">•</span>Dead Bug: 3×10/Seite</li>
+        <li><span class="dot">•</span>McGill Big 3 Core-Routine</li>
+        <li><span class="dot">•</span>Couch Stretch: 2×60s</li>
+      </ul>
+    </div>
+    <div class="ex-block">
+      <h3>Kraft B – Studio (Beine/Rücken)</h3>
+      <ul class="list">
+        <li><span class="dot">•</span>Kniebeuge: 4×8</li>
+        <li><span class="dot">•</span>Rumänisches Kreuzheben: 4×10</li>
+        <li><span class="dot">•</span>Latziehen / Klimmzüge: 4×8</li>
+        <li><span class="dot">•</span>Adduktorenmaschine: 3×15</li>
+        <li><span class="dot">•</span>Hanging Leg Raises: 3×10</li>
+        <li><span class="dot">•</span>Hip Flexor Mobilität</li>
+      </ul>
+    </div>
+    <div class="ex-block">
+      <h3>Kraft C – Pull/Legs (Home)</h3>
+      <ul class="list">
+        <li><span class="dot">•</span>Pull-up Negatives / Assisted: 4×6</li>
+        <li><span class="dot">•</span>Rudern (Widerstandsband): 4×12</li>
+        <li><span class="dot">•</span>Walking Lunges: 3×10/Seite</li>
+        <li><span class="dot">•</span>Glute Bridge: 3×15</li>
+        <li><span class="dot">•</span>Plank Variationen: 3×40s</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="badge red">🔥 Monat 3 – Performance</span>
+    <ul class="list" style="margin-top:8px">
+      <li><span class="dot r">→</span>Gewicht jede Woche um 2–5% steigern</li>
+      <li><span class="dot r">→</span>Supersätze einführen (Zeit sparen)</li>
+      <li><span class="dot r">→</span>Samstag: 30–45 Min Laufen oder Rad</li>
+      <li><span class="dot r">→</span>Adduktoren-Arbeit weiter beibehalten</li>
+      <li><span class="dot r">→</span>Optional: ersten Sprint-Triathlon planen</li>
+    </ul>
+  </div>
+
+  <div class="card" style="border-left:3px solid #4ade80">
+    <h2>🧘 Tägliche Mobility (10 Min morgens)</h2>
+    <p style="font-size:.72rem;color:#888;margin-bottom:8px">Speziell für Leiste & Adduktoren – jeden Tag!</p>
+    <ul class="list">
+      <li><span class="dot g">✓</span>90/90 Hip Rotation: 60s/Seite</li>
+      <li><span class="dot g">✓</span>Couch Stretch (Hüftbeuger): 60s/Seite</li>
+      <li><span class="dot g">✓</span>Adduktoren-Groin Stretch: 60s/Seite</li>
+      <li><span class="dot g">✓</span>Cat-Cow: 10 Wdh</li>
+      <li><span class="dot g">✓</span>World's Greatest Stretch: 5×/Seite</li>
+      <li><span class="dot g">✓</span>Hängen an Stange: 30s</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- TAB: ERNÄHRUNG -->
+<div class="tab" id="tab2">
+
+  <div class="card">
+    <h2>🎯 Makros pro Tag</h2>
+    <div class="stat-grid">
+      <div class="stat-box"><div class="sl">Kalorien</div><div class="sv">~2.100</div><div class="ss">kcal/Tag</div></div>
+      <div class="stat-box"><div class="sl">Protein</div><div class="sv">160–180g</div><div class="ss">2g/kg</div></div>
+      <div class="stat-box"><div class="sl">Kohlenhydrate</div><div class="sv">150–200g</div><div class="ss">Timing!</div></div>
+      <div class="stat-box"><div class="sl">Fett</div><div class="sv">60–80g</div><div class="ss">gesund</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🍽️ Tagesplan (Trainingstag)</h2>
+    <div class="meal">
+      <div class="meal-head"><span class="mt">07:00 Frühstück</span><span class="mk">~500 kcal</span></div>
+      <ul class="list">
+        <li><span class="dot">•</span>3 Eier + 2 Eiweiß, gerührt</li>
+        <li><span class="dot">•</span>150g griechischer Joghurt (2%)</li>
+        <li><span class="dot">•</span>1 Handvoll Beeren</li>
+        <li><span class="dot">•</span>Kaffee/Tee ohne Zucker</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <div class="meal-head"><span class="mt">13:00 Mittagessen</span><span class="mk">~600 kcal</span></div>
+      <ul class="list">
+        <li><span class="dot">•</span>200g Hühnerbrust / Lachs / Rind</li>
+        <li><span class="dot">•</span>150g Reis / Kartoffeln / Linsen</li>
+        <li><span class="dot">•</span>Großes Gemüse nach Wahl</li>
+        <li><span class="dot">•</span>1 EL Olivenöl</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <div class="meal-head"><span class="mt">17:00 Pre-Workout</span><span class="mk">~200 kcal</span></div>
+      <ul class="list">
+        <li><span class="dot">•</span>1 Banane + 30g Haferflocken</li>
+        <li><span class="dot">•</span>oder: Vollkornbrot + Skyr</li>
+      </ul>
+    </div>
+    <div class="meal">
+      <div class="meal-head"><span class="mt">19:00 Post-Workout</span><span class="mk">~550 kcal</span></div>
+      <ul class="list">
+        <li><span class="dot">•</span>200g Magerquark / Skyr</li>
+        <li><span class="dot">•</span>150g Süßkartoffel</li>
+        <li><span class="dot">•</span>Brokkoli oder Salat</li>
+        <li><span class="dot">•</span>1 EL Leinöl oder Nüsse</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🥩 Protein ohne Pulver</h2>
+    <div class="row"><span>Magerquark 500g</span><span class="val">55g Protein</span></div>
+    <div class="row"><span>Skyr 200g</span><span class="val">24g Protein</span></div>
+    <div class="row"><span>3 Eier + 2 Eiweiß</span><span class="val">30g Protein</span></div>
+    <div class="row"><span>Hühnerbrust 200g</span><span class="val">46g Protein</span></div>
+    <div class="row"><span>Lachs 150g</span><span class="val">30g Protein</span></div>
+    <div class="row"><span>Thunfisch Dose</span><span class="val">25g Protein</span></div>
+    <div class="row"><span>Hüttenkäse 250g</span><span class="val">28g Protein</span></div>
+    <div class="row"><span>Linsen 200g gegart</span><span class="val">18g Protein</span></div>
+  </div>
+
+  <div class="card">
+    <h2>💊 Supplements</h2>
+    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Kreatin</strong> – 5g/täglich, #1 für Kraft & Recomp</div></div>
+    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Vitamin D3 + K2</strong> – bei Bürojob fast immer sinnvoll</div></div>
+    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Magnesium Glycinat</strong> – Muskeln & Schlaf</div></div>
+    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Omega-3</strong> – anti-entzündlich, gut für Sehnen</div></div>
+    <div class="sup-row"><span style="color:#fbbf24">⚠️</span><div><strong>Whey Isolat</strong> – nur ohne Süßstoffe: Natureletics / Alpenpower</div></div>
+    <div class="sup-row"><span style="color:#f87171">❌</span><div><strong>Pre-Workout</strong> – unnötig, Kaffee reicht</div></div>
+  </div>
+
+  <div class="card" style="border-left:3px solid #fbbf24">
+    <h2>🚫 Die wichtigsten Regeln</h2>
+    <ul class="list" style="margin-top:6px">
+      <li><span class="dot a">→</span>Protein bei JEDER Mahlzeit – min. 30g</li>
+      <li><span class="dot a">→</span>Kein Alkohol die ersten 4 Wochen</li>
+      <li><span class="dot a">→</span>Keine Crash-Diät – 300 kcal Defizit reicht</li>
+      <li><span class="dot a">→</span>Wasser: min. 2,5 Liter täglich</li>
+      <li><span class="dot a">→</span>Keine ultraprozessierten Lebensmittel</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- TAB: ROUTINE -->
+<div class="tab" id="tab3">
+
+  <div class="card">
+    <h2>🌅 Morgenroutine (30 Min)</h2>
+    <div class="time-row"><div class="t">06:15</div><div class="txt">💧 Aufstehen – sofort 500ml Wasser</div></div>
+    <div class="time-row"><div class="t">06:20</div><div class="txt">🧘 10 Min Mobility (Leiste/Hüfte)</div></div>
+    <div class="time-row"><div class="t">06:30</div><div class="txt">🚿 Dusche – 30s kalt am Ende</div></div>
+    <div class="time-row"><div class="t">06:40</div><div class="txt">☕ Frühstück + Kaffee</div></div>
+    <div class="time-row"><div class="t">06:55</div><div class="txt">📔 5 Min: Tagesziele + 3 Dankbarkeiten</div></div>
+  </div>
+
+  <div class="card">
+    <h2>💼 Im Job (gegen Sitzschäden)</h2>
+    <ul class="list">
+      <li><span class="dot g">✓</span>Alle 45–60 Min: 2 Min aufstehen & gehen</li>
+      <li><span class="dot g">✓</span>1× täglich: 5 Min Hüftbeuger-Stretch</li>
+      <li><span class="dot g">✓</span>Stehpult oder Laptop erhöhen wenn möglich</li>
+      <li><span class="dot g">✓</span>Mittagspause: 15–20 Min Spaziergang</li>
+      <li><span class="dot g">✓</span>Meetings stehend oder gehend</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🌙 Abendroutine (20 Min)</h2>
+    <div class="time-row"><div class="t">21:00</div><div class="txt">📵 Kein Bildschirm (oder Blaulichtfilter)</div></div>
+    <div class="time-row"><div class="t">21:15</div><div class="txt">🫁 5–10 Min Dehnen / Foam Rolling</div></div>
+    <div class="time-row"><div class="t">21:30</div><div class="txt">📚 Lesen – kein Handy</div></div>
+    <div class="time-row"><div class="t">22:00</div><div class="txt">😴 Schlaf – Zimmer kühl & dunkel</div></div>
+  </div>
+
+  <div class="card">
+    <h2>📊 Wöchentliches Check-in</h2>
+    <ul class="list">
+      <li><span class="dot a">→</span>Gewicht: 1× wöchentlich, morgens nüchtern</li>
+      <li><span class="dot a">→</span>Fotos: 1× monatlich (gleiche Bedingungen)</li>
+      <li><span class="dot a">→</span>Push-ups & Pull-ups: alle 2 Wochen testen</li>
+      <li><span class="dot a">→</span>Beschwerden dokumentieren (0–10 Skala)</li>
+      <li><span class="dot a">→</span>Schlaf & Energie notieren</li>
+    </ul>
+  </div>
+
+  <div class="highlight">
+    <strong>🧠 Der wichtigste Tipp:</strong><br><br>
+    Konsistenz schlägt Perfektion. Ein mittelmäßiges Training das du durchhältst ist 100× effektiver als ein perfekter Plan den du abbrichst. In den ersten 4 Wochen zählt nur: <strong>Erscheinen.</strong>
+  </div>
+
+</div>
+
+<nav>
+  <button class="active" onclick="show(0,this)"><span class="ico">🎯</span>Übersicht</button>
+  <button onclick="show(1,this)"><span class="ico">💪</span>Training</button>
+  <button onclick="show(2,this)"><span class="ico">🥗</span>Ernährung</button>
+  <button onclick="show(3,this)"><span class="ico">⏰</span>Routine</button>
+</nav>
+
+<script>
+function show(i,btn){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab'+i).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
