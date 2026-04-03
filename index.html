@@ -13,13 +13,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 h1{text-align:center;padding:16px 16px 4px;font-size:1.1rem}
 .sub{text-align:center;font-size:.72rem;color:#888;padding-bottom:12px}
 nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#1a1a1a;border-top:1px solid #333;display:flex;z-index:99}
-nav button{flex:1;padding:10px 4px 12px;background:none;border:none;color:#777;font-size:.62rem;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}
+nav button{flex:1;padding:10px 2px 12px;background:none;border:none;color:#777;font-size:.58rem;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}
 nav button.active{color:#4a9eff}
 nav button .ico{font-size:1.2rem}
 .tab{display:none;padding:0 12px}
 .tab.active{display:block}
-
-/* CARDS */
 .card{background:#1e1e1e;border-radius:14px;padding:13px;margin-bottom:11px}
 .card h2{font-size:.88rem;font-weight:700;margin-bottom:9px}
 .badge{display:inline-block;font-size:.67rem;padding:2px 8px;border-radius:20px;margin-bottom:8px}
@@ -63,8 +61,6 @@ ul.list li:last-child{border-bottom:none}
 .highlight strong{color:#fff}
 .sup-row{display:flex;gap:7px;padding:5px 0;border-bottom:1px solid #2a2a2a;font-size:.74rem}
 .sup-row:last-child{border-bottom:none}
-
-/* EXERCISE CARDS */
 .ex-section{margin-bottom:14px}
 .ex-section h3{font-size:.82rem;font-weight:700;color:#4a9eff;margin-bottom:8px;padding:6px 0;border-bottom:1px solid #2a2a2a}
 .ex-card{background:#1e1e1e;border-radius:13px;margin-bottom:9px;overflow:hidden}
@@ -77,7 +73,7 @@ ul.list li:last-child{border-bottom:none}
 .img-wrap{position:relative;background:#0a0a0a;border-radius:9px;overflow:hidden;margin-bottom:10px;min-height:160px;display:flex;align-items:center;justify-content:center}
 .img-wrap img{width:100%;max-height:200px;object-fit:cover;display:block}
 .img-nav{position:absolute;bottom:7px;right:7px;display:flex;gap:5px}
-.img-nav button{background:rgba(0,0,0,.65);border:1px solid #444;color:#fff;border-radius:6px;padding:3px 9px;font-size:.72rem;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.img-nav button{background:rgba(0,0,0,.65);border:1px solid #444;color:#fff;border-radius:6px;padding:3px 9px;font-size:.72rem;cursor:pointer}
 .img-counter{position:absolute;bottom:7px;left:7px;background:rgba(0,0,0,.65);border-radius:6px;padding:2px 7px;font-size:.7rem;color:#ccc}
 .img-error{display:flex;align-items:center;justify-content:center;height:160px;background:#1a1a1a;font-size:.75rem;color:#666;text-align:center;padding:10px}
 .muscles{font-size:.72rem;color:#888;margin-bottom:9px}
@@ -107,17 +103,10 @@ ul.list li:last-child{border-bottom:none}
 <!-- TAB 0: ÜBERSICHT -->
 <div class="tab active" id="tab0">
   <a href="https://yuhonas.github.io/free-exercise-db/" target="_blank" style="display:flex;align-items:center;justify-content:space-between;background:#1e1e1e;border-radius:14px;padding:13px;margin-bottom:11px;text-decoration:none;border:1px solid #2a2a2a">
-    <div>
-      <div style="font-size:.85rem;font-weight:700;color:#fff">📚 Übungsdatenbank</div>
-      <div style="font-size:.72rem;color:#888;margin-top:2px">800+ Übungen mit Bildern & Anleitungen</div>
-    </div>
+    <div><div style="font-size:.85rem;font-weight:700;color:#fff">📚 Übungsdatenbank</div><div style="font-size:.72rem;color:#888;margin-top:2px">800+ Übungen mit Bildern & Anleitungen</div></div>
     <span style="color:#4a9eff;font-size:1.1rem">→</span>
   </a>
-
-  <div class="card">
-    <span class="badge blue">Strategie</span>
-    <p style="font-size:.78rem;color:#ccc;line-height:1.6">Body Recomposition – gleichzeitig Fett abbauen & Muskeln aufbauen. Krafttraining als Fundament + tägliche Mobilität für Leiste/Adduktoren.</p>
-  </div>
+  <div class="card"><span class="badge blue">Strategie</span><p style="font-size:.78rem;color:#ccc;line-height:1.6">Body Recomposition – gleichzeitig Fett abbauen & Muskeln aufbauen. Krafttraining als Fundament + tägliche Mobilität für Leiste/Adduktoren.</p></div>
   <div class="grid3">
     <div class="gbox"><div class="ico">🌱</div><div class="t">Monat 1</div><div class="s">Reaktivierung</div></div>
     <div class="gbox"><div class="ico">💪</div><div class="t">Monat 2</div><div class="s">Kraft & Aufbau</div></div>
@@ -131,10 +120,7 @@ ul.list li:last-child{border-bottom:none}
     <div class="row"><span>Pull-ups (jetzt 5)</span><span class="val">Ziel: 12+</span></div>
     <div class="row"><span>Beschwerden Leiste</span><span class="val a">deutlich besser</span></div>
   </div>
-  <div class="card" style="border-left:3px solid #fbbf24">
-    <span class="badge amber">⚠️ Wichtig</span>
-    <p style="font-size:.76rem;color:#ccc;line-height:1.5;margin-top:4px">Leisten-/Adduktorenbeschwerden kommen von verkürztem Hüftbeuger. Die tägliche 10-Min-Mobility ist genauso wichtig wie das Training!</p>
-  </div>
+  <div class="card" style="border-left:3px solid #fbbf24"><span class="badge amber">⚠️ Wichtig</span><p style="font-size:.76rem;color:#ccc;line-height:1.5;margin-top:4px">Leisten-/Adduktorenbeschwerden kommen von verkürztem Hüftbeuger. Die tägliche 10-Min-Mobility ist genauso wichtig wie das Training!</p></div>
   <div class="card">
     <h2>⏱️ Zeitaufwand/Woche</h2>
     <div class="row"><span>Training (3×)</span><span class="val">~2 Std</span></div>
@@ -157,490 +143,197 @@ ul.list li:last-child{border-bottom:none}
     <div class="week-row"><div class="day">So</div><div class="txt">😴 Ruhe</div></div>
   </div>
 
-  <!-- MOBILITY -->
   <div class="ex-section">
     <h3>🧘 Tägliche Mobility (10 Min morgens)</h3>
-    <!-- 90/90 Hip -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>90/90 Hip Rotation</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>90/90 Hip Rotation</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-hip" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Ankle_On_The_Knee/0.jpg" onerror="showErr(this)" alt="Hip Stretch">
-          <div class="img-counter" id="cnt-hip">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('hip',['Ankle_On_The_Knee/0.jpg','Ankle_On_The_Knee/1.jpg'])">◀</button>
-            <button onclick="ni('hip',['Ankle_On_The_Knee/0.jpg','Ankle_On_The_Knee/1.jpg'])">▶</button>
-          </div>
-        </div>
+        <div class="img-wrap"><img id="img-hip" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Ankle_On_The_Knee/0.jpg" onerror="showErr(this)" alt="Hip Stretch"><div class="img-counter" id="cnt-hip">1/2</div><div class="img-nav"><button onclick="imgPrev('hip',['Ankle_On_The_Knee/0.jpg','Ankle_On_The_Knee/1.jpg'])">◀</button><button onclick="imgNext('hip',['Ankle_On_The_Knee/0.jpg','Ankle_On_The_Knee/1.jpg'])">▶</button></div></div>
         <div class="muscles">Primär: <span>Hüfte, Gesäß</span> · Sekundär: <span>Adduktoren</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Beide Sitzbeinhöcker bleiben am Boden. Aufrecht sitzen, nicht nach vorne lehnen. 60 Sekunden pro Seite – je steifer du bist, desto wichtiger!</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Beide Beine in 90° Winkel auf dem Boden</li>
-          <li>Vorderes Knie & Hüfte je 90°</li>
-          <li>Aufrecht sitzen, tief atmen</li>
-          <li>60s halten, Seite wechseln</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Hände auf dem Boden abstützen</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Oberkörper nach vorne lehnen über Vorderbein</p></div>
-        </div>
+        <div class="tip"><strong>💡 Tipp:</strong> Beide Sitzbeinhöcker bleiben am Boden. Aufrecht sitzen, nicht nach vorne lehnen. 60s pro Seite.</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Beide Beine in 90° Winkel auf dem Boden</li><li>Vorderes Knie & Hüfte je 90°</li><li>Aufrecht sitzen, tief atmen</li><li>60s halten, Seite wechseln</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Hände auf dem Boden abstützen</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Oberkörper nach vorne lehnen</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=90+90+hip+stretch+mobility" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
-    <!-- Couch Stretch -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>Couch Stretch (Hüftbeuger)</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>Couch Stretch (Hüftbeuger)</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-couch" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/All_Fours_Quad_Stretch/0.jpg" onerror="showErr(this)" alt="Couch Stretch">
-          <div class="img-counter" id="cnt-couch">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('couch',['All_Fours_Quad_Stretch/0.jpg','All_Fours_Quad_Stretch/1.jpg'])">◀</button>
-            <button onclick="ni('couch',['All_Fours_Quad_Stretch/0.jpg','All_Fours_Quad_Stretch/1.jpg'])">▶</button>
-          </div>
-        </div>
+        <div class="img-wrap"><img id="img-couch" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/All_Fours_Quad_Stretch/0.jpg" onerror="showErr(this)" alt="Couch Stretch"><div class="img-counter" id="cnt-couch">1/2</div><div class="img-nav"><button onclick="imgPrev('couch',['All_Fours_Quad_Stretch/0.jpg','All_Fours_Quad_Stretch/1.jpg'])">◀</button><button onclick="imgNext('couch',['All_Fours_Quad_Stretch/0.jpg','All_Fours_Quad_Stretch/1.jpg'])">▶</button></div></div>
         <div class="muscles">Primär: <span>Hüftbeuger (Iliopsoas)</span> · Sekundär: <span>Quadrizeps</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Das ist die wichtigste Übung für deine Leistenproblematik! Hüfte nach vorne schieben, Gesäß anspannen. Du solltest die Dehnung tief in der Leiste spüren – nicht im Knie.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Hinteres Knie auf dem Boden, Fuß an Wand/Sofa</li>
-          <li>Vorderes Bein 90° angewinkelt</li>
-          <li>Gesäß anspannen und Hüfte nach vorne schieben</li>
-          <li>60s halten, tief atmen, Seite wechseln</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Fuß nicht an der Wand, nur kniend</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Oberkörper aufrecht + Arme über Kopf strecken</p></div>
-        </div>
+        <div class="tip"><strong>💡 Tipp:</strong> Wichtigste Übung für deine Leistenproblematik! Gesäß anspannen und Hüfte nach vorne schieben. Dehnung tief in der Leiste spüren.</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Hinteres Knie auf dem Boden, Fuß an Wand/Sofa</li><li>Vorderes Bein 90° angewinkelt</li><li>Gesäß anspannen, Hüfte nach vorne</li><li>60s halten, Seite wechseln</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Fuß nicht an der Wand</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Arme über Kopf strecken</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=couch+stretch+hüftbeuger+dehnen" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
-    <!-- Adduktoren -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>Adduktoren-Groin Stretch</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>Adduktoren-Groin Stretch</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-add" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Adductor_Groin/0.jpg" onerror="showErr(this)" alt="Adduktor Stretch">
-          <div class="img-counter" id="cnt-add">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('add',['Adductor_Groin/0.jpg','Adductor_Groin/1.jpg'])">◀</button>
-            <button onclick="ni('add',['Adductor_Groin/0.jpg','Adductor_Groin/1.jpg'])">▶</button>
-          </div>
-        </div>
+        <div class="img-wrap"><img id="img-add" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Adductor_Groin/0.jpg" onerror="showErr(this)" alt="Adduktor Stretch"><div class="img-counter" id="cnt-add">1/2</div><div class="img-nav"><button onclick="imgPrev('add',['Adductor_Groin/0.jpg','Adductor_Groin/1.jpg'])">◀</button><button onclick="imgNext('add',['Adductor_Groin/0.jpg','Adductor_Groin/1.jpg'])">▶</button></div></div>
         <div class="muscles">Primär: <span>Adduktoren</span> · Sekundär: <span>Leiste</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Besonders wichtig für deine Beschwerden! Nie in den Schmerz dehnen – nur bis zur Spannung. Mit jedem Ausatmen etwas tiefer gehen.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Breiter Stand oder Sitz, Beine gespreizt</li>
-          <li>Langsam in die Dehnung sinken</li>
-          <li>60s halten, tief atmen</li>
-          <li>Seite wechseln</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Sitzend auf dem Boden, Fußsohlen zusammen (Schmetterling)</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Stehend mit breiterem Stand, Oberkörper tiefer</p></div>
-        </div>
+        <div class="tip"><strong>💡 Tipp:</strong> Nie in den Schmerz dehnen – nur bis zur Spannung. Mit jedem Ausatmen etwas tiefer.</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Breiter Stand oder Sitz</li><li>Langsam in die Dehnung sinken</li><li>60s halten, tief atmen</li><li>Seite wechseln</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Schmetterling sitzend</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Breiterer Stand, tiefer</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=adduktoren+dehnen+leiste+stretch" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
-    <!-- Cat Cow -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>Cat-Cow</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>Cat-Cow</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-catcow" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cat_Stretch/0.jpg" onerror="showErr(this)" alt="Cat Cow">
-          <div class="img-counter" id="cnt-catcow">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('catcow',['Cat_Stretch/0.jpg','Cat_Stretch/1.jpg'])">◀</button>
-            <button onclick="ni('catcow',['Cat_Stretch/0.jpg','Cat_Stretch/1.jpg'])">▶</button>
-          </div>
-        </div>
+        <div class="img-wrap"><img id="img-catcow" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cat_Stretch/0.jpg" onerror="showErr(this)" alt="Cat Cow"><div class="img-counter" id="cnt-catcow">1/2</div><div class="img-nav"><button onclick="imgPrev('catcow',['Cat_Stretch/0.jpg','Cat_Stretch/1.jpg'])">◀</button><button onclick="imgNext('catcow',['Cat_Stretch/0.jpg','Cat_Stretch/1.jpg'])">▶</button></div></div>
         <div class="muscles">Primär: <span>Wirbelsäule</span> · Sekundär: <span>Core, Hüfte</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Langsam und fließend – kein Rucken. Jede Wirbel einzeln bewegen, von unten nach oben. Ideal zum Aufwärmen der Wirbelsäule morgens.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Vierfüßler: Hände unter Schultern, Knie unter Hüften</li>
-          <li>Einatmen: Rücken durchhängen lassen (Cow)</li>
-          <li>Ausatmen: Rücken rund machen (Cat)</li>
-          <li>10 Wiederholungen, langsam</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Kleinere Bewegungsamplitude</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Bewegung verlangsamen auf 3s pro Phase</p></div>
-        </div>
+        <div class="tip"><strong>💡 Tipp:</strong> Langsam und fließend. Jeden Wirbel einzeln bewegen, von unten nach oben.</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Vierfüßler: Hände unter Schultern</li><li>Einatmen: Rücken durchhängen (Cow)</li><li>Ausatmen: Rücken rund (Cat)</li><li>10 Wdh langsam</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Kleinere Amplitude</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>3s pro Phase</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=cat+cow+wirbelsäule+mobilität" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
-    <!-- Worlds Greatest Stretch -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>World's Greatest Stretch</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>World's Greatest Stretch</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-wgs" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Cross-Over_Knee_Pull-In/0.jpg" onerror="showErr(this)" alt="Worlds Greatest Stretch">
-          <div class="img-counter" id="cnt-wgs">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('wgs',['Lying_Cross-Over_Knee_Pull-In/0.jpg','Lying_Cross-Over_Knee_Pull-In/1.jpg'])">◀</button>
-            <button onclick="ni('wgs',['Lying_Cross-Over_Knee_Pull-In/0.jpg','Lying_Cross-Over_Knee_Pull-In/1.jpg'])">▶</button>
-          </div>
-        </div>
-        <div class="muscles">Primär: <span>Hüftbeuger, Brust, Wirbelsäule</span> · Sekundär: <span>Hamstrings, Schultern</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Die effizienteste Mobilisierungsübung – trainiert gleichzeitig Hüfte, Brust und Wirbelsäule. 5 Wiederholungen pro Seite reichen, dafür langsam und bewusst.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Ausfallschritt: vorderer Fuß außen, hinteres Knie am Boden</li>
-          <li>Hand auf Boden neben Vorderfuß stellen</li>
-          <li>Oberen Arm zur Decke drehen, Blick folgt</li>
-          <li>Zurück und Seite wechseln – 5×/Seite</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Hinteres Knie bleibt immer am Boden</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Hinteres Knie angehoben (Ausfallschritt)</p></div>
-        </div>
+        <div class="img-wrap"><img id="img-wgs" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Cross-Over_Knee_Pull-In/0.jpg" onerror="showErr(this)" alt="Worlds Greatest Stretch"><div class="img-counter" id="cnt-wgs">1/2</div><div class="img-nav"><button onclick="imgPrev('wgs',['Lying_Cross-Over_Knee_Pull-In/0.jpg','Lying_Cross-Over_Knee_Pull-In/1.jpg'])">◀</button><button onclick="imgNext('wgs',['Lying_Cross-Over_Knee_Pull-In/0.jpg','Lying_Cross-Over_Knee_Pull-In/1.jpg'])">▶</button></div></div>
+        <div class="muscles">Primär: <span>Hüftbeuger, Brust, Wirbelsäule</span></div>
+        <div class="tip"><strong>💡 Tipp:</strong> Effizienteste Mobilisierungsübung. 5 Wdh pro Seite, langsam und bewusst.</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Ausfallschritt, vorderer Fuß außen</li><li>Hand auf Boden neben Vorderfuß</li><li>Oberen Arm zur Decke drehen</li><li>Zurück, Seite wechseln – 5×/Seite</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Hinteres Knie am Boden</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Knie angehoben</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=worlds+greatest+stretch+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
   </div>
 
-  <!-- MONAT 1 KRAFT -->
   <div class="ex-section">
     <h3>🌱 Monat 1 – Kraft A (Hometraining)</h3>
-    <!-- Push-ups -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>Push-ups</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>Push-ups</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-pu" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pushups/0.jpg" onerror="showErr(this)" alt="Push-ups">
-          <div class="img-counter" id="cnt-pu">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('pu',['Pushups/0.jpg','Pushups/1.jpg'])">◀</button>
-            <button onclick="ni('pu',['Pushups/0.jpg','Pushups/1.jpg'])">▶</button>
-          </div>
-        </div>
+        <div class="img-wrap"><img id="img-pu" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pushups/0.jpg" onerror="showErr(this)" alt="Push-ups"><div class="img-counter" id="cnt-pu">1/2</div><div class="img-nav"><button onclick="imgPrev('pu',['Pushups/0.jpg','Pushups/1.jpg'])">◀</button><button onclick="imgNext('pu',['Pushups/0.jpg','Pushups/1.jpg'])">▶</button></div></div>
         <div class="muscles">Primär: <span>Brust, Trizeps</span> · Sekundär: <span>Schultern, Core</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Körper ist eine gerade Linie von Kopf bis Ferse. Ellenbogen nicht zu weit ausgestellt (max. 45°). Brust berührt fast den Boden – volle Bewegungsamplitude!</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Hände schulterbreit, etwas breiter als Schultern</li>
-          <li>Körper gerade halten – kein Hohlkreuz</li>
-          <li>Langsam absenken (2s), explosiv hoch (1s)</li>
-          <li>3 Sätze × maximale saubere Wiederholungen</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Knie auf dem Boden (Knee Push-up)</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Füße erhöht (Decline Push-up) oder mit Gewichtsweste</p></div>
-        </div>
+        <div class="tip"><strong>💡 Tipp:</strong> Körper ist eine gerade Linie. Ellenbogen max. 45° ausgestellt. Brust berührt fast den Boden.</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Hände etwas breiter als Schultern</li><li>Körper gerade – kein Hohlkreuz</li><li>Langsam absenken (2s), explosiv hoch</li><li>3 Sätze × maximale saubere Wdh</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Knie auf dem Boden</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Füße erhöht (Decline)</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=liegestütze+richtige+technik" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
-    <!-- Goblet Squat -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>Goblet Squat</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>Goblet Squat</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-gob" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat/0.jpg" onerror="showErr(this)" alt="Goblet Squat">
-          <div class="img-counter" id="cnt-gob">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('gob',['Dumbbell_Squat/0.jpg','Dumbbell_Squat/1.jpg'])">◀</button>
-            <button onclick="ni('gob',['Dumbbell_Squat/0.jpg','Dumbbell_Squat/1.jpg'])">▶</button>
-          </div>
-        </div>
+        <div class="img-wrap"><img id="img-gob" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat/0.jpg" onerror="showErr(this)" alt="Goblet Squat"><div class="img-counter" id="cnt-gob">1/2</div><div class="img-nav"><button onclick="imgPrev('gob',['Dumbbell_Squat/0.jpg','Dumbbell_Squat/1.jpg'])">◀</button><button onclick="imgNext('gob',['Dumbbell_Squat/0.jpg','Dumbbell_Squat/1.jpg'])">▶</button></div></div>
         <div class="muscles">Primär: <span>Quadrizeps, Gesäß</span> · Sekundär: <span>Core, Rücken</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Hantel nah an der Brust, Ellenbogen zeigen innen. Knie über Zehen – so tief wie möglich. Fersen fest in den Boden, Brust hoch!</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Hantel vertikal vor der Brust halten</li>
-          <li>Füße schulterbreit, leicht nach außen</li>
-          <li>Tief in Kniebeuge – Oberschenkel parallel oder tiefer</li>
-          <li>Explosiv zurück in Ausgangsposition</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Box Squat: auf Stuhl setzen und aufstehen</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Schwerere Hantel, 3s langsam runter</p></div>
-        </div>
+        <div class="tip"><strong>💡 Tipp:</strong> Hantel nah an der Brust. Knie über Zehen – so tief wie möglich. Fersen fest in den Boden!</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Hantel vertikal vor der Brust</li><li>Füße schulterbreit, leicht nach außen</li><li>Tief in Kniebeuge – Oberschenkel parallel</li><li>Explosiv zurück – 3×10</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Box Squat: auf Stuhl setzen</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Schwerere Hantel, 3s runter</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=goblet+squat+technik+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
-    <!-- Dead Bug -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>Dead Bug</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>Dead Bug</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-db" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bicycle_Crunch/0.jpg" onerror="showErr(this)" alt="Dead Bug">
-          <div class="img-counter" id="cnt-db">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('db',['Bicycle_Crunch/0.jpg','Bicycle_Crunch/1.jpg'])">◀</button>
-            <button onclick="ni('db',['Bicycle_Crunch/0.jpg','Bicycle_Crunch/1.jpg'])">▶</button>
-          </div>
-        </div>
-        <div class="muscles">Primär: <span>Core (Transversus)</span> · Sekundär: <span>Hüftbeuger, Schultern</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Unterer Rücken IMMER flach am Boden – das ist alles! Ausatmen beim Absenken. Langsam und kontrolliert, nie mit Schwung. Super für Leistenbeschwerden!</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Rückenlage, Arme senkrecht hoch, Beine 90° angewinkelt</li>
-          <li>LWS flach in den Boden drücken</li>
-          <li>Rechten Arm + linkes Bein gleichzeitig absenken</li>
-          <li>Kurz vor Boden stoppen, zurück – 8×/Seite</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Nur Beine bewegen, Arme bleiben oben</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Mit Hanteln in den Händen</p></div>
-        </div>
+        <div class="img-wrap"><img id="img-db" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bicycle_Crunch/0.jpg" onerror="showErr(this)" alt="Dead Bug"><div class="img-counter" id="cnt-db">1/2</div><div class="img-nav"><button onclick="imgPrev('db',['Bicycle_Crunch/0.jpg','Bicycle_Crunch/1.jpg'])">◀</button><button onclick="imgNext('db',['Bicycle_Crunch/0.jpg','Bicycle_Crunch/1.jpg'])">▶</button></div></div>
+        <div class="muscles">Primär: <span>Core (Transversus)</span> · Sekundär: <span>Hüftbeuger</span></div>
+        <div class="tip"><strong>💡 Tipp:</strong> Unterer Rücken IMMER flach am Boden. Langsam und kontrolliert. Super für Leistenbeschwerden!</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Rückenlage, Arme hoch, Beine 90°</li><li>LWS flach in den Boden drücken</li><li>Arm + gegenüberliegendes Bein absenken</li><li>8×/Seite</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Nur Beine bewegen</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Mit Hanteln in den Händen</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=dead+bug+übung+core+richtig" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
   </div>
 
-  <!-- MONAT 1 KRAFT B -->
   <div class="ex-section">
     <h3>🌱 Monat 1 – Kraft B (Studio)</h3>
-    <!-- Romanian Deadlift -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>Romanian Deadlift</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>Romanian Deadlift</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-rdl" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/0.jpg" onerror="showErr(this)" alt="Romanian Deadlift">
-          <div class="img-counter" id="cnt-rdl">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('rdl',['Romanian_Deadlift/0.jpg','Romanian_Deadlift/1.jpg'])">◀</button>
-            <button onclick="ni('rdl',['Romanian_Deadlift/0.jpg','Romanian_Deadlift/1.jpg'])">▶</button>
-          </div>
-        </div>
-        <div class="muscles">Primär: <span>Hamstrings, Gesäß</span> · Sekundär: <span>unterer Rücken, Core</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Rücken IMMER gerade – wichtigste Regel! Stange nah am Körper. Du spürst Dehnung in der hinteren Oberschenkelseite – das ist richtig. Knie leicht gebeugt.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Schulterbreiter Stand, Stange vor Oberschenkeln</li>
-          <li>Hüfte nach hinten schieben (nicht runter!)</li>
-          <li>Rücken flach, Brust raus, Blick geradeaus</li>
-          <li>Gesäß anspannen beim Hochkommen</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Nur Körpergewicht, Hände an Oberschenkeln</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Single Leg RDL (einbeinig)</p></div>
-        </div>
+        <div class="img-wrap"><img id="img-rdl" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/0.jpg" onerror="showErr(this)" alt="Romanian Deadlift"><div class="img-counter" id="cnt-rdl">1/2</div><div class="img-nav"><button onclick="imgPrev('rdl',['Romanian_Deadlift/0.jpg','Romanian_Deadlift/1.jpg'])">◀</button><button onclick="imgNext('rdl',['Romanian_Deadlift/0.jpg','Romanian_Deadlift/1.jpg'])">▶</button></div></div>
+        <div class="muscles">Primär: <span>Hamstrings, Gesäß</span> · Sekundär: <span>unterer Rücken</span></div>
+        <div class="tip"><strong>💡 Tipp:</strong> Rücken IMMER gerade! Hüfte nach hinten (nicht runter). Dehnung in der Rückseite des Oberschenkels ist richtig.</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Schulterbreiter Stand</li><li>Hüfte nach hinten schieben</li><li>Rücken flach, Brust raus</li><li>Gesäß anspannen beim Hochkommen</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Nur Körpergewicht</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Single Leg RDL</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=rumänisches+kreuzheben+technik+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
-    <!-- Adduktorenmaschine -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>Adduktorenmaschine</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>Adduktorenmaschine</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-addm" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Adductor/0.jpg" onerror="showErr(this)" alt="Adduktorenmaschine">
-          <div class="img-counter" id="cnt-addm">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('addm',['Adductor/0.jpg','Adductor/1.jpg'])">◀</button>
-            <button onclick="ni('addm',['Adductor/0.jpg','Adductor/1.jpg'])">▶</button>
-          </div>
-        </div>
+        <div class="img-wrap"><img id="img-addm" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Adductor/0.jpg" onerror="showErr(this)" alt="Adduktorenmaschine"><div class="img-counter" id="cnt-addm">1/2</div><div class="img-nav"><button onclick="imgPrev('addm',['Adductor/0.jpg','Adductor/1.jpg'])">◀</button><button onclick="imgNext('addm',['Adductor/0.jpg','Adductor/1.jpg'])">▶</button></div></div>
         <div class="muscles">Primär: <span>Adduktoren (Innenseite Oberschenkel)</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Leichtes Gewicht am Anfang! Kontrollierte Bewegung, kein Schwung. Besonders wichtig für deine Leistenbeschwerden – stärkt die Adduktoren gezielt.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Aufrecht sitzen, Rücken an Lehne</li>
-          <li>Beine langsam zusammenführen (2s)</li>
-          <li>1s halten, langsam öffnen (3s)</li>
-          <li>3 × 15 Wiederholungen, leichtes Gewicht</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Weniger Gewicht, kleinere Bewegungsamplitude</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Mehr Gewicht, Pause am Ende halten</p></div>
-        </div>
+        <div class="tip"><strong>💡 Tipp:</strong> Leichtes Gewicht am Anfang! Kontrolliert, kein Schwung. Wichtig für deine Leistenbeschwerden.</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Aufrecht sitzen, Rücken an Lehne</li><li>Beine langsam zusammenführen (2s)</li><li>1s halten, langsam öffnen (3s)</li><li>3 × 15 Wdh</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Weniger Gewicht</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Pause am Ende halten</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=adduktorenmaschine+richtig+benutzen" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
   </div>
 
-  <!-- MONAT 1 KRAFT C -->
   <div class="ex-section">
     <h3>🌱 Monat 1 – Kraft C (Hometraining)</h3>
-    <!-- Pull-up Negatives -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>Pull-up Negatives</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>Pull-up Negatives</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-neg" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pullups/0.jpg" onerror="showErr(this)" alt="Pull-up Negatives">
-          <div class="img-counter" id="cnt-neg">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('neg',['Pullups/0.jpg','Pullups/1.jpg'])">◀</button>
-            <button onclick="ni('neg',['Pullups/0.jpg','Pullups/1.jpg'])">▶</button>
-          </div>
-        </div>
+        <div class="img-wrap"><img id="img-neg" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pullups/0.jpg" onerror="showErr(this)" alt="Pull-up Negatives"><div class="img-counter" id="cnt-neg">1/2</div><div class="img-nav"><button onclick="imgPrev('neg',['Pullups/0.jpg','Pullups/1.jpg'])">◀</button><button onclick="imgNext('neg',['Pullups/0.jpg','Pullups/1.jpg'])">▶</button></div></div>
         <div class="muscles">Primär: <span>Latissimus, Bizeps</span> · Sekundär: <span>Schultern, Core</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Der negative Teil (runter) ist der wichtigste für Kraftaufbau! 4 Sekunden runter zählen. Schulterblätter zusammenziehen beim Hochkommen. Großartig zum Vorbereiten auf echte Klimmzüge.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Auf Stuhl steigen, Kinn über der Stange</li>
-          <li>Stuhl wegziehen, 4 Sekunden langsam runter</li>
-          <li>Wieder hochsteigen und wiederholen</li>
-          <li>3 × 5 Wiederholungen</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Nur 2s runter, Füße leicht abfangen</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>6-8s runter, mit Gewicht am Gürtel</p></div>
-        </div>
+        <div class="tip"><strong>💡 Tipp:</strong> 4 Sekunden langsam runter zählen. Der negative Teil ist der wichtigste für Kraftaufbau!</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Auf Stuhl steigen, Kinn über der Stange</li><li>4 Sekunden langsam runter</li><li>Wieder hochsteigen, wiederholen</li><li>3 × 5 Wdh</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>2s runter, Füße leicht abfangen</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>6-8s runter</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=klimmzug+negatives+lernen+anfänger" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
-    <!-- Bulgarian Split Squat -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>Bulgarian Split Squat</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>Bulgarian Split Squat</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-bss" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Rear_Lunge/0.jpg" onerror="showErr(this)" alt="Bulgarian Split Squat">
-          <div class="img-counter" id="cnt-bss">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('bss',['Dumbbell_Rear_Lunge/0.jpg','Dumbbell_Rear_Lunge/1.jpg'])">◀</button>
-            <button onclick="ni('bss',['Dumbbell_Rear_Lunge/0.jpg','Dumbbell_Rear_Lunge/1.jpg'])">▶</button>
-          </div>
-        </div>
-        <div class="muscles">Primär: <span>Quadrizeps, Gesäß</span> · Sekundär: <span>Hamstrings, Core, Gleichgewicht</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Vorderes Knie bleibt über dem Fuß. Oberkörper aufrecht, nicht nach vorne lehnen. Langsam und kontrolliert – eine der effektivsten Beinübungen überhaupt!</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Hinterer Fuß auf Stuhl/Bank</li>
-          <li>Vorderer Fuß etwa 60cm vor dem Stuhl</li>
-          <li>Langsam in die Kniebeuge sinken (2s)</li>
-          <li>Explosiv hochdrücken – 3×8/Seite</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Normaler Ausfallschritt ohne erhöhten Fuß</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Mit Hanteln in den Händen</p></div>
-        </div>
+        <div class="img-wrap"><img id="img-bss" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Rear_Lunge/0.jpg" onerror="showErr(this)" alt="Bulgarian Split Squat"><div class="img-counter" id="cnt-bss">1/2</div><div class="img-nav"><button onclick="imgPrev('bss',['Dumbbell_Rear_Lunge/0.jpg','Dumbbell_Rear_Lunge/1.jpg'])">◀</button><button onclick="imgNext('bss',['Dumbbell_Rear_Lunge/0.jpg','Dumbbell_Rear_Lunge/1.jpg'])">▶</button></div></div>
+        <div class="muscles">Primär: <span>Quadrizeps, Gesäß</span> · Sekundär: <span>Hamstrings, Balance</span></div>
+        <div class="tip"><strong>💡 Tipp:</strong> Vorderes Knie bleibt über dem Fuß. Oberkörper aufrecht. Eine der effektivsten Beinübungen!</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Hinterer Fuß auf Stuhl/Bank</li><li>Vorderer Fuß ~60cm davor</li><li>Langsam in Kniebeuge (2s)</li><li>Explosiv hoch – 3×8/Seite</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Normaler Ausfallschritt</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Mit Hanteln</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=bulgarian+split+squat+technik+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
-    <!-- Plank -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>Plank</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>Plank</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-plank" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plank/0.jpg" onerror="showErr(this)" alt="Plank">
-          <div class="img-counter" id="cnt-plank">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('plank',['Plank/0.jpg','Plank/1.jpg'])">◀</button>
-            <button onclick="ni('plank',['Plank/0.jpg','Plank/1.jpg'])">▶</button>
-          </div>
-        </div>
-        <div class="muscles">Primär: <span>Core (alle Bauchmuskeln)</span> · Sekundär: <span>Schultern, Gesäß</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Gesäß anspannen und leicht einrollen. Schulterblätter auseinander drücken. Kein Hohlkreuz! Qualität schlägt Dauer – lieber 20s perfekt als 60s schlampig.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Unterarme auf dem Boden, Ellenbogen unter Schultern</li>
-          <li>Körper gerade wie ein Brett</li>
-          <li>Gesäß anspannen, Bauch einziehen</li>
-          <li>3 × 30 Sekunden halten</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Knie auf dem Boden</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Seitenplank oder Arm/Bein anheben</p></div>
-        </div>
+        <div class="img-wrap"><img id="img-plank" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plank/0.jpg" onerror="showErr(this)" alt="Plank"><div class="img-counter" id="cnt-plank">1/2</div><div class="img-nav"><button onclick="imgPrev('plank',['Plank/0.jpg','Plank/1.jpg'])">◀</button><button onclick="imgNext('plank',['Plank/0.jpg','Plank/1.jpg'])">▶</button></div></div>
+        <div class="muscles">Primär: <span>Core</span> · Sekundär: <span>Schultern, Gesäß</span></div>
+        <div class="tip"><strong>💡 Tipp:</strong> Gesäß anspannen und leicht einrollen. Kein Hohlkreuz! Qualität schlägt Dauer.</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Unterarme auf dem Boden</li><li>Körper gerade wie ein Brett</li><li>Gesäß anspannen, Bauch einziehen</li><li>3 × 30s halten</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Knie auf dem Boden</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Seitenplank oder Arm anheben</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=plank+richtig+ausführen+core" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
   </div>
 
-  <!-- MONAT 2 STUDIO -->
   <div class="ex-section">
     <h3>💪 Monat 2 – Studio (Ganzkörper)</h3>
-    <!-- Kniebeuge -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>Kniebeuge (Barbell Squat)</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>Kniebeuge (Barbell Squat)</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-sq" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Full_Squat/0.jpg" onerror="showErr(this)" alt="Kniebeuge">
-          <div class="img-counter" id="cnt-sq">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('sq',['Barbell_Full_Squat/0.jpg','Barbell_Full_Squat/1.jpg'])">◀</button>
-            <button onclick="ni('sq',['Barbell_Full_Squat/0.jpg','Barbell_Full_Squat/1.jpg'])">▶</button>
-          </div>
-        </div>
-        <div class="muscles">Primär: <span>Quadrizeps, Gesäß</span> · Sekundär: <span>Hamstrings, Core, Rücken</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Die Königin der Übungen. Knie verfolgen die Zehenrichtung, Rücken gerade, Brust hoch. Lieber leichtes Gewicht mit perfekter Form als viel Gewicht mit Technikfehlern!</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Stange auf den oberen Rücken (nicht Nacken)</li>
-          <li>Füße etwas breiter als schulterbreit</li>
-          <li>Tief in die Kniebeuge – Oberschenkel parallel</li>
-          <li>4 × 8 Wiederholungen mit moderatem Gewicht</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Goblet Squat oder nur Körpergewicht</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Mehr Gewicht, Pause unten (Paused Squat)</p></div>
-        </div>
+        <div class="img-wrap"><img id="img-sq" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Full_Squat/0.jpg" onerror="showErr(this)" alt="Kniebeuge"><div class="img-counter" id="cnt-sq">1/2</div><div class="img-nav"><button onclick="imgPrev('sq',['Barbell_Full_Squat/0.jpg','Barbell_Full_Squat/1.jpg'])">◀</button><button onclick="imgNext('sq',['Barbell_Full_Squat/0.jpg','Barbell_Full_Squat/1.jpg'])">▶</button></div></div>
+        <div class="muscles">Primär: <span>Quadrizeps, Gesäß</span> · Sekundär: <span>Hamstrings, Core</span></div>
+        <div class="tip"><strong>💡 Tipp:</strong> Lieber leichtes Gewicht mit perfekter Form! Knie verfolgen Zehenrichtung, Brust hoch.</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Stange auf oberen Rücken</li><li>Füße etwas breiter als schulterbreit</li><li>Tief – Oberschenkel parallel</li><li>4 × 8 Wdh</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Goblet Squat</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Paused Squat (unten halten)</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=kniebeuge+technik+anfänger+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
-    <!-- Latziehen -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>Latziehen / Klimmzüge</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>Latziehen / Klimmzüge</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-lat" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/0.jpg" onerror="showErr(this)" alt="Latziehen">
-          <div class="img-counter" id="cnt-lat">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('lat',['Wide-Grip_Lat_Pulldown/0.jpg','Wide-Grip_Lat_Pulldown/1.jpg'])">◀</button>
-            <button onclick="ni('lat',['Wide-Grip_Lat_Pulldown/0.jpg','Wide-Grip_Lat_Pulldown/1.jpg'])">▶</button>
-          </div>
-        </div>
+        <div class="img-wrap"><img id="img-lat" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/0.jpg" onerror="showErr(this)" alt="Latziehen"><div class="img-counter" id="cnt-lat">1/2</div><div class="img-nav"><button onclick="imgPrev('lat',['Wide-Grip_Lat_Pulldown/0.jpg','Wide-Grip_Lat_Pulldown/1.jpg'])">◀</button><button onclick="imgNext('lat',['Wide-Grip_Lat_Pulldown/0.jpg','Wide-Grip_Lat_Pulldown/1.jpg'])">▶</button></div></div>
         <div class="muscles">Primär: <span>Latissimus</span> · Sekundär: <span>Bizeps, hintere Schulter</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Schulterblätter zusammenziehen und runterdrücken BEVOR du ziehst. Ellenbogen zur Hüfte ziehen, nicht zum Körper. Langsam zurück lassen – der negative Teil ist wichtig!</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Weiter Griff an der Stange</li>
-          <li>Leicht nach hinten lehnen, Brust hoch</li>
-          <li>Stange zur oberen Brust ziehen</li>
-          <li>4 × 8 Wiederholungen</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Weniger Gewicht, enger Griff (Untergriff)</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Echte Klimmzüge am Körpergewicht</p></div>
-        </div>
+        <div class="tip"><strong>💡 Tipp:</strong> Schulterblätter zusammenziehen BEVOR du ziehst. Ellenbogen zur Hüfte, nicht zum Körper.</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Weiter Griff an der Stange</li><li>Leicht nach hinten lehnen, Brust hoch</li><li>Stange zur oberen Brust ziehen</li><li>4 × 8 Wdh</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Weniger Gewicht, Untergriff</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Echte Klimmzüge</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=latziehen+technik+richtig+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
-    <!-- Bankdrücken -->
     <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)">
-        <h4>Bankdrücken</h4><span class="arr">▼</span>
-      </div>
+      <div class="ex-header" onclick="toggleEx(this)"><h4>Bankdrücken</h4><span class="arr">▼</span></div>
       <div class="ex-body">
-        <div class="img-wrap">
-          <img id="img-bp" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/0.jpg" onerror="showErr(this)" alt="Bankdrücken">
-          <div class="img-counter" id="cnt-bp">1/2</div>
-          <div class="img-nav">
-            <button onclick="pi('bp',['Barbell_Bench_Press_-_Medium_Grip/0.jpg','Barbell_Bench_Press_-_Medium_Grip/1.jpg'])">◀</button>
-            <button onclick="ni('bp',['Barbell_Bench_Press_-_Medium_Grip/0.jpg','Barbell_Bench_Press_-_Medium_Grip/1.jpg'])">▶</button>
-          </div>
-        </div>
+        <div class="img-wrap"><img id="img-bp" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/0.jpg" onerror="showErr(this)" alt="Bankdrücken"><div class="img-counter" id="cnt-bp">1/2</div><div class="img-nav"><button onclick="imgPrev('bp',['Barbell_Bench_Press_-_Medium_Grip/0.jpg','Barbell_Bench_Press_-_Medium_Grip/1.jpg'])">◀</button><button onclick="imgNext('bp',['Barbell_Bench_Press_-_Medium_Grip/0.jpg','Barbell_Bench_Press_-_Medium_Grip/1.jpg'])">▶</button></div></div>
         <div class="muscles">Primär: <span>Brust</span> · Sekundär: <span>Trizeps, Schultern</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Füße fest auf dem Boden. Schulterblätter zusammenziehen und in die Bank drücken. Stange zur unteren Brust senken, nicht zum Hals. Immer mit Sicherung oder Spotter!</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol>
-          <li>Schulterbreiter Griff, etwas breiter</li>
-          <li>Schulterblätter zurück und runter</li>
-          <li>Stange zur unteren Brust senken (2s)</li>
-          <li>4 × 8 Wiederholungen</li>
-        </ol></div>
-        <div class="variants">
-          <div class="variant easy"><h5>⬇️ Leichter</h5><p>Schrägbank mit Hanteln oder Push-ups</p></div>
-          <div class="variant hard"><h5>⬆️ Schwerer</h5><p>Mehr Gewicht, engerer Griff (Trizeps-Fokus)</p></div>
-        </div>
+        <div class="tip"><strong>💡 Tipp:</strong> Füße fest auf dem Boden. Schulterblätter zusammenziehen. Immer mit Sicherung!</div>
+        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Schulterbreiter Griff</li><li>Schulterblätter zurück und runter</li><li>Stange zur unteren Brust (2s)</li><li>4 × 8 Wdh</li></ol></div>
+        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Hanteln oder Push-ups</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Mehr Gewicht, engerer Griff</p></div></div>
         <a class="yt-link" href="https://www.youtube.com/results?search_query=bankdrücken+technik+anfänger+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
       </div>
     </div>
@@ -660,14 +353,10 @@ ul.list li:last-child{border-bottom:none}
   </div>
   <div class="card">
     <h2>🍽️ Tagesplan (Trainingstag)</h2>
-    <div class="meal"><div class="meal-head"><span class="mt">07:00 Frühstück</span><span class="mk">~500 kcal</span></div>
-      <ul class="list"><li><span class="dot">•</span>3 Eier + 2 Eiweiß, gerührt</li><li><span class="dot">•</span>150g griechischer Joghurt (2%)</li><li><span class="dot">•</span>1 Handvoll Beeren</li><li><span class="dot">•</span>Kaffee/Tee ohne Zucker</li></ul></div>
-    <div class="meal"><div class="meal-head"><span class="mt">13:00 Mittagessen</span><span class="mk">~600 kcal</span></div>
-      <ul class="list"><li><span class="dot">•</span>200g Hühnerbrust / Lachs / Rind</li><li><span class="dot">•</span>150g Reis / Kartoffeln / Linsen</li><li><span class="dot">•</span>Großes Gemüse nach Wahl</li><li><span class="dot">•</span>1 EL Olivenöl</li></ul></div>
-    <div class="meal"><div class="meal-head"><span class="mt">17:00 Pre-Workout</span><span class="mk">~200 kcal</span></div>
-      <ul class="list"><li><span class="dot">•</span>1 Banane + 30g Haferflocken</li><li><span class="dot">•</span>oder: Vollkornbrot + Skyr</li></ul></div>
-    <div class="meal"><div class="meal-head"><span class="mt">19:00 Post-Workout</span><span class="mk">~550 kcal</span></div>
-      <ul class="list"><li><span class="dot">•</span>200g Magerquark / Skyr</li><li><span class="dot">•</span>150g Süßkartoffel</li><li><span class="dot">•</span>Brokkoli oder Salat</li><li><span class="dot">•</span>1 EL Leinöl oder Nüsse</li></ul></div>
+    <div class="meal"><div class="meal-head"><span class="mt">07:00 Frühstück</span><span class="mk">~500 kcal</span></div><ul class="list"><li><span class="dot">•</span>Overnight Oats (siehe Rezepte-Tab)</li><li><span class="dot">•</span>Haferflocken + Hafermilch + Skyr/Quark</li><li><span class="dot">•</span>Kaffee/Tee ohne Zucker</li></ul></div>
+    <div class="meal"><div class="meal-head"><span class="mt">13:00 Mittagessen</span><span class="mk">~600 kcal</span></div><ul class="list"><li><span class="dot">•</span>200g Hühnerbrust / Lachs / Rind</li><li><span class="dot">•</span>150g Reis / Kartoffeln / Linsen</li><li><span class="dot">•</span>Großes Gemüse nach Wahl</li><li><span class="dot">•</span>1 EL Olivenöl</li></ul></div>
+    <div class="meal"><div class="meal-head"><span class="mt">17:00 Pre-Workout</span><span class="mk">~200 kcal</span></div><ul class="list"><li><span class="dot">•</span>1 Banane + 30g Haferflocken</li><li><span class="dot">•</span>oder: Vollkornbrot + Skyr</li></ul></div>
+    <div class="meal"><div class="meal-head"><span class="mt">19:00 Post-Workout</span><span class="mk">~550 kcal</span></div><ul class="list"><li><span class="dot">•</span>200g Magerquark / Skyr</li><li><span class="dot">•</span>150g Süßkartoffel</li><li><span class="dot">•</span>Brokkoli oder Salat</li><li><span class="dot">•</span>1 EL Leinöl oder Nüsse</li></ul></div>
   </div>
   <div class="card">
     <h2>🥩 Protein ohne Pulver</h2>
@@ -681,11 +370,10 @@ ul.list li:last-child{border-bottom:none}
   </div>
   <div class="card">
     <h2>💊 Supplements</h2>
-    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Kreatin</strong> – 5g/täglich, #1 für Kraft & Recomp</div></div>
-    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Vitamin D3 + K2</strong> – bei Bürojob fast immer sinnvoll</div></div>
-    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Magnesium Glycinat</strong> – Muskeln & Schlaf</div></div>
-    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Omega-3</strong> – anti-entzündlich, gut für Sehnen</div></div>
-    <div class="sup-row"><span style="color:#fbbf24">⚠️</span><div><strong>Whey Isolat</strong> – nur ohne Süßstoffe: Natureletics / Alpenpower</div></div>
+    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Kreatin</strong> – 5g/täglich (Weider Creapure)</div></div>
+    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Vitamin D3 + K2</strong> – Hübner Tropfen</div></div>
+    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Magnesium Bisglycinat</strong> – Pulver, abends</div></div>
+    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Omega-3</strong> – Norsan flüssig, zur Mahlzeit</div></div>
     <div class="sup-row"><span style="color:#f87171">❌</span><div><strong>Pre-Workout</strong> – unnötig, Kaffee reicht</div></div>
   </div>
   <div class="card" style="border-left:3px solid #fbbf24">
@@ -693,15 +381,64 @@ ul.list li:last-child{border-bottom:none}
     <ul class="list" style="margin-top:6px">
       <li><span class="dot a">→</span>Protein bei JEDER Mahlzeit – min. 30g</li>
       <li><span class="dot a">→</span>Kein Alkohol die ersten 4 Wochen</li>
-      <li><span class="dot a">→</span>Kein Crash-Diät – 300 kcal Defizit reicht</li>
+      <li><span class="dot a">→</span>300 kcal Defizit reicht – keine Crash-Diät</li>
       <li><span class="dot a">→</span>Wasser: min. 2,5 Liter täglich</li>
-      <li><span class="dot a">→</span>Keine ultraprozessierten Lebensmittel</li>
+      <li><span class="dot a">→</span>Pizza = Cheat-Day ✅ (1×/Woche ok!)</li>
     </ul>
   </div>
 </div>
 
-<!-- TAB 3: ROUTINE -->
+<!-- TAB 3: REZEPTE -->
 <div class="tab" id="tab3">
+  <div style="padding:8px 0 10px;text-align:center"><div style="font-size:.72rem;color:#888">Zutaten anpassen → Nährwerte in Echtzeit</div></div>
+  <div style="overflow-x:auto;padding-bottom:8px;margin-bottom:10px">
+    <div id="recipe-btns" style="display:flex;gap:8px;padding:0 0 4px"></div>
+  </div>
+  <div class="card">
+    <div style="font-size:.95rem;font-weight:700;margin-bottom:2px" id="recipe-name"></div>
+    <div style="font-size:.75rem;color:#888" id="recipe-desc"></div>
+  </div>
+  <div style="background:#1a2a3a;border-radius:14px;padding:12px 14px;margin-bottom:11px;border:1px solid #2a4a6a">
+    <div style="font-size:.78rem;font-weight:700;color:#4a9eff;margin-bottom:10px">📊 Nährwerte (aktuell)</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+      <div style="background:#0a1a2a;border-radius:10px;padding:10px;text-align:center">
+        <div style="font-size:.68rem;color:#888">Kalorien</div>
+        <div style="font-size:1.4rem;font-weight:800;color:#fbbf24" id="total-kcal">0</div>
+        <div style="font-size:.65rem;color:#666">kcal</div>
+      </div>
+      <div style="background:#0a1a2a;border-radius:10px;padding:10px;text-align:center">
+        <div style="font-size:.68rem;color:#888">Eiweiß</div>
+        <div style="font-size:1.4rem;font-weight:800;color:#4ade80" id="total-prot">0g</div>
+        <div style="font-size:.65rem;color:#666">Protein</div>
+      </div>
+    </div>
+    <div style="margin-bottom:8px">
+      <div style="display:flex;justify-content:space-between;font-size:.68rem;color:#888;margin-bottom:3px"><span>Eiweiß-Ziel (50g)</span><span id="prot-lbl" style="color:#4ade80">✓ gut</span></div>
+      <div style="background:#252525;border-radius:6px;height:8px;overflow:hidden"><div id="prot-bar" style="height:100%;border-radius:6px;background:#4ade80;width:0%;transition:width .3s"></div></div>
+    </div>
+    <div>
+      <div style="display:flex;justify-content:space-between;font-size:.68rem;color:#888;margin-bottom:3px"><span>Kalorien-Ziel (~500 kcal)</span><span id="kcal-lbl" style="color:#4ade80">✓ passt</span></div>
+      <div style="background:#252525;border-radius:6px;height:8px;overflow:hidden"><div id="kcal-bar" style="height:100%;border-radius:6px;background:#4ade80;width:0%;transition:width .3s"></div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div style="font-size:.78rem;font-weight:700;color:#ddd;margin-bottom:12px">🥣 Zutaten anpassen</div>
+    <div id="ing-container"></div>
+    <button onclick="resetRecipe()" style="width:100%;padding:10px;background:#252525;border:1px solid #333;border-radius:10px;color:#888;font-size:.78rem;cursor:pointer;margin-top:4px">↺ Zurücksetzen</button>
+  </div>
+  <div class="card">
+    <div style="font-size:.78rem;font-weight:700;color:#ddd;margin-bottom:8px">📝 Zubereitung</div>
+    <div style="font-size:.75rem;color:#bbb;line-height:1.7">
+      1. Alle Zutaten abends in ein Glas geben und umrühren.<br>
+      2. Über Nacht im Kühlschrank quellen lassen (mind. 6h).<br>
+      3. Morgens Toppings drauf und genießen!<br>
+      <span style="color:#666;font-size:.7rem">💡 Hält 3 Tage · Toppings immer erst morgens!</span>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 4: ROUTINE -->
+<div class="tab" id="tab4">
   <div class="card">
     <h2>🌅 Morgenroutine (30 Min)</h2>
     <div class="time-row"><div class="t">06:15</div><div class="txt">💧 Aufstehen – sofort 500ml Wasser</div></div>
@@ -737,23 +474,19 @@ ul.list li:last-child{border-bottom:none}
       <li><span class="dot a">→</span>Schlaf & Energie notieren</li>
     </ul>
   </div>
-  <div class="highlight">
-    <strong>🧠 Der wichtigste Tipp:</strong><br><br>
-    Konsistenz schlägt Perfektion. Ein mittelmäßiges Training das du durchhältst ist 100× besser als ein perfekter Plan den du abbrichst. Die ersten 4 Wochen zählt nur: <strong>Erscheinen.</strong>
-  </div>
+  <div class="highlight"><strong>🧠 Der wichtigste Tipp:</strong><br><br>Konsistenz schlägt Perfektion. Ein mittelmäßiges Training das du durchhältst ist 100× besser als ein perfekter Plan den du abbrichst. Die ersten 4 Wochen zählt nur: <strong>Erscheinen.</strong></div>
 </div>
 
 <nav>
   <button class="active" onclick="showTab(0,this)"><span class="ico">🎯</span>Übersicht</button>
   <button onclick="showTab(1,this)"><span class="ico">💪</span>Training</button>
   <button onclick="showTab(2,this)"><span class="ico">🥗</span>Ernährung</button>
-  <button onclick="showTab(3,this)"><span class="ico">⏰</span>Routine</button>
+  <button onclick="showTab(3,this)"><span class="ico">🌙</span>Rezepte</button>
+  <button onclick="showTab(4,this)"><span class="ico">⏰</span>Routine</button>
 </nav>
 
 <script>
-const BASE = 'https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/';
-const state = {};
-
+// ── NAVIGATION ──
 function showTab(i, btn) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
@@ -762,29 +495,220 @@ function showTab(i, btn) {
   window.scrollTo(0, 0);
 }
 
+// ── EXERCISE HELPERS ──
+var imgState = {};
+var IMG_BASE = 'https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/';
+
 function toggleEx(header) {
   header.classList.toggle('open');
-  const body = header.nextElementSibling;
-  body.classList.toggle('open');
+  header.nextElementSibling.classList.toggle('open');
 }
 
 function showErr(img) {
-  img.parentNode.innerHTML = '<div class="img-error">📸 Bild nicht verfügbar<br><small>Prüfe deine Internetverbindung</small></div>';
+  img.parentNode.innerHTML = '<div class="img-error">📸 Bild lädt nur online</div>';
 }
 
-function ni(id, imgs) {
-  if (state[id] === undefined) state[id] = 0;
-  state[id] = (state[id] + 1) % imgs.length;
-  const el = document.getElementById('img-' + id);
-  if (el) { el.src = BASE + imgs[state[id]]; document.getElementById('cnt-' + id).textContent = (state[id]+1)+'/'+imgs.length; }
+function imgNext(id, imgs) {
+  if (!imgState[id]) imgState[id] = 0;
+  imgState[id] = (imgState[id] + 1) % imgs.length;
+  var el = document.getElementById('img-' + id);
+  if (el) { el.src = IMG_BASE + imgs[imgState[id]]; document.getElementById('cnt-' + id).textContent = (imgState[id]+1)+'/'+imgs.length; }
 }
 
-function pi(id, imgs) {
-  if (state[id] === undefined) state[id] = 0;
-  state[id] = (state[id] - 1 + imgs.length) % imgs.length;
-  const el = document.getElementById('img-' + id);
-  if (el) { el.src = BASE + imgs[state[id]]; document.getElementById('cnt-' + id).textContent = (state[id]+1)+'/'+imgs.length; }
+function imgPrev(id, imgs) {
+  if (!imgState[id]) imgState[id] = 0;
+  imgState[id] = (imgState[id] - 1 + imgs.length) % imgs.length;
+  var el = document.getElementById('img-' + id);
+  if (el) { el.src = IMG_BASE + imgs[imgState[id]]; document.getElementById('cnt-' + id).textContent = (imgState[id]+1)+'/'+imgs.length; }
 }
+
+// ── OVERNIGHT OATS RECHNER ──
+var NUT = {
+  haferflocken:{k:3.62,p:0.133}, hafermilch:{k:0.46,p:0.010},
+  skyr:{k:0.63,p:0.111}, magerquark:{k:0.67,p:0.120},
+  erdnussbutter:{k:5.88,p:0.256}, kakao:{k:2.28,p:0.198},
+  honig:{k:3.04,p:0.003}, erdnuesse:{k:5.67,p:0.258},
+  banane:{k:0.89,p:0.011}, zimt:{k:2.47,p:0.040},
+  walnuesse:{k:6.54,p:0.154}, instantkaffee:{k:2.38,p:0.120},
+  mandeln:{k:5.79,p:0.212}, beeren_getr:{k:3.17,p:0.035},
+  vanille:{k:0.50,p:0.010}, beeren_fr:{k:0.57,p:0.007},
+  apfel:{k:0.52,p:0.003}, rosinen:{k:2.99,p:0.031},
+  schoko85:{k:5.98,p:0.080}, kokosmilch:{k:1.97,p:0.020},
+  mango_getr:{k:3.19,p:0.027}, kokosraspeln:{k:6.60,p:0.065},
+  zitrone:{k:0.22,p:0.003}, heidelbeeren:{k:0.57,p:0.007},
+};
+
+var RECIPES = [
+  {name:"🥜 Erdnussbutter-Schoko", desc:"Schmeckt wie Snickers – aber gesund", ings:[
+    {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
+    {key:"hafermilch",label:"Hafermilch",unit:"ml",def:150,min:50,max:300,step:25},
+    {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
+    {key:"magerquark",label:"Magerquark",unit:"g",def:0,min:0,max:300,step:25},
+    {key:"erdnussbutter",label:"Erdnussbutter",unit:"g",def:30,min:0,max:60,step:5},
+    {key:"kakao",label:"Kakaopulver",unit:"g",def:10,min:0,max:30,step:2},
+    {key:"honig",label:"Honig",unit:"g",def:10,min:0,max:30,step:5},
+    {key:"erdnuesse",label:"Erdnüsse gehackt (Topping)",unit:"g",def:15,min:0,max:40,step:5},
+  ]},
+  {name:"🍌 Banane-Zimt", desc:"Natürlich süß, kein Zucker nötig", ings:[
+    {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
+    {key:"hafermilch",label:"Hafermilch",unit:"ml",def:150,min:50,max:300,step:25},
+    {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
+    {key:"magerquark",label:"Magerquark",unit:"g",def:0,min:0,max:300,step:25},
+    {key:"banane",label:"Banane",unit:"g",def:80,min:0,max:150,step:10},
+    {key:"zimt",label:"Zimt",unit:"g",def:2,min:0,max:8,step:1},
+    {key:"walnuesse",label:"Walnüsse (Topping)",unit:"g",def:15,min:0,max:40,step:5},
+  ]},
+  {name:"☕ Kaffee-Kakao (Mocha)", desc:"Morgens Kaffee essen statt trinken", ings:[
+    {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
+    {key:"hafermilch",label:"Hafermilch",unit:"ml",def:150,min:50,max:300,step:25},
+    {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
+    {key:"magerquark",label:"Magerquark",unit:"g",def:0,min:0,max:300,step:25},
+    {key:"instantkaffee",label:"Instant-Kaffeepulver",unit:"g",def:4,min:0,max:10,step:1},
+    {key:"kakao",label:"Kakaopulver",unit:"g",def:10,min:0,max:30,step:2},
+    {key:"mandeln",label:"Mandelblättchen (Topping)",unit:"g",def:15,min:0,max:40,step:5},
+  ]},
+  {name:"🫐 Beeren-Vanille", desc:"Fruchtig-leicht, ideal im Sommer", ings:[
+    {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
+    {key:"hafermilch",label:"Hafermilch",unit:"ml",def:150,min:50,max:300,step:25},
+    {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
+    {key:"magerquark",label:"Magerquark",unit:"g",def:0,min:0,max:300,step:25},
+    {key:"beeren_getr",label:"Getrocknete Beeren",unit:"g",def:20,min:0,max:50,step:5},
+    {key:"vanille",label:"Vanilleextrakt",unit:"g",def:3,min:0,max:10,step:1},
+    {key:"beeren_fr",label:"Frische Beeren (Topping)",unit:"g",def:50,min:0,max:150,step:10},
+  ]},
+  {name:"🍎 Apfel-Zimt", desc:"Wie Apfelstrudel, nur kalt", ings:[
+    {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
+    {key:"hafermilch",label:"Hafermilch",unit:"ml",def:150,min:50,max:300,step:25},
+    {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
+    {key:"magerquark",label:"Magerquark",unit:"g",def:0,min:0,max:300,step:25},
+    {key:"apfel",label:"Apfel gerieben",unit:"g",def:80,min:0,max:150,step:10},
+    {key:"zimt",label:"Zimt",unit:"g",def:3,min:0,max:8,step:1},
+    {key:"walnuesse",label:"Walnüsse (Topping)",unit:"g",def:15,min:0,max:40,step:5},
+    {key:"rosinen",label:"Rosinen (Topping)",unit:"g",def:10,min:0,max:30,step:5},
+  ]},
+  {name:"🍫 Triple Schoko", desc:"Für Schoko-Fans", ings:[
+    {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
+    {key:"hafermilch",label:"Hafermilch",unit:"ml",def:150,min:50,max:300,step:25},
+    {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
+    {key:"magerquark",label:"Magerquark",unit:"g",def:0,min:0,max:300,step:25},
+    {key:"kakao",label:"Kakaopulver",unit:"g",def:15,min:0,max:30,step:2},
+    {key:"erdnussbutter",label:"Erdnussbutter",unit:"g",def:20,min:0,max:50,step:5},
+    {key:"schoko85",label:"Dunkle Schokolade 85% (Topping)",unit:"g",def:10,min:0,max:30,step:5},
+  ]},
+  {name:"🥥 Kokos-Mango", desc:"Fühlt sich an wie Urlaub", ings:[
+    {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
+    {key:"hafermilch",label:"Hafermilch",unit:"ml",def:100,min:50,max:200,step:25},
+    {key:"kokosmilch",label:"Kokosmilch",unit:"ml",def:50,min:0,max:150,step:25},
+    {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
+    {key:"magerquark",label:"Magerquark",unit:"g",def:0,min:0,max:300,step:25},
+    {key:"mango_getr",label:"Getrocknete Mango",unit:"g",def:25,min:0,max:60,step:5},
+    {key:"kokosraspeln",label:"Kokosraspeln (Topping)",unit:"g",def:10,min:0,max:30,step:5},
+  ]},
+  {name:"🍋 Zitrone-Heidelbeere", desc:"Erfrischend-leicht", ings:[
+    {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
+    {key:"hafermilch",label:"Hafermilch",unit:"ml",def:150,min:50,max:300,step:25},
+    {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
+    {key:"magerquark",label:"Magerquark",unit:"g",def:0,min:0,max:300,step:25},
+    {key:"zitrone",label:"Zitronensaft",unit:"ml",def:20,min:0,max:50,step:5},
+    {key:"heidelbeeren",label:"Heidelbeeren (Topping)",unit:"g",def:60,min:0,max:150,step:10},
+    {key:"mandeln",label:"Mandeln (Topping)",unit:"g",def:10,min:0,max:30,step:5},
+  ]},
+];
+
+var curR = 0;
+var rAmounts = {};
+
+function rKey(ri, key) { return ri + '_' + key; }
+
+function getAmt(ri, key) {
+  var k = rKey(ri, key);
+  if (rAmounts[k] !== undefined) return rAmounts[k];
+  var ing = RECIPES[ri].ings.find(function(i){return i.key===key;});
+  return ing ? ing.def : 0;
+}
+
+function setAmt(ri, key, val) {
+  var ing = RECIPES[ri].ings.find(function(i){return i.key===key;});
+  if (!ing) return;
+  rAmounts[rKey(ri,key)] = Math.min(ing.max, Math.max(ing.min, Number(val)));
+  renderIngs(ri);
+  updateNutrition(ri);
+}
+
+function calcNut(ri) {
+  var kcal=0, prot=0;
+  RECIPES[ri].ings.forEach(function(ing){
+    var n=NUT[ing.key]; if(!n) return;
+    var a=getAmt(ri,ing.key);
+    kcal+=n.k*a; prot+=n.p*a;
+  });
+  return {kcal:Math.round(kcal), prot:Math.round(prot*10)/10};
+}
+
+function updateNutrition(ri) {
+  var r=calcNut(ri);
+  document.getElementById('total-kcal').textContent=r.kcal;
+  document.getElementById('total-prot').textContent=r.prot+'g';
+  var pp=Math.min(100,Math.round((r.prot/50)*100));
+  var kp=Math.min(100,Math.round((r.kcal/800)*100));
+  var pb=document.getElementById('prot-bar'), pl=document.getElementById('prot-lbl');
+  pb.style.width=pp+'%'; pb.style.background=r.prot>=30?'#4ade80':'#fbbf24';
+  pl.textContent=r.prot>=30?'✓ gut':'etwas wenig'; pl.style.color=r.prot>=30?'#4ade80':'#fbbf24';
+  var kb=document.getElementById('kcal-bar'), kl=document.getElementById('kcal-lbl');
+  kb.style.width=kp+'%'; kb.style.background=r.kcal<=600?'#4ade80':'#f87171';
+  kl.textContent=r.kcal<=600?'✓ passt':'etwas viel'; kl.style.color=r.kcal<=600?'#4ade80':'#f87171';
+}
+
+function renderIngs(ri) {
+  var c=document.getElementById('ing-container'); if(!c) return;
+  c.innerHTML=RECIPES[ri].ings.map(function(ing){
+    var a=getAmt(ri,ing.key), n=NUT[ing.key];
+    var ik=n?Math.round(n.k*a):0, ip=n?Math.round(n.p*a*10)/10:0;
+    return '<div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #2a2a2a">'+
+      '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">'+
+      '<div><div style="font-size:.8rem;font-weight:600">'+ing.label+'</div>'+
+      '<div style="font-size:.68rem;color:#666">'+ik+' kcal · '+ip+'g Eiweiß</div></div>'+
+      '<div style="display:flex;align-items:center;gap:8px">'+
+      '<button onclick="setAmt('+ri+',\''+ing.key+'\','+(a-ing.step)+')" style="width:28px;height:28px;border-radius:50%;border:1px solid #444;background:#252525;color:#fff;font-size:1rem;cursor:pointer">−</button>'+
+      '<div style="min-width:52px;text-align:center"><span style="font-size:.9rem;font-weight:700;color:#4a9eff">'+a+'</span><span style="font-size:.65rem;color:#888">'+ing.unit+'</span></div>'+
+      '<button onclick="setAmt('+ri+',\''+ing.key+'\','+(a+ing.step)+')" style="width:28px;height:28px;border-radius:50%;border:1px solid #444;background:#252525;color:#fff;font-size:1rem;cursor:pointer">+</button>'+
+      '</div></div>'+
+      '<input type="range" min="'+ing.min+'" max="'+ing.max+'" step="'+ing.step+'" value="'+a+'" '+
+      'oninput="setAmt('+ri+',\''+ing.key+'\',this.value)" style="width:100%;accent-color:#4a9eff;cursor:pointer">'+
+      '<div style="display:flex;justify-content:space-between;font-size:.62rem;color:#555;margin-top:2px"><span>'+ing.min+ing.unit+'</span><span>'+ing.max+ing.unit+'</span></div>'+
+      '</div>';
+  }).join('');
+}
+
+function selectRecipe(i) {
+  curR=i;
+  document.querySelectorAll('.rbtn').forEach(function(b,j){
+    b.style.background=j===i?'#4a9eff':'#252525';
+    b.style.color=j===i?'#fff':'#aaa';
+  });
+  document.getElementById('recipe-name').textContent=RECIPES[i].name;
+  document.getElementById('recipe-desc').textContent=RECIPES[i].desc;
+  renderIngs(i);
+  updateNutrition(i);
+}
+
+function resetRecipe() {
+  RECIPES[curR].ings.forEach(function(ing){ rAmounts[rKey(curR,ing.key)]=ing.def; });
+  renderIngs(curR); updateNutrition(curR);
+}
+
+// Build recipe buttons
+var btnContainer=document.getElementById('recipe-btns');
+RECIPES.forEach(function(r,i){
+  var b=document.createElement('button');
+  b.className='rbtn';
+  b.textContent=r.name;
+  b.style.cssText='flex-shrink:0;padding:8px 12px;border-radius:20px;border:none;cursor:pointer;font-size:.7rem;font-weight:600;white-space:nowrap;background:'+(i===0?'#4a9eff':'#252525')+';color:'+(i===0?'#fff':'#aaa');
+  b.onclick=function(){selectRecipe(i);};
+  btnContainer.appendChild(b);
+});
+
+selectRecipe(0);
 </script>
 </body>
 </html>
