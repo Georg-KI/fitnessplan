@@ -93,453 +93,747 @@ ul.list li:last-child{border-bottom:none}
 .variant.hard h5{color:#f87171}
 .variant p{font-size:.7rem;color:#bbb;line-height:1.4}
 .yt-link{display:inline-flex;align-items:center;gap:5px;background:#1a1a2a;border:1px solid #333;border-radius:7px;padding:5px 10px;font-size:.72rem;color:#4a9eff;text-decoration:none;margin-top:8px}
+
+/* ── WOCHENPLAN STYLES ── */
+.wp-day-tabs{display:flex;gap:5px;overflow-x:auto;padding-bottom:6px;margin-bottom:10px;scrollbar-width:none}
+.wp-day-tabs::-webkit-scrollbar{display:none}
+.wp-dtab{flex-shrink:0;padding:6px 11px;border-radius:16px;border:1px solid #333;background:#1a1a1a;color:#888;font-size:.7rem;cursor:pointer;transition:all .15s}
+.wp-dtab.active{background:#1a3a5c;color:#4a9eff;border-color:#2a5a8c;font-weight:700}
+.wp-dtab.training{position:relative}
+.wp-dtab.training::after{content:'';position:absolute;top:3px;right:3px;width:5px;height:5px;border-radius:50%;background:#4ade80}
+.wp-meal-card{background:#1e1e1e;border-radius:12px;margin-bottom:9px;overflow:hidden}
+.wp-meal-card.whey-card{border:1px solid #1a4a3a}
+.wp-meal-top{padding:10px 12px 0}
+.wp-meal-row1{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+.wp-meal-name{font-size:.84rem;font-weight:700}
+.wp-meal-time{font-size:.68rem;color:#888}
+.wp-type-badge{font-size:.62rem;padding:2px 8px;border-radius:10px;margin-bottom:7px;display:inline-block}
+.wb-gut{background:#1a3020;color:#4ade80}
+.wb-pre{background:#0a2a1a;color:#34d399}
+.wb-pro{background:#1a2a4a;color:#60a5fa}
+.wb-main{background:#2a1a4a;color:#a78bfa}
+.wb-snack{background:#3a2a0a;color:#fbbf24}
+.wb-whey{background:#0a2a1a;color:#2dd4bf}
+.wp-alt-row{display:flex;gap:5px;overflow-x:auto;padding:0 12px 8px;scrollbar-width:none}
+.wp-alt-row::-webkit-scrollbar{display:none}
+.wp-alt-btn{flex-shrink:0;font-size:.65rem;padding:4px 10px;border-radius:12px;border:1px solid #333;background:#252525;color:#999;cursor:pointer;transition:all .12s;white-space:nowrap}
+.wp-alt-btn.active{background:#1a3a5c;color:#4a9eff;border-color:#2a5a8c;font-weight:700}
+.wp-sliders{background:#252525;margin:0 8px 8px;border-radius:9px;padding:9px 10px}
+.wp-slider-row{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.wp-slider-row:last-child{margin-bottom:0}
+.wp-sl-lbl{font-size:.65rem;color:#999;min-width:90px}
+.wp-sl-val{font-size:.65rem;font-weight:700;color:#4a9eff;min-width:36px;text-align:right}
+.wp-slider-row input[type=range]{flex:1;accent-color:#4a9eff;cursor:pointer}
+.wp-macros{display:flex;border-top:1px solid #2a2a2a;padding:8px 12px}
+.wp-mac{flex:1;display:flex;flex-direction:column;align-items:center}
+.wp-mac-v{font-size:.78rem;font-weight:700;color:#4a9eff}
+.wp-mac-l{font-size:.6rem;color:#666}
+.wp-day-summary{background:#1a2a3a;border-radius:10px;padding:10px 12px;margin-bottom:9px}
+.wp-sum-row{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-bottom:8px}
+.wp-sum-item{display:flex;flex-direction:column;align-items:center}
+.wp-sum-v{font-size:.88rem;font-weight:700}
+.wp-sum-l{font-size:.6rem;color:#888}
+.wp-prog-row{margin-bottom:4px}
+.wp-prog-lbl{display:flex;justify-content:space-between;font-size:.62rem;color:#888;margin-bottom:2px}
+.wp-prog-bar{background:#252525;border-radius:4px;height:5px;overflow:hidden}
+.wp-prog-fill{height:100%;border-radius:4px;transition:width .3s}
 </style>
 </head>
 <body>
-
 <h1>🏋️ Mein Comeback-Plan</h1>
 <p class="sub">45J · 183cm · 82kg · 3-Monats-Programm</p>
 
 <!-- TAB 0: ÜBERSICHT -->
 <div class="tab active" id="tab0">
-  <a href="https://yuhonas.github.io/free-exercise-db/" target="_blank" style="display:flex;align-items:center;justify-content:space-between;background:#1e1e1e;border-radius:14px;padding:13px;margin-bottom:11px;text-decoration:none;border:1px solid #2a2a2a">
-    <div><div style="font-size:.85rem;font-weight:700;color:#fff">📚 Übungsdatenbank</div><div style="font-size:.72rem;color:#888;margin-top:2px">800+ Übungen mit Bildern & Anleitungen</div></div>
-    <span style="color:#4a9eff;font-size:1.1rem">→</span>
-  </a>
-  <div class="card"><span class="badge blue">Strategie</span><p style="font-size:.78rem;color:#ccc;line-height:1.6">Body Recomposition – gleichzeitig Fett abbauen & Muskeln aufbauen. Krafttraining als Fundament + tägliche Mobilität für Leiste/Adduktoren.</p></div>
-  <div class="grid3">
-    <div class="gbox"><div class="ico">🌱</div><div class="t">Monat 1</div><div class="s">Reaktivierung</div></div>
-    <div class="gbox"><div class="ico">💪</div><div class="t">Monat 2</div><div class="s">Kraft & Aufbau</div></div>
-    <div class="gbox"><div class="ico">🔥</div><div class="t">Monat 3</div><div class="s">Performance</div></div>
-  </div>
-  <div class="card">
-    <h2>📊 Ziele nach 3 Monaten</h2>
-    <div class="row"><span>Fettabbau</span><span class="val g">-4 bis -7 kg</span></div>
-    <div class="row"><span>Muskelmasse</span><span class="val g">+2 bis +4 kg</span></div>
-    <div class="row"><span>Push-ups (jetzt 10)</span><span class="val">Ziel: 30+</span></div>
-    <div class="row"><span>Pull-ups (jetzt 5)</span><span class="val">Ziel: 12+</span></div>
-    <div class="row"><span>Beschwerden Leiste</span><span class="val a">deutlich besser</span></div>
-  </div>
-  <div class="card" style="border-left:3px solid #fbbf24"><span class="badge amber">⚠️ Wichtig</span><p style="font-size:.76rem;color:#ccc;line-height:1.5;margin-top:4px">Leisten-/Adduktorenbeschwerden kommen von verkürztem Hüftbeuger. Die tägliche 10-Min-Mobility ist genauso wichtig wie das Training!</p></div>
-  <div class="card">
-    <h2>⏱️ Zeitaufwand/Woche</h2>
-    <div class="row"><span>Training (3×)</span><span class="val">~2 Std</span></div>
-    <div class="row"><span>Mobility (täglich)</span><span class="val">~1 Std 10 Min</span></div>
-    <div class="row"><span>Spaziergänge</span><span class="val">~1 Std 45 Min</span></div>
-    <div class="row"><span style="font-weight:700">Gesamt</span><span class="val g">~5 Stunden</span></div>
-  </div>
+<a href="https://yuhonas.github.io/free-exercise-db/" target="_blank" style="display:flex;align-items:center;justify-content:space-between;background:#1e1e1e;border-radius:14px;padding:13px;margin-bottom:11px;text-decoration:none;border:1px solid #2a2a2a">
+<div><div style="font-size:.85rem;font-weight:700;color:#fff">📚 Übungsdatenbank</div><div style="font-size:.72rem;color:#888;margin-top:2px">800+ Übungen mit Bildern & Anleitungen</div></div>
+<span style="color:#4a9eff;font-size:1.1rem">→</span>
+</a>
+<div class="card"><span class="badge blue">Strategie</span><p style="font-size:.78rem;color:#ccc;line-height:1.6">Body Recomposition – gleichzeitig Fett abbauen & Muskeln aufbauen. Krafttraining als Fundament + tägliche Mobilität für Leiste/Adduktoren.</p></div>
+<div class="grid3">
+<div class="gbox"><div class="ico">🌱</div><div class="t">Monat 1</div><div class="s">Reaktivierung</div></div>
+<div class="gbox"><div class="ico">💪</div><div class="t">Monat 2</div><div class="s">Kraft & Aufbau</div></div>
+<div class="gbox"><div class="ico">🔥</div><div class="t">Monat 3</div><div class="s">Performance</div></div>
+</div>
+<div class="card">
+<h2>📊 Ziele nach 3 Monaten</h2>
+<div class="row"><span>Fettabbau</span><span class="val g">-4 bis -7 kg</span></div>
+<div class="row"><span>Muskelmasse</span><span class="val g">+2 bis +4 kg</span></div>
+<div class="row"><span>Push-ups (jetzt 10)</span><span class="val">Ziel: 30+</span></div>
+<div class="row"><span>Pull-ups (jetzt 5)</span><span class="val">Ziel: 12+</span></div>
+<div class="row"><span>Beschwerden Leiste</span><span class="val a">deutlich besser</span></div>
+</div>
+<div class="card" style="border-left:3px solid #fbbf24"><span class="badge amber">⚠️ Wichtig</span><p style="font-size:.76rem;color:#ccc;line-height:1.5;margin-top:4px">Leisten-/Adduktorenbeschwerden kommen von verkürztem Hüftbeuger. Die tägliche 10-Min-Mobility ist genauso wichtig wie das Training!</p></div>
+<div class="card">
+<h2>⏱️ Zeitaufwand/Woche</h2>
+<div class="row"><span>Training (3×)</span><span class="val">~2 Std</span></div>
+<div class="row"><span>Mobility (täglich)</span><span class="val">~1 Std 10 Min</span></div>
+<div class="row"><span>Spaziergänge</span><span class="val">~1 Std 45 Min</span></div>
+<div class="row"><span style="font-weight:700">Gesamt</span><span class="val g">~5 Stunden</span></div>
+</div>
 </div>
 
 <!-- TAB 1: TRAINING -->
 <div class="tab" id="tab1">
-  <div class="card">
-    <h2>📅 Wochenstruktur</h2>
-    <div class="week-row"><div class="day">Mo</div><div class="txt">🏠 Kraft A – Hometraining</div></div>
-    <div class="week-row"><div class="day">Di</div><div class="txt">🧘 Mobility & Spaziergang</div></div>
-    <div class="week-row"><div class="day">Mi</div><div class="txt">🏋️ Kraft B – Studio</div></div>
-    <div class="week-row"><div class="day">Do</div><div class="txt">🚶 Aktive Erholung</div></div>
-    <div class="week-row"><div class="day">Fr</div><div class="txt">🏠 Kraft C – Hometraining</div></div>
-    <div class="week-row"><div class="day">Sa</div><div class="txt">🚴 Cardio optional</div></div>
-    <div class="week-row"><div class="day">So</div><div class="txt">😴 Ruhe</div></div>
-  </div>
-
-  <div class="ex-section">
-    <h3>🧘 Tägliche Mobility (10 Min morgens)</h3>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>90/90 Hip Rotation</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-hip" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Ankle_On_The_Knee/0.jpg" onerror="showErr(this)" alt="Hip Stretch"><div class="img-counter" id="cnt-hip">1/2</div><div class="img-nav"><button onclick="imgPrev('hip',['Ankle_On_The_Knee/0.jpg','Ankle_On_The_Knee/1.jpg'])">◀</button><button onclick="imgNext('hip',['Ankle_On_The_Knee/0.jpg','Ankle_On_The_Knee/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Hüfte, Gesäß</span> · Sekundär: <span>Adduktoren</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Beide Sitzbeinhöcker bleiben am Boden. Aufrecht sitzen, nicht nach vorne lehnen. 60s pro Seite.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Beide Beine in 90° Winkel auf dem Boden</li><li>Vorderes Knie & Hüfte je 90°</li><li>Aufrecht sitzen, tief atmen</li><li>60s halten, Seite wechseln</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Hände auf dem Boden abstützen</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Oberkörper nach vorne lehnen</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=90+90+hip+stretch+mobility" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>Couch Stretch (Hüftbeuger)</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-couch" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/All_Fours_Quad_Stretch/0.jpg" onerror="showErr(this)" alt="Couch Stretch"><div class="img-counter" id="cnt-couch">1/2</div><div class="img-nav"><button onclick="imgPrev('couch',['All_Fours_Quad_Stretch/0.jpg','All_Fours_Quad_Stretch/1.jpg'])">◀</button><button onclick="imgNext('couch',['All_Fours_Quad_Stretch/0.jpg','All_Fours_Quad_Stretch/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Hüftbeuger (Iliopsoas)</span> · Sekundär: <span>Quadrizeps</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Wichtigste Übung für deine Leistenproblematik! Gesäß anspannen und Hüfte nach vorne schieben. Dehnung tief in der Leiste spüren.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Hinteres Knie auf dem Boden, Fuß an Wand/Sofa</li><li>Vorderes Bein 90° angewinkelt</li><li>Gesäß anspannen, Hüfte nach vorne</li><li>60s halten, Seite wechseln</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Fuß nicht an der Wand</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Arme über Kopf strecken</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=couch+stretch+hüftbeuger+dehnen" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>Adduktoren-Groin Stretch</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-add" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Adductor_Groin/0.jpg" onerror="showErr(this)" alt="Adduktor Stretch"><div class="img-counter" id="cnt-add">1/2</div><div class="img-nav"><button onclick="imgPrev('add',['Adductor_Groin/0.jpg','Adductor_Groin/1.jpg'])">◀</button><button onclick="imgNext('add',['Adductor_Groin/0.jpg','Adductor_Groin/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Adduktoren</span> · Sekundär: <span>Leiste</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Nie in den Schmerz dehnen – nur bis zur Spannung. Mit jedem Ausatmen etwas tiefer.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Breiter Stand oder Sitz</li><li>Langsam in die Dehnung sinken</li><li>60s halten, tief atmen</li><li>Seite wechseln</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Schmetterling sitzend</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Breiterer Stand, tiefer</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=adduktoren+dehnen+leiste+stretch" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>Cat-Cow</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-catcow" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cat_Stretch/0.jpg" onerror="showErr(this)" alt="Cat Cow"><div class="img-counter" id="cnt-catcow">1/2</div><div class="img-nav"><button onclick="imgPrev('catcow',['Cat_Stretch/0.jpg','Cat_Stretch/1.jpg'])">◀</button><button onclick="imgNext('catcow',['Cat_Stretch/0.jpg','Cat_Stretch/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Wirbelsäule</span> · Sekundär: <span>Core, Hüfte</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Langsam und fließend. Jeden Wirbel einzeln bewegen, von unten nach oben.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Vierfüßler: Hände unter Schultern</li><li>Einatmen: Rücken durchhängen (Cow)</li><li>Ausatmen: Rücken rund (Cat)</li><li>10 Wdh langsam</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Kleinere Amplitude</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>3s pro Phase</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=cat+cow+wirbelsäule+mobilität" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>World's Greatest Stretch</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-wgs" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Cross-Over_Knee_Pull-In/0.jpg" onerror="showErr(this)" alt="Worlds Greatest Stretch"><div class="img-counter" id="cnt-wgs">1/2</div><div class="img-nav"><button onclick="imgPrev('wgs',['Lying_Cross-Over_Knee_Pull-In/0.jpg','Lying_Cross-Over_Knee_Pull-In/1.jpg'])">◀</button><button onclick="imgNext('wgs',['Lying_Cross-Over_Knee_Pull-In/0.jpg','Lying_Cross-Over_Knee_Pull-In/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Hüftbeuger, Brust, Wirbelsäule</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Effizienteste Mobilisierungsübung. 5 Wdh pro Seite, langsam und bewusst.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Ausfallschritt, vorderer Fuß außen</li><li>Hand auf Boden neben Vorderfuß</li><li>Oberen Arm zur Decke drehen</li><li>Zurück, Seite wechseln – 5×/Seite</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Hinteres Knie am Boden</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Knie angehoben</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=worlds+greatest+stretch+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="ex-section">
-    <h3>🌱 Monat 1 – Kraft A (Hometraining)</h3>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>Push-ups</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-pu" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pushups/0.jpg" onerror="showErr(this)" alt="Push-ups"><div class="img-counter" id="cnt-pu">1/2</div><div class="img-nav"><button onclick="imgPrev('pu',['Pushups/0.jpg','Pushups/1.jpg'])">◀</button><button onclick="imgNext('pu',['Pushups/0.jpg','Pushups/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Brust, Trizeps</span> · Sekundär: <span>Schultern, Core</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Körper ist eine gerade Linie. Ellenbogen max. 45° ausgestellt. Brust berührt fast den Boden.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Hände etwas breiter als Schultern</li><li>Körper gerade – kein Hohlkreuz</li><li>Langsam absenken (2s), explosiv hoch</li><li>3 Sätze × maximale saubere Wdh</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Knie auf dem Boden</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Füße erhöht (Decline)</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=liegestütze+richtige+technik" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>Goblet Squat</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-gob" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat/0.jpg" onerror="showErr(this)" alt="Goblet Squat"><div class="img-counter" id="cnt-gob">1/2</div><div class="img-nav"><button onclick="imgPrev('gob',['Dumbbell_Squat/0.jpg','Dumbbell_Squat/1.jpg'])">◀</button><button onclick="imgNext('gob',['Dumbbell_Squat/0.jpg','Dumbbell_Squat/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Quadrizeps, Gesäß</span> · Sekundär: <span>Core, Rücken</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Hantel nah an der Brust. Knie über Zehen – so tief wie möglich. Fersen fest in den Boden!</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Hantel vertikal vor der Brust</li><li>Füße schulterbreit, leicht nach außen</li><li>Tief in Kniebeuge – Oberschenkel parallel</li><li>Explosiv zurück – 3×10</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Box Squat: auf Stuhl setzen</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Schwerere Hantel, 3s runter</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=goblet+squat+technik+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>Dead Bug</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-db" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bicycle_Crunch/0.jpg" onerror="showErr(this)" alt="Dead Bug"><div class="img-counter" id="cnt-db">1/2</div><div class="img-nav"><button onclick="imgPrev('db',['Bicycle_Crunch/0.jpg','Bicycle_Crunch/1.jpg'])">◀</button><button onclick="imgNext('db',['Bicycle_Crunch/0.jpg','Bicycle_Crunch/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Core (Transversus)</span> · Sekundär: <span>Hüftbeuger</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Unterer Rücken IMMER flach am Boden. Langsam und kontrolliert. Super für Leistenbeschwerden!</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Rückenlage, Arme hoch, Beine 90°</li><li>LWS flach in den Boden drücken</li><li>Arm + gegenüberliegendes Bein absenken</li><li>8×/Seite</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Nur Beine bewegen</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Mit Hanteln in den Händen</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=dead+bug+übung+core+richtig" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="ex-section">
-    <h3>🌱 Monat 1 – Kraft B (Studio)</h3>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>Romanian Deadlift</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-rdl" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/0.jpg" onerror="showErr(this)" alt="Romanian Deadlift"><div class="img-counter" id="cnt-rdl">1/2</div><div class="img-nav"><button onclick="imgPrev('rdl',['Romanian_Deadlift/0.jpg','Romanian_Deadlift/1.jpg'])">◀</button><button onclick="imgNext('rdl',['Romanian_Deadlift/0.jpg','Romanian_Deadlift/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Hamstrings, Gesäß</span> · Sekundär: <span>unterer Rücken</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Rücken IMMER gerade! Hüfte nach hinten (nicht runter). Dehnung in der Rückseite des Oberschenkels ist richtig.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Schulterbreiter Stand</li><li>Hüfte nach hinten schieben</li><li>Rücken flach, Brust raus</li><li>Gesäß anspannen beim Hochkommen</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Nur Körpergewicht</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Single Leg RDL</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=rumänisches+kreuzheben+technik+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>Adduktorenmaschine</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-addm" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Adductor/0.jpg" onerror="showErr(this)" alt="Adduktorenmaschine"><div class="img-counter" id="cnt-addm">1/2</div><div class="img-nav"><button onclick="imgPrev('addm',['Adductor/0.jpg','Adductor/1.jpg'])">◀</button><button onclick="imgNext('addm',['Adductor/0.jpg','Adductor/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Adduktoren (Innenseite Oberschenkel)</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Leichtes Gewicht am Anfang! Kontrolliert, kein Schwung. Wichtig für deine Leistenbeschwerden.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Aufrecht sitzen, Rücken an Lehne</li><li>Beine langsam zusammenführen (2s)</li><li>1s halten, langsam öffnen (3s)</li><li>3 × 15 Wdh</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Weniger Gewicht</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Pause am Ende halten</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=adduktorenmaschine+richtig+benutzen" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="ex-section">
-    <h3>🌱 Monat 1 – Kraft C (Hometraining)</h3>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>Pull-up Negatives</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-neg" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pullups/0.jpg" onerror="showErr(this)" alt="Pull-up Negatives"><div class="img-counter" id="cnt-neg">1/2</div><div class="img-nav"><button onclick="imgPrev('neg',['Pullups/0.jpg','Pullups/1.jpg'])">◀</button><button onclick="imgNext('neg',['Pullups/0.jpg','Pullups/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Latissimus, Bizeps</span> · Sekundär: <span>Schultern, Core</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> 4 Sekunden langsam runter zählen. Der negative Teil ist der wichtigste für Kraftaufbau!</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Auf Stuhl steigen, Kinn über der Stange</li><li>4 Sekunden langsam runter</li><li>Wieder hochsteigen, wiederholen</li><li>3 × 5 Wdh</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>2s runter, Füße leicht abfangen</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>6-8s runter</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=klimmzug+negatives+lernen+anfänger" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>Bulgarian Split Squat</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-bss" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Rear_Lunge/0.jpg" onerror="showErr(this)" alt="Bulgarian Split Squat"><div class="img-counter" id="cnt-bss">1/2</div><div class="img-nav"><button onclick="imgPrev('bss',['Dumbbell_Rear_Lunge/0.jpg','Dumbbell_Rear_Lunge/1.jpg'])">◀</button><button onclick="imgNext('bss',['Dumbbell_Rear_Lunge/0.jpg','Dumbbell_Rear_Lunge/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Quadrizeps, Gesäß</span> · Sekundär: <span>Hamstrings, Balance</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Vorderes Knie bleibt über dem Fuß. Oberkörper aufrecht. Eine der effektivsten Beinübungen!</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Hinterer Fuß auf Stuhl/Bank</li><li>Vorderer Fuß ~60cm davor</li><li>Langsam in Kniebeuge (2s)</li><li>Explosiv hoch – 3×8/Seite</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Normaler Ausfallschritt</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Mit Hanteln</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=bulgarian+split+squat+technik+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>Plank</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-plank" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plank/0.jpg" onerror="showErr(this)" alt="Plank"><div class="img-counter" id="cnt-plank">1/2</div><div class="img-nav"><button onclick="imgPrev('plank',['Plank/0.jpg','Plank/1.jpg'])">◀</button><button onclick="imgNext('plank',['Plank/0.jpg','Plank/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Core</span> · Sekundär: <span>Schultern, Gesäß</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Gesäß anspannen und leicht einrollen. Kein Hohlkreuz! Qualität schlägt Dauer.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Unterarme auf dem Boden</li><li>Körper gerade wie ein Brett</li><li>Gesäß anspannen, Bauch einziehen</li><li>3 × 30s halten</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Knie auf dem Boden</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Seitenplank oder Arm anheben</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=plank+richtig+ausführen+core" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="ex-section">
-    <h3>💪 Monat 2 – Studio (Ganzkörper)</h3>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>Kniebeuge (Barbell Squat)</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-sq" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Full_Squat/0.jpg" onerror="showErr(this)" alt="Kniebeuge"><div class="img-counter" id="cnt-sq">1/2</div><div class="img-nav"><button onclick="imgPrev('sq',['Barbell_Full_Squat/0.jpg','Barbell_Full_Squat/1.jpg'])">◀</button><button onclick="imgNext('sq',['Barbell_Full_Squat/0.jpg','Barbell_Full_Squat/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Quadrizeps, Gesäß</span> · Sekundär: <span>Hamstrings, Core</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Lieber leichtes Gewicht mit perfekter Form! Knie verfolgen Zehenrichtung, Brust hoch.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Stange auf oberen Rücken</li><li>Füße etwas breiter als schulterbreit</li><li>Tief – Oberschenkel parallel</li><li>4 × 8 Wdh</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Goblet Squat</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Paused Squat (unten halten)</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=kniebeuge+technik+anfänger+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>Latziehen / Klimmzüge</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-lat" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/0.jpg" onerror="showErr(this)" alt="Latziehen"><div class="img-counter" id="cnt-lat">1/2</div><div class="img-nav"><button onclick="imgPrev('lat',['Wide-Grip_Lat_Pulldown/0.jpg','Wide-Grip_Lat_Pulldown/1.jpg'])">◀</button><button onclick="imgNext('lat',['Wide-Grip_Lat_Pulldown/0.jpg','Wide-Grip_Lat_Pulldown/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Latissimus</span> · Sekundär: <span>Bizeps, hintere Schulter</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Schulterblätter zusammenziehen BEVOR du ziehst. Ellenbogen zur Hüfte, nicht zum Körper.</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Weiter Griff an der Stange</li><li>Leicht nach hinten lehnen, Brust hoch</li><li>Stange zur oberen Brust ziehen</li><li>4 × 8 Wdh</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Weniger Gewicht, Untergriff</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Echte Klimmzüge</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=latziehen+technik+richtig+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-    <div class="ex-card">
-      <div class="ex-header" onclick="toggleEx(this)"><h4>Bankdrücken</h4><span class="arr">▼</span></div>
-      <div class="ex-body">
-        <div class="img-wrap"><img id="img-bp" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/0.jpg" onerror="showErr(this)" alt="Bankdrücken"><div class="img-counter" id="cnt-bp">1/2</div><div class="img-nav"><button onclick="imgPrev('bp',['Barbell_Bench_Press_-_Medium_Grip/0.jpg','Barbell_Bench_Press_-_Medium_Grip/1.jpg'])">◀</button><button onclick="imgNext('bp',['Barbell_Bench_Press_-_Medium_Grip/0.jpg','Barbell_Bench_Press_-_Medium_Grip/1.jpg'])">▶</button></div></div>
-        <div class="muscles">Primär: <span>Brust</span> · Sekundär: <span>Trizeps, Schultern</span></div>
-        <div class="tip"><strong>💡 Tipp:</strong> Füße fest auf dem Boden. Schulterblätter zusammenziehen. Immer mit Sicherung!</div>
-        <div class="ex-steps"><h5>Ausführung:</h5><ol><li>Schulterbreiter Griff</li><li>Schulterblätter zurück und runter</li><li>Stange zur unteren Brust (2s)</li><li>4 × 8 Wdh</li></ol></div>
-        <div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Hanteln oder Push-ups</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Mehr Gewicht, engerer Griff</p></div></div>
-        <a class="yt-link" href="https://www.youtube.com/results?search_query=bankdrücken+technik+anfänger+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
-      </div>
-    </div>
-  </div>
+<div class="card">
+<h2>📅 Wochenstruktur</h2>
+<div class="week-row"><div class="day">Mo</div><div class="txt">🏠 Kraft A – Hometraining</div></div>
+<div class="week-row"><div class="day">Di</div><div class="txt">🧘 Mobility & Spaziergang</div></div>
+<div class="week-row"><div class="day">Mi</div><div class="txt">🏋️ Kraft B – Studio</div></div>
+<div class="week-row"><div class="day">Do</div><div class="txt">🚶 Aktive Erholung</div></div>
+<div class="week-row"><div class="day">Fr</div><div class="txt">🏠 Kraft C – Hometraining</div></div>
+<div class="week-row"><div class="day">Sa</div><div class="txt">🚴 Cardio optional</div></div>
+<div class="week-row"><div class="day">So</div><div class="txt">😴 Ruhe</div></div>
+</div>
+<div class="ex-section">
+<h3>🧘 Tägliche Mobility (10 Min morgens)</h3>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>90/90 Hip Rotation</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-hip" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Ankle_On_The_Knee/0.jpg" onerror="showErr(this)" alt="Hip Stretch"><div class="img-counter" id="cnt-hip">1/2</div><div class="img-nav"><button onclick="imgPrev('hip',['Ankle_On_The_Knee/0.jpg','Ankle_On_The_Knee/1.jpg'])">◀</button><button onclick="imgNext('hip',['Ankle_On_The_Knee/0.jpg','Ankle_On_The_Knee/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Hüfte, Gesäß</span> · Sekundär: <span>Adduktoren</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Beide Sitzbeinhöcker bleiben am Boden. Aufrecht sitzen, nicht nach vorne lehnen. 60s pro Seite.</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Beide Beine in 90° Winkel auf dem Boden</li><li>Vorderes Knie & Hüfte je 90°</li><li>Aufrecht sitzen, tief atmen</li><li>60s halten, Seite wechseln</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Hände auf dem Boden abstützen</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Oberkörper nach vorne lehnen</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=90+90+hip+stretch+mobility" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>Couch Stretch (Hüftbeuger)</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-couch" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/All_Fours_Quad_Stretch/0.jpg" onerror="showErr(this)" alt="Couch Stretch"><div class="img-counter" id="cnt-couch">1/2</div><div class="img-nav"><button onclick="imgPrev('couch',['All_Fours_Quad_Stretch/0.jpg','All_Fours_Quad_Stretch/1.jpg'])">◀</button><button onclick="imgNext('couch',['All_Fours_Quad_Stretch/0.jpg','All_Fours_Quad_Stretch/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Hüftbeuger (Iliopsoas)</span> · Sekundär: <span>Quadrizeps</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Wichtigste Übung für deine Leistenproblematik! Gesäß anspannen und Hüfte nach vorne schieben.</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Hinteres Knie auf dem Boden, Fuß an Wand/Sofa</li><li>Vorderes Bein 90° angewinkelt</li><li>Gesäß anspannen, Hüfte nach vorne</li><li>60s halten, Seite wechseln</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Fuß nicht an der Wand</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Arme über Kopf strecken</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=couch+stretch+hüftbeuger+dehnen" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>Adduktoren-Groin Stretch</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-add" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Adductor_Groin/0.jpg" onerror="showErr(this)" alt="Adduktor Stretch"><div class="img-counter" id="cnt-add">1/2</div><div class="img-nav"><button onclick="imgPrev('add',['Adductor_Groin/0.jpg','Adductor_Groin/1.jpg'])">◀</button><button onclick="imgNext('add',['Adductor_Groin/0.jpg','Adductor_Groin/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Adduktoren</span> · Sekundär: <span>Leiste</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Nie in den Schmerz dehnen – nur bis zur Spannung. Mit jedem Ausatmen etwas tiefer.</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Breiter Stand oder Sitz</li><li>Langsam in die Dehnung sinken</li><li>60s halten, tief atmen</li><li>Seite wechseln</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Schmetterling sitzend</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Breiterer Stand, tiefer</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=adduktoren+dehnen+leiste+stretch" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>Cat-Cow</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-catcow" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cat_Stretch/0.jpg" onerror="showErr(this)" alt="Cat Cow"><div class="img-counter" id="cnt-catcow">1/2</div><div class="img-nav"><button onclick="imgPrev('catcow',['Cat_Stretch/0.jpg','Cat_Stretch/1.jpg'])">◀</button><button onclick="imgNext('catcow',['Cat_Stretch/0.jpg','Cat_Stretch/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Wirbelsäule</span> · Sekundär: <span>Core, Hüfte</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Langsam und fließend. Jeden Wirbel einzeln bewegen, von unten nach oben.</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Vierfüßler: Hände unter Schultern</li><li>Einatmen: Rücken durchhängen (Cow)</li><li>Ausatmen: Rücken rund (Cat)</li><li>10 Wdh langsam</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Kleinere Amplitude</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>3s pro Phase</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=cat+cow+wirbelsäule+mobilität" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>World's Greatest Stretch</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-wgs" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Cross-Over_Knee_Pull-In/0.jpg" onerror="showErr(this)" alt="Worlds Greatest Stretch"><div class="img-counter" id="cnt-wgs">1/2</div><div class="img-nav"><button onclick="imgPrev('wgs',['Lying_Cross-Over_Knee_Pull-In/0.jpg','Lying_Cross-Over_Knee_Pull-In/1.jpg'])">◀</button><button onclick="imgNext('wgs',['Lying_Cross-Over_Knee_Pull-In/0.jpg','Lying_Cross-Over_Knee_Pull-In/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Hüftbeuger, Brust, Wirbelsäule</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Effizienteste Mobilisierungsübung. 5 Wdh pro Seite, langsam und bewusst.</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Ausfallschritt, vorderer Fuß außen</li><li>Hand auf Boden neben Vorderfuß</li><li>Oberen Arm zur Decke drehen</li><li>Zurück, Seite wechseln – 5×/Seite</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Hinteres Knie am Boden</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Knie angehoben</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=worlds+greatest+stretch+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+</div>
+<div class="ex-section">
+<h3>🌱 Monat 1 – Kraft A (Hometraining)</h3>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>Push-ups</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-pu" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pushups/0.jpg" onerror="showErr(this)" alt="Push-ups"><div class="img-counter" id="cnt-pu">1/2</div><div class="img-nav"><button onclick="imgPrev('pu',['Pushups/0.jpg','Pushups/1.jpg'])">◀</button><button onclick="imgNext('pu',['Pushups/0.jpg','Pushups/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Brust, Trizeps</span> · Sekundär: <span>Schultern, Core</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Körper ist eine gerade Linie. Ellenbogen max. 45° ausgestellt. Brust berührt fast den Boden.</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Hände etwas breiter als Schultern</li><li>Körper gerade – kein Hohlkreuz</li><li>Langsam absenken (2s), explosiv hoch</li><li>3 Sätze × maximale saubere Wdh</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Knie auf dem Boden</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Füße erhöht (Decline)</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=liegestütze+richtige+technik" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>Goblet Squat</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-gob" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat/0.jpg" onerror="showErr(this)" alt="Goblet Squat"><div class="img-counter" id="cnt-gob">1/2</div><div class="img-nav"><button onclick="imgPrev('gob',['Dumbbell_Squat/0.jpg','Dumbbell_Squat/1.jpg'])">◀</button><button onclick="imgNext('gob',['Dumbbell_Squat/0.jpg','Dumbbell_Squat/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Quadrizeps, Gesäß</span> · Sekundär: <span>Core, Rücken</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Hantel nah an der Brust. Knie über Zehen – so tief wie möglich. Fersen fest in den Boden!</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Hantel vertikal vor der Brust</li><li>Füße schulterbreit, leicht nach außen</li><li>Tief in Kniebeuge – Oberschenkel parallel</li><li>Explosiv zurück – 3×10</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Box Squat: auf Stuhl setzen</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Schwerere Hantel, 3s runter</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=goblet+squat+technik+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>Dead Bug</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-db" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bicycle_Crunch/0.jpg" onerror="showErr(this)" alt="Dead Bug"><div class="img-counter" id="cnt-db">1/2</div><div class="img-nav"><button onclick="imgPrev('db',['Bicycle_Crunch/0.jpg','Bicycle_Crunch/1.jpg'])">◀</button><button onclick="imgNext('db',['Bicycle_Crunch/0.jpg','Bicycle_Crunch/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Core (Transversus)</span> · Sekundär: <span>Hüftbeuger</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Unterer Rücken IMMER flach am Boden. Langsam und kontrolliert. Super für Leistenbeschwerden!</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Rückenlage, Arme hoch, Beine 90°</li><li>LWS flach in den Boden drücken</li><li>Arm + gegenüberliegendes Bein absenken</li><li>8×/Seite</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Nur Beine bewegen</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Mit Hanteln in den Händen</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=dead+bug+übung+core+richtig" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+</div>
+<div class="ex-section">
+<h3>🌱 Monat 1 – Kraft B (Studio)</h3>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>Romanian Deadlift</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-rdl" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/0.jpg" onerror="showErr(this)" alt="Romanian Deadlift"><div class="img-counter" id="cnt-rdl">1/2</div><div class="img-nav"><button onclick="imgPrev('rdl',['Romanian_Deadlift/0.jpg','Romanian_Deadlift/1.jpg'])">◀</button><button onclick="imgNext('rdl',['Romanian_Deadlift/0.jpg','Romanian_Deadlift/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Hamstrings, Gesäß</span> · Sekundär: <span>unterer Rücken</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Rücken IMMER gerade! Hüfte nach hinten (nicht runter). Dehnung in der Rückseite des Oberschenkels ist richtig.</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Schulterbreiter Stand</li><li>Hüfte nach hinten schieben</li><li>Rücken flach, Brust raus</li><li>Gesäß anspannen beim Hochkommen</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Nur Körpergewicht</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Single Leg RDL</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=rumänisches+kreuzheben+technik+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>Adduktorenmaschine</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-addm" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Adductor/0.jpg" onerror="showErr(this)" alt="Adduktorenmaschine"><div class="img-counter" id="cnt-addm">1/2</div><div class="img-nav"><button onclick="imgPrev('addm',['Adductor/0.jpg','Adductor/1.jpg'])">◀</button><button onclick="imgNext('addm',['Adductor/0.jpg','Adductor/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Adduktoren (Innenseite Oberschenkel)</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Leichtes Gewicht am Anfang! Kontrolliert, kein Schwung. Wichtig für deine Leistenbeschwerden.</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Aufrecht sitzen, Rücken an Lehne</li><li>Beine langsam zusammenführen (2s)</li><li>1s halten, langsam öffnen (3s)</li><li>3 × 15 Wdh</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Weniger Gewicht</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Pause am Ende halten</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=adduktorenmaschine+richtig+benutzen" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+</div>
+<div class="ex-section">
+<h3>🌱 Monat 1 – Kraft C (Hometraining)</h3>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>Pull-up Negatives</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-neg" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pullups/0.jpg" onerror="showErr(this)" alt="Pull-up Negatives"><div class="img-counter" id="cnt-neg">1/2</div><div class="img-nav"><button onclick="imgPrev('neg',['Pullups/0.jpg','Pullups/1.jpg'])">◀</button><button onclick="imgNext('neg',['Pullups/0.jpg','Pullups/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Latissimus, Bizeps</span> · Sekundär: <span>Schultern, Core</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> 4 Sekunden langsam runter zählen. Der negative Teil ist der wichtigste für Kraftaufbau!</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Auf Stuhl steigen, Kinn über der Stange</li><li>4 Sekunden langsam runter</li><li>Wieder hochsteigen, wiederholen</li><li>3 × 5 Wdh</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>2s runter, Füße leicht abfangen</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>6-8s runter</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=klimmzug+negatives+lernen+anfänger" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>Bulgarian Split Squat</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-bss" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Rear_Lunge/0.jpg" onerror="showErr(this)" alt="Bulgarian Split Squat"><div class="img-counter" id="cnt-bss">1/2</div><div class="img-nav"><button onclick="imgPrev('bss',['Dumbbell_Rear_Lunge/0.jpg','Dumbbell_Rear_Lunge/1.jpg'])">◀</button><button onclick="imgNext('bss',['Dumbbell_Rear_Lunge/0.jpg','Dumbbell_Rear_Lunge/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Quadrizeps, Gesäß</span> · Sekundär: <span>Hamstrings, Balance</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Vorderes Knie bleibt über dem Fuß. Oberkörper aufrecht. Eine der effektivsten Beinübungen!</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Hinterer Fuß auf Stuhl/Bank</li><li>Vorderer Fuß ~60cm davor</li><li>Langsam in Kniebeuge (2s)</li><li>Explosiv hoch – 3×8/Seite</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Normaler Ausfallschritt</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Mit Hanteln</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=bulgarian+split+squat+technik+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>Plank</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-plank" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plank/0.jpg" onerror="showErr(this)" alt="Plank"><div class="img-counter" id="cnt-plank">1/2</div><div class="img-nav"><button onclick="imgPrev('plank',['Plank/0.jpg','Plank/1.jpg'])">◀</button><button onclick="imgNext('plank',['Plank/0.jpg','Plank/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Core</span> · Sekundär: <span>Schultern, Gesäß</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Gesäß anspannen und leicht einrollen. Kein Hohlkreuz! Qualität schlägt Dauer.</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Unterarme auf dem Boden</li><li>Körper gerade wie ein Brett</li><li>Gesäß anspannen, Bauch einziehen</li><li>3 × 30s halten</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Knie auf dem Boden</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Seitenplank oder Arm anheben</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=plank+richtig+ausführen+core" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+</div>
+<div class="ex-section">
+<h3>💪 Monat 2 – Studio (Ganzkörper)</h3>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>Kniebeuge (Barbell Squat)</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-sq" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Full_Squat/0.jpg" onerror="showErr(this)" alt="Kniebeuge"><div class="img-counter" id="cnt-sq">1/2</div><div class="img-nav"><button onclick="imgPrev('sq',['Barbell_Full_Squat/0.jpg','Barbell_Full_Squat/1.jpg'])">◀</button><button onclick="imgNext('sq',['Barbell_Full_Squat/0.jpg','Barbell_Full_Squat/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Quadrizeps, Gesäß</span> · Sekundär: <span>Hamstrings, Core</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Lieber leichtes Gewicht mit perfekter Form! Knie verfolgen Zehenrichtung, Brust hoch.</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Stange auf oberen Rücken</li><li>Füße etwas breiter als schulterbreit</li><li>Tief – Oberschenkel parallel</li><li>4 × 8 Wdh</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Goblet Squat</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Paused Squat (unten halten)</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=kniebeuge+technik+anfänger+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>Latziehen / Klimmzüge</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-lat" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/0.jpg" onerror="showErr(this)" alt="Latziehen"><div class="img-counter" id="cnt-lat">1/2</div><div class="img-nav"><button onclick="imgPrev('lat',['Wide-Grip_Lat_Pulldown/0.jpg','Wide-Grip_Lat_Pulldown/1.jpg'])">◀</button><button onclick="imgNext('lat',['Wide-Grip_Lat_Pulldown/0.jpg','Wide-Grip_Lat_Pulldown/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Latissimus</span> · Sekundär: <span>Bizeps, hintere Schulter</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Schulterblätter zusammenziehen BEVOR du ziehst. Ellenbogen zur Hüfte, nicht zum Körper.</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Weiter Griff an der Stange</li><li>Leicht nach hinten lehnen, Brust hoch</li><li>Stange zur oberen Brust ziehen</li><li>4 × 8 Wdh</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Weniger Gewicht, Untergriff</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Echte Klimmzüge</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=latziehen+technik+richtig+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+<div class="ex-card">
+<div class="ex-header" onclick="toggleEx(this)"><h4>Bankdrücken</h4><span class="arr">▼</span></div>
+<div class="ex-body">
+<div class="img-wrap"><img id="img-bp" src="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/0.jpg" onerror="showErr(this)" alt="Bankdrücken"><div class="img-counter" id="cnt-bp">1/2</div><div class="img-nav"><button onclick="imgPrev('bp',['Barbell_Bench_Press_-_Medium_Grip/0.jpg','Barbell_Bench_Press_-_Medium_Grip/1.jpg'])">◀</button><button onclick="imgNext('bp',['Barbell_Bench_Press_-_Medium_Grip/0.jpg','Barbell_Bench_Press_-_Medium_Grip/1.jpg'])">▶</button></div></div>
+<div class="muscles">Primär: <span>Brust</span> · Sekundär: <span>Trizeps, Schultern</span></div>
+<div class="tip"><strong>💡 Tipp:</strong> Füße fest auf dem Boden. Schulterblätter zusammenziehen. Immer mit Sicherung!</div>
+<div class="ex-steps"><h5>Ausführung:</h5><ol><li>Schulterbreiter Griff</li><li>Schulterblätter zurück und runter</li><li>Stange zur unteren Brust (2s)</li><li>4 × 8 Wdh</li></ol></div>
+<div class="variants"><div class="variant easy"><h5>⬇️ Leichter</h5><p>Hanteln oder Push-ups</p></div><div class="variant hard"><h5>⬆️ Schwerer</h5><p>Mehr Gewicht, engerer Griff</p></div></div>
+<a class="yt-link" href="https://www.youtube.com/results?search_query=bankdrücken+technik+anfänger+deutsch" target="_blank">🎥 YouTube-Tutorial suchen</a>
+</div>
+</div>
+</div>
 </div>
 
 <!-- TAB 2: ERNÄHRUNG -->
 <div class="tab" id="tab2">
   <div class="card">
-    <h2>🎯 Makros pro Tag</h2>
+    <h2>🎯 Tagesziele</h2>
     <div class="stat-grid">
       <div class="stat-box"><div class="sl">Kalorien</div><div class="sv">~2.100</div><div class="ss">kcal/Tag</div></div>
-      <div class="stat-box"><div class="sl">Protein</div><div class="sv">160–180g</div><div class="ss">2g/kg</div></div>
-      <div class="stat-box"><div class="sl">Kohlenhydrate</div><div class="sv">150–200g</div><div class="ss">Timing!</div></div>
+      <div class="stat-box"><div class="sl">Protein</div><div class="sv">160–180g</div><div class="ss">~2g/kg</div></div>
+      <div class="stat-box"><div class="sl">Kohlenhydrate</div><div class="sv">150–220g</div><div class="ss">Timing!</div></div>
       <div class="stat-box"><div class="sl">Fett</div><div class="sv">60–80g</div><div class="ss">gesund</div></div>
     </div>
   </div>
-  <div class="card">
-    <h2>🍽️ Tagesplan (Trainingstag)</h2>
-    <div class="meal"><div class="meal-head"><span class="mt">07:00 Frühstück</span><span class="mk">~500 kcal</span></div><ul class="list"><li><span class="dot">•</span>Overnight Oats (siehe Rezepte-Tab)</li><li><span class="dot">•</span>Haferflocken + Hafermilch + Skyr/Quark</li><li><span class="dot">•</span>Kaffee/Tee ohne Zucker</li></ul></div>
-    <div class="meal"><div class="meal-head"><span class="mt">13:00 Mittagessen</span><span class="mk">~600 kcal</span></div><ul class="list"><li><span class="dot">•</span>200g Hühnerbrust / Lachs / Rind</li><li><span class="dot">•</span>150g Reis / Kartoffeln / Linsen</li><li><span class="dot">•</span>Großes Gemüse nach Wahl</li><li><span class="dot">•</span>1 EL Olivenöl</li></ul></div>
-    <div class="meal"><div class="meal-head"><span class="mt">17:00 Pre-Workout</span><span class="mk">~200 kcal</span></div><ul class="list"><li><span class="dot">•</span>1 Banane + 30g Haferflocken</li><li><span class="dot">•</span>oder: Vollkornbrot + Skyr</li></ul></div>
-    <div class="meal"><div class="meal-head"><span class="mt">19:00 Post-Workout</span><span class="mk">~550 kcal</span></div><ul class="list"><li><span class="dot">•</span>200g Magerquark / Skyr</li><li><span class="dot">•</span>150g Süßkartoffel</li><li><span class="dot">•</span>Brokkoli oder Salat</li><li><span class="dot">•</span>1 EL Leinöl oder Nüsse</li></ul></div>
+
+  <div style="font-size:.72rem;color:#888;margin-bottom:6px;padding:0 2px">● grüner Punkt = Trainingstag · Mahlzeiten & Portionen anpassbar</div>
+  <div class="wp-day-tabs" id="wp-tabs"></div>
+  <div id="wp-day-label" style="font-size:.72rem;color:#888;margin-bottom:8px;padding:0 2px"></div>
+  <div id="wp-meals"></div>
+  <div id="wp-summary"></div>
+
+  <div class="card" style="margin-top:4px;border-left:3px solid #2dd4bf">
+    <h2 style="color:#2dd4bf;margin-bottom:8px">💊 Supplements</h2>
+    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Kreatin (Creapure)</strong> – 5g morgens mit Frühstück</div></div>
+    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>D3+K2 Tropfen</strong> – täglich zur fetthaltigen Mahlzeit</div></div>
+    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Norsan Omega-3</strong> – 1 EL mittags/abends (empfohlen)</div></div>
+    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Magnesium Bisglycinat</strong> – 200–300mg abends als Pulver</div></div>
+    <div class="sup-row"><span style="color:#2dd4bf">🥛</span><div><strong>Whey (Molkenproteinkonzentrat)</strong> – 30g post-workout (Mo/Mi/Fr), Sa als Joghurt-Bowl. Kein Süßstoff, darmverträglich.</div></div>
+    <div class="sup-row"><span style="color:#fbbf24">💊</span><div><strong>Probiotikum (optional, 4–8 Wo)</strong> – z.B. Omni-Biotic 6, morgens nüchtern als Pulver</div></div>
   </div>
-  <div class="card">
-    <h2>🥩 Protein ohne Pulver</h2>
-    <div class="row"><span>Magerquark 500g</span><span class="val">55g</span></div>
-    <div class="row"><span>Skyr 200g</span><span class="val">24g</span></div>
-    <div class="row"><span>3 Eier + 2 Eiweiß</span><span class="val">30g</span></div>
-    <div class="row"><span>Hühnerbrust 200g</span><span class="val">46g</span></div>
-    <div class="row"><span>Lachs 150g</span><span class="val">30g</span></div>
-    <div class="row"><span>Thunfisch Dose</span><span class="val">25g</span></div>
-    <div class="row"><span>Hüttenkäse 250g</span><span class="val">28g</span></div>
-  </div>
-  <div class="card">
-    <h2>💊 Supplements</h2>
-    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Kreatin</strong> – 5g/täglich (Weider Creapure)</div></div>
-    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Vitamin D3 + K2</strong> – Hübner Tropfen</div></div>
-    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Magnesium Bisglycinat</strong> – Pulver, abends</div></div>
-    <div class="sup-row"><span style="color:#4ade80">✅</span><div><strong>Omega-3</strong> – Norsan flüssig, zur Mahlzeit</div></div>
-    <div class="sup-row"><span style="color:#f87171">❌</span><div><strong>Pre-Workout</strong> – unnötig, Kaffee reicht</div></div>
-  </div>
+
   <div class="card" style="border-left:3px solid #fbbf24">
     <h2>🚫 Goldene Regeln</h2>
     <ul class="list" style="margin-top:6px">
-      <li><span class="dot a">→</span>Protein bei JEDER Mahlzeit – min. 30g</li>
-      <li><span class="dot a">→</span>Kein Alkohol die ersten 4 Wochen</li>
+      <li><span class="dot a">→</span>Protein bei JEDER Mahlzeit – min. 25g</li>
+      <li><span class="dot a">→</span>Täglich fermentierte Milchprodukte (Skyr/Joghurt/Quark)</li>
+      <li><span class="dot a">→</span>Präbiotika täglich: Haferflocken, Leinsamen, Hülsenfrüchte, Zwiebeln</li>
       <li><span class="dot a">→</span>300 kcal Defizit reicht – keine Crash-Diät</li>
       <li><span class="dot a">→</span>Wasser: min. 2,5 Liter täglich</li>
-      <li><span class="dot a">→</span>Pizza = Cheat-Day ✅ (1×/Woche ok!)</li>
+      <li><span class="dot a">→</span>Pizza = Cheat-Day ✅ (1×/Woche – Freitag)</li>
     </ul>
   </div>
 </div>
 
 <!-- TAB 3: REZEPTE -->
 <div class="tab" id="tab3">
-  <div style="padding:8px 0 10px;text-align:center"><div style="font-size:.72rem;color:#888">Zutaten anpassen → Nährwerte in Echtzeit</div></div>
-  <div style="overflow-x:auto;padding-bottom:8px;margin-bottom:10px">
-    <div id="recipe-btns" style="display:flex;gap:8px;padding:0 0 4px"></div>
-  </div>
-  <div class="card">
-    <div style="font-size:.95rem;font-weight:700;margin-bottom:2px" id="recipe-name"></div>
-    <div style="font-size:.75rem;color:#888" id="recipe-desc"></div>
-  </div>
-  <div style="background:#1a2a3a;border-radius:14px;padding:12px 14px;margin-bottom:11px;border:1px solid #2a4a6a">
-    <div style="font-size:.78rem;font-weight:700;color:#4a9eff;margin-bottom:10px">📊 Nährwerte (aktuell)</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
-      <div style="background:#0a1a2a;border-radius:10px;padding:10px;text-align:center">
-        <div style="font-size:.68rem;color:#888">Kalorien</div>
-        <div style="font-size:1.4rem;font-weight:800;color:#fbbf24" id="total-kcal">0</div>
-        <div style="font-size:.65rem;color:#666">kcal</div>
-      </div>
-      <div style="background:#0a1a2a;border-radius:10px;padding:10px;text-align:center">
-        <div style="font-size:.68rem;color:#888">Eiweiß</div>
-        <div style="font-size:1.4rem;font-weight:800;color:#4ade80" id="total-prot">0g</div>
-        <div style="font-size:.65rem;color:#666">Protein</div>
-      </div>
-    </div>
-    <div style="margin-bottom:8px">
-      <div style="display:flex;justify-content:space-between;font-size:.68rem;color:#888;margin-bottom:3px"><span>Eiweiß-Ziel (50g)</span><span id="prot-lbl" style="color:#4ade80">✓ gut</span></div>
-      <div style="background:#252525;border-radius:6px;height:8px;overflow:hidden"><div id="prot-bar" style="height:100%;border-radius:6px;background:#4ade80;width:0%;transition:width .3s"></div></div>
-    </div>
-    <div>
-      <div style="display:flex;justify-content:space-between;font-size:.68rem;color:#888;margin-bottom:3px"><span>Kalorien-Ziel (~500 kcal)</span><span id="kcal-lbl" style="color:#4ade80">✓ passt</span></div>
-      <div style="background:#252525;border-radius:6px;height:8px;overflow:hidden"><div id="kcal-bar" style="height:100%;border-radius:6px;background:#4ade80;width:0%;transition:width .3s"></div></div>
-    </div>
-  </div>
-  <div class="card">
-    <div style="font-size:.78rem;font-weight:700;color:#ddd;margin-bottom:12px">🥣 Zutaten anpassen</div>
-    <div id="ing-container"></div>
-    <button onclick="resetRecipe()" style="width:100%;padding:10px;background:#252525;border:1px solid #333;border-radius:10px;color:#888;font-size:.78rem;cursor:pointer;margin-top:4px">↺ Zurücksetzen</button>
-  </div>
-  <div class="card">
-    <div style="font-size:.78rem;font-weight:700;color:#ddd;margin-bottom:8px">📝 Zubereitung</div>
-    <div style="font-size:.75rem;color:#bbb;line-height:1.7">
-      1. Alle Zutaten abends in ein Glas geben und umrühren.<br>
-      2. Über Nacht im Kühlschrank quellen lassen (mind. 6h).<br>
-      3. Morgens Toppings drauf und genießen!<br>
-      <span style="color:#666;font-size:.7rem">💡 Hält 3 Tage · Toppings immer erst morgens!</span>
-    </div>
-  </div>
+<div style="padding:8px 0 10px;text-align:center"><div style="font-size:.72rem;color:#888">Zutaten anpassen → Nährwerte in Echtzeit</div></div>
+<div style="overflow-x:auto;padding-bottom:8px;margin-bottom:10px">
+<div id="recipe-btns" style="display:flex;gap:8px;padding:0 0 4px"></div>
+</div>
+<div class="card">
+<div style="font-size:.95rem;font-weight:700;margin-bottom:2px" id="recipe-name"></div>
+<div style="font-size:.75rem;color:#888" id="recipe-desc"></div>
+</div>
+<div style="background:#1a2a3a;border-radius:14px;padding:12px 14px;margin-bottom:11px;border:1px solid #2a4a6a">
+<div style="font-size:.78rem;font-weight:700;color:#4a9eff;margin-bottom:10px">📊 Nährwerte (aktuell)</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+<div style="background:#0a1a2a;border-radius:10px;padding:10px;text-align:center">
+<div style="font-size:.68rem;color:#888">Kalorien</div>
+<div style="font-size:1.4rem;font-weight:800;color:#fbbf24" id="total-kcal">0</div>
+<div style="font-size:.65rem;color:#666">kcal</div>
+</div>
+<div style="background:#0a1a2a;border-radius:10px;padding:10px;text-align:center">
+<div style="font-size:.68rem;color:#888">Eiweiß</div>
+<div style="font-size:1.4rem;font-weight:800;color:#4ade80" id="total-prot">0g</div>
+<div style="font-size:.65rem;color:#666">Protein</div>
+</div>
+</div>
+<div style="margin-bottom:8px">
+<div style="display:flex;justify-content:space-between;font-size:.68rem;color:#888;margin-bottom:3px"><span>Eiweiß-Ziel (50g)</span><span id="prot-lbl" style="color:#4ade80">✓ gut</span></div>
+<div style="background:#252525;border-radius:6px;height:8px;overflow:hidden"><div id="prot-bar" style="height:100%;border-radius:6px;background:#4ade80;width:0%;transition:width .3s"></div></div>
+</div>
+<div>
+<div style="display:flex;justify-content:space-between;font-size:.68rem;color:#888;margin-bottom:3px"><span>Kalorien-Ziel (~500 kcal)</span><span id="kcal-lbl" style="color:#4ade80">✓ passt</span></div>
+<div style="background:#252525;border-radius:6px;height:8px;overflow:hidden"><div id="kcal-bar" style="height:100%;border-radius:6px;background:#4ade80;width:0%;transition:width .3s"></div></div>
+</div>
+</div>
+<div class="card">
+<div style="font-size:.78rem;font-weight:700;color:#ddd;margin-bottom:12px">🥣 Zutaten anpassen</div>
+<div id="ing-container"></div>
+<button onclick="resetRecipe()" style="width:100%;padding:10px;background:#252525;border:1px solid #333;border-radius:10px;color:#888;font-size:.78rem;cursor:pointer;margin-top:4px">↺ Zurücksetzen</button>
+</div>
+<div class="card">
+<div style="font-size:.78rem;font-weight:700;color:#ddd;margin-bottom:8px">📝 Zubereitung</div>
+<div style="font-size:.75rem;color:#bbb;line-height:1.7">
+1. Alle Zutaten abends in ein Glas geben und umrühren.<br>
+2. Über Nacht im Kühlschrank quellen lassen (mind. 6h).<br>
+3. Morgens Toppings drauf und genießen!<br>
+<span style="color:#666;font-size:.7rem">💡 Hält 3 Tage · Toppings immer erst morgens!</span>
+</div>
+</div>
 </div>
 
 <!-- TAB 4: ROUTINE -->
 <div class="tab" id="tab4">
-  <div class="card">
-    <h2>🌅 Morgenroutine (30 Min)</h2>
-    <div class="time-row"><div class="t">06:15</div><div class="txt">💧 Aufstehen – sofort 500ml Wasser</div></div>
-    <div class="time-row"><div class="t">06:20</div><div class="txt">🧘 10 Min Mobility (Leiste/Hüfte)</div></div>
-    <div class="time-row"><div class="t">06:30</div><div class="txt">🚿 Dusche – 30s kalt am Ende</div></div>
-    <div class="time-row"><div class="t">06:40</div><div class="txt">☕ Frühstück + Kaffee</div></div>
-    <div class="time-row"><div class="t">06:55</div><div class="txt">📔 5 Min: Tagesziele + 3 Dankbarkeiten</div></div>
-  </div>
-  <div class="card">
-    <h2>💼 Im Job (gegen Sitzschäden)</h2>
-    <ul class="list">
-      <li><span class="dot g">✓</span>Alle 45–60 Min: 2 Min aufstehen & gehen</li>
-      <li><span class="dot g">✓</span>1× täglich: 5 Min Hüftbeuger-Stretch</li>
-      <li><span class="dot g">✓</span>Stehpult wenn möglich</li>
-      <li><span class="dot g">✓</span>Mittagspause: 15–20 Min Spaziergang</li>
-      <li><span class="dot g">✓</span>Meetings stehend oder gehend</li>
-    </ul>
-  </div>
-  <div class="card">
-    <h2>🌙 Abendroutine (20 Min)</h2>
-    <div class="time-row"><div class="t">21:00</div><div class="txt">📵 Kein Bildschirm (oder Blaulichtfilter)</div></div>
-    <div class="time-row"><div class="t">21:15</div><div class="txt">🫁 5–10 Min Dehnen / Foam Rolling</div></div>
-    <div class="time-row"><div class="t">21:30</div><div class="txt">📚 Lesen – kein Handy</div></div>
-    <div class="time-row"><div class="t">22:00</div><div class="txt">😴 Schlaf – Zimmer kühl & dunkel</div></div>
-  </div>
-  <div class="card">
-    <h2>📊 Wöchentliches Check-in</h2>
-    <ul class="list">
-      <li><span class="dot a">→</span>Gewicht: 1× wöchentlich morgens nüchtern</li>
-      <li><span class="dot a">→</span>Fotos: 1× monatlich (gleiche Bedingungen)</li>
-      <li><span class="dot a">→</span>Push-ups & Pull-ups: alle 2 Wochen testen</li>
-      <li><span class="dot a">→</span>Beschwerden dokumentieren (0–10)</li>
-      <li><span class="dot a">→</span>Schlaf & Energie notieren</li>
-    </ul>
-  </div>
-  <div class="highlight"><strong>🧠 Der wichtigste Tipp:</strong><br><br>Konsistenz schlägt Perfektion. Ein mittelmäßiges Training das du durchhältst ist 100× besser als ein perfekter Plan den du abbrichst. Die ersten 4 Wochen zählt nur: <strong>Erscheinen.</strong></div>
+<div class="card">
+<h2>🌅 Morgenroutine (30 Min)</h2>
+<div class="time-row"><div class="t">06:15</div><div class="txt">💧 Aufstehen – sofort 500ml Wasser</div></div>
+<div class="time-row"><div class="t">06:20</div><div class="txt">🧘 10 Min Mobility (Leiste/Hüfte)</div></div>
+<div class="time-row"><div class="t">06:30</div><div class="txt">🚿 Dusche – 30s kalt am Ende</div></div>
+<div class="time-row"><div class="t">06:40</div><div class="txt">☕ Frühstück + Kaffee</div></div>
+<div class="time-row"><div class="t">06:55</div><div class="txt">📔 5 Min: Tagesziele + 3 Dankbarkeiten</div></div>
+</div>
+<div class="card">
+<h2>💼 Im Job (gegen Sitzschäden)</h2>
+<ul class="list">
+<li><span class="dot g">✓</span>Alle 45–60 Min: 2 Min aufstehen & gehen</li>
+<li><span class="dot g">✓</span>1× täglich: 5 Min Hüftbeuger-Stretch</li>
+<li><span class="dot g">✓</span>Stehpult wenn möglich</li>
+<li><span class="dot g">✓</span>Mittagspause: 15–20 Min Spaziergang</li>
+<li><span class="dot g">✓</span>Meetings stehend oder gehend</li>
+</ul>
+</div>
+<div class="card">
+<h2>🌙 Abendroutine (20 Min)</h2>
+<div class="time-row"><div class="t">21:00</div><div class="txt">📵 Kein Bildschirm (oder Blaulichtfilter)</div></div>
+<div class="time-row"><div class="t">21:15</div><div class="txt">🫁 5–10 Min Dehnen / Foam Rolling</div></div>
+<div class="time-row"><div class="t">21:30</div><div class="txt">📚 Lesen – kein Handy</div></div>
+<div class="time-row"><div class="t">22:00</div><div class="txt">😴 Schlaf – Zimmer kühl & dunkel</div></div>
+</div>
+<div class="card">
+<h2>📊 Wöchentliches Check-in</h2>
+<ul class="list">
+<li><span class="dot a">→</span>Gewicht: 1× wöchentlich morgens nüchtern</li>
+<li><span class="dot a">→</span>Fotos: 1× monatlich (gleiche Bedingungen)</li>
+<li><span class="dot a">→</span>Push-ups & Pull-ups: alle 2 Wochen testen</li>
+<li><span class="dot a">→</span>Beschwerden dokumentieren (0–10)</li>
+<li><span class="dot a">→</span>Schlaf & Energie notieren</li>
+</ul>
+</div>
+<div class="highlight"><strong>🧠 Der wichtigste Tipp:</strong><br><br>Konsistenz schlägt Perfektion. Ein mittelmäßiges Training das du durchhältst ist 100× besser als ein perfekter Plan den du abbrichst. Die ersten 4 Wochen zählt nur: <strong>Erscheinen.</strong></div>
 </div>
 
 <nav>
-  <button class="active" onclick="showTab(0,this)"><span class="ico">🎯</span>Übersicht</button>
-  <button onclick="showTab(1,this)"><span class="ico">💪</span>Training</button>
-  <button onclick="showTab(2,this)"><span class="ico">🥗</span>Ernährung</button>
-  <button onclick="showTab(3,this)"><span class="ico">🍽️</span>Rezepte</button>
-  <button onclick="showTab(4,this)"><span class="ico">⏰</span>Routine</button>
+<button class="active" onclick="showTab(0,this)"><span class="ico">🎯</span>Übersicht</button>
+<button onclick="showTab(1,this)"><span class="ico">💪</span>Training</button>
+<button onclick="showTab(2,this)"><span class="ico">🥗</span>Ernährung</button>
+<button onclick="showTab(3,this)"><span class="ico">🍽️</span>Rezepte</button>
+<button onclick="showTab(4,this)"><span class="ico">⏰</span>Routine</button>
 </nav>
 
 <script>
 // ── NAVIGATION ──
-function showTab(i, btn) {
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab' + i).classList.add('active');
+function showTab(i,btn){
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active')});
+  document.querySelectorAll('nav button').forEach(function(b){b.classList.remove('active')});
+  document.getElementById('tab'+i).classList.add('active');
   btn.classList.add('active');
-  window.scrollTo(0, 0);
+  window.scrollTo(0,0);
 }
 
 // ── EXERCISE HELPERS ──
-var imgState = {};
-var IMG_BASE = 'https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/';
-
-function toggleEx(header) {
-  header.classList.toggle('open');
-  header.nextElementSibling.classList.toggle('open');
+var imgState={};
+var IMG_BASE='https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/';
+function toggleEx(header){header.classList.toggle('open');header.nextElementSibling.classList.toggle('open')}
+function showErr(img){img.parentNode.innerHTML='<div class="img-error">📸 Bild lädt nur online</div>'}
+function imgNext(id,imgs){
+  if(!imgState[id])imgState[id]=0;
+  imgState[id]=(imgState[id]+1)%imgs.length;
+  var el=document.getElementById('img-'+id);
+  if(el){el.src=IMG_BASE+imgs[imgState[id]];document.getElementById('cnt-'+id).textContent=(imgState[id]+1)+'/'+imgs.length}
+}
+function imgPrev(id,imgs){
+  if(!imgState[id])imgState[id]=0;
+  imgState[id]=(imgState[id]-1+imgs.length)%imgs.length;
+  var el=document.getElementById('img-'+id);
+  if(el){el.src=IMG_BASE+imgs[imgState[id]];document.getElementById('cnt-'+id).textContent=(imgState[id]+1)+'/'+imgs.length}
 }
 
-function showErr(img) {
-  img.parentNode.innerHTML = '<div class="img-error">📸 Bild lädt nur online</div>';
+// ── WOCHENPLAN DATA ──
+var WP_DAYS=[
+  {label:'Mo',full:'Montag',training:true,meals:[
+    {time:'07:00',type:'pro',tb:'wb-pro',tl:'Protein-Fokus',whey:false,alts:[
+      {name:'Overnight Oats',sliders:[{key:'hafer',lbl:'Haferflocken',unit:'g',min:40,max:120,step:10,def:80,ck:3.6,cp:0.13,cc:0.58,cf:0.07},{key:'skyr',lbl:'Skyr',unit:'g',min:50,max:250,step:25,def:150,ck:0.59,cp:0.10,cc:0.04,cf:0.002},{key:'hm',lbl:'Hafermilch',unit:'ml',min:100,max:300,step:50,def:150,ck:0.46,cp:0.004,cc:0.07,cf:0.015}]},
+      {name:'Hafer-Pancakes',sliders:[{key:'hafer',lbl:'Haferflocken',unit:'g',min:40,max:120,step:10,def:80,ck:3.6,cp:0.13,cc:0.58,cf:0.07},{key:'quark',lbl:'Magerquark',unit:'g',min:100,max:300,step:50,def:200,ck:0.67,cp:0.12,cc:0.04,cf:0.003},{key:'eier',lbl:'Eier',unit:'Stk',min:1,max:4,step:1,def:2,ck:65,cp:5.5,cc:0.4,cf:4.5}]},
+      {name:'Rührei + Vollkornbrot',sliders:[{key:'eier',lbl:'Eier',unit:'Stk',min:2,max:5,step:1,def:3,ck:65,cp:5.5,cc:0.4,cf:4.5},{key:'brot',lbl:'Vollkornbrot',unit:'Scheiben',min:1,max:4,step:1,def:2,ck:80,cp:3.5,cc:14,cf:1},{key:'avo',lbl:'Avocado',unit:'½',min:0,max:2,step:1,def:1,ck:120,cp:1.5,cc:2,cf:11}]}
+    ]},
+    {time:'12:30',type:'pre',tb:'wb-pre',tl:'Präbiotisch',whey:false,alts:[
+      {name:'Büro-Sandwich',sliders:[{key:'brot',lbl:'Vollkornbrot',unit:'Scheiben',min:1,max:4,step:1,def:2,ck:80,cp:3.5,cc:14,cf:1},{key:'haehnchen',lbl:'Hähnchenbrust',unit:'g',min:80,max:200,step:20,def:120,ck:1.65,cp:0.31,cc:0,cf:0.036},{key:'hummus',lbl:'Hummus',unit:'g',min:0,max:60,step:10,def:20,ck:1.66,cp:0.08,cc:0.14,cf:0.10}]},
+      {name:'Mediterrane Bowl',sliders:[{key:'quinoa',lbl:'Quinoa',unit:'g',min:50,max:150,step:25,def:100,ck:1.2,cp:0.044,cc:0.21,cf:0.019},{key:'kichererbsen',lbl:'Kichererbsen',unit:'g',min:50,max:200,step:25,def:100,ck:1.64,cp:0.09,cc:0.27,cf:0.026},{key:'feta',lbl:'Feta',unit:'g',min:0,max:80,step:10,def:40,ck:2.64,cp:0.14,cc:0.04,cf:0.21}]},
+      {name:'Linsensalat',sliders:[{key:'linsen',lbl:'Linsen (gegart)',unit:'g',min:100,max:250,step:25,def:150,ck:1.16,cp:0.09,cc:0.20,cf:0.004},{key:'feta',lbl:'Feta',unit:'g',min:0,max:60,step:10,def:30,ck:2.64,cp:0.14,cc:0.04,cf:0.21},{key:'olivenoel',lbl:'Olivenöl',unit:'EL',min:0,max:3,step:1,def:1,ck:119,cp:0,cc:0,cf:13.5}]}
+    ]},
+    {time:'17:30',type:'whey',tb:'wb-whey',tl:'Whey Post-Workout',whey:true,alts:[
+      {name:'Whey-Shake',sliders:[{key:'whey',lbl:'Whey-Pulver',unit:'g',min:20,max:50,step:5,def:30,ck:3.7,cp:0.8,cc:0.06,cf:0.05},{key:'hm',lbl:'Hafermilch',unit:'ml',min:150,max:400,step:50,def:250,ck:0.46,cp:0.004,cc:0.07,cf:0.015},{key:'banana',lbl:'Banane',unit:'Stk',min:0,max:2,step:1,def:1,ck:90,cp:1.1,cc:21,cf:0.3}]},
+      {name:'Whey-Joghurt-Bowl',sliders:[{key:'joghurt',lbl:'Joghurt natur',unit:'g',min:100,max:300,step:50,def:150,ck:0.61,cp:0.035,cc:0.045,cf:0.035},{key:'whey',lbl:'Whey-Pulver',unit:'g',min:10,max:30,step:5,def:20,ck:3.7,cp:0.8,cc:0.06,cf:0.05},{key:'beeren',lbl:'Beeren',unit:'g',min:0,max:150,step:25,def:80,ck:0.5,cp:0.007,cc:0.11,cf:0.003}]}
+    ]},
+    {time:'19:30',type:'main',tb:'wb-main',tl:'Hauptmahlzeit',whey:false,alts:[
+      {name:'Lachs + Kartoffeln + Brokkoli',sliders:[{key:'lachs',lbl:'Lachs',unit:'g',min:100,max:250,step:25,def:150,ck:2.08,cp:0.20,cc:0,cf:0.13},{key:'kartoffeln',lbl:'Kartoffeln',unit:'g',min:100,max:300,step:50,def:200,ck:0.77,cp:0.02,cc:0.17,cf:0.001},{key:'brokkoli',lbl:'Brokkoli',unit:'g',min:100,max:300,step:50,def:150,ck:0.34,cp:0.028,cc:0.07,cf:0.004}]},
+      {name:'Hähnchen-Pfanne + Reis',sliders:[{key:'haehnchen',lbl:'Hähnchenbrust',unit:'g',min:150,max:300,step:25,def:200,ck:1.65,cp:0.31,cc:0,cf:0.036},{key:'reis',lbl:'Basmatireis',unit:'g',min:50,max:150,step:25,def:80,ck:3.5,cp:0.07,cc:0.78,cf:0.005},{key:'gemuese',lbl:'Gemüse Mix',unit:'g',min:100,max:300,step:50,def:200,ck:0.30,cp:0.02,cc:0.06,cf:0.002}]},
+      {name:'Pasta Bolognese',sliders:[{key:'pasta',lbl:'Vollkorn-Spaghetti',unit:'g',min:60,max:120,step:10,def:80,ck:3.3,cp:0.13,cc:0.63,cf:0.025},{key:'hack',lbl:'Rinderhack 7%',unit:'g',min:100,max:250,step:25,def:150,ck:1.52,cp:0.20,cc:0,cf:0.07},{key:'tomaten',lbl:'Tomatensoße',unit:'g',min:100,max:300,step:50,def:150,ck:0.35,cp:0.017,cc:0.07,cf:0.003}]}
+    ]}
+  ]},
+  {label:'Di',full:'Dienstag',training:false,meals:[
+    {time:'07:00',type:'pro',tb:'wb-pro',tl:'Protein-Fokus',whey:false,alts:[
+      {name:'Overnight Oats',sliders:[{key:'hafer',lbl:'Haferflocken',unit:'g',min:40,max:120,step:10,def:80,ck:3.6,cp:0.13,cc:0.58,cf:0.07},{key:'quark',lbl:'Magerquark',unit:'g',min:100,max:250,step:25,def:200,ck:0.67,cp:0.12,cc:0.04,cf:0.003},{key:'hm',lbl:'Hafermilch',unit:'ml',min:100,max:300,step:50,def:150,ck:0.46,cp:0.004,cc:0.07,cf:0.015}]},
+      {name:'Rührei + Vollkornbrot',sliders:[{key:'eier',lbl:'Eier',unit:'Stk',min:2,max:5,step:1,def:3,ck:65,cp:5.5,cc:0.4,cf:4.5},{key:'brot',lbl:'Vollkornbrot',unit:'Scheiben',min:1,max:4,step:1,def:2,ck:80,cp:3.5,cc:14,cf:1},{key:'avo',lbl:'Avocado',unit:'½',min:0,max:2,step:1,def:1,ck:120,cp:1.5,cc:2,cf:11}]}
+    ]},
+    {time:'12:30',type:'gut',tb:'wb-gut',tl:'Darmflora',whey:false,alts:[
+      {name:'Mediterrane Bowl',sliders:[{key:'quinoa',lbl:'Quinoa',unit:'g',min:50,max:150,step:25,def:100,ck:1.2,cp:0.044,cc:0.21,cf:0.019},{key:'kichererbsen',lbl:'Kichererbsen',unit:'g',min:50,max:200,step:25,def:100,ck:1.64,cp:0.09,cc:0.27,cf:0.026},{key:'feta',lbl:'Feta',unit:'g',min:0,max:80,step:10,def:40,ck:2.64,cp:0.14,cc:0.04,cf:0.21}]},
+      {name:'Linsensalat',sliders:[{key:'linsen',lbl:'Linsen (gegart)',unit:'g',min:100,max:250,step:25,def:150,ck:1.16,cp:0.09,cc:0.20,cf:0.004},{key:'feta',lbl:'Feta',unit:'g',min:0,max:60,step:10,def:30,ck:2.64,cp:0.14,cc:0.04,cf:0.21},{key:'olivenoel',lbl:'Olivenöl',unit:'EL',min:0,max:3,step:1,def:1,ck:119,cp:0,cc:0,cf:13.5}]}
+    ]},
+    {time:'16:00',type:'snack',tb:'wb-snack',tl:'Snack',whey:false,alts:[
+      {name:'Apfel + Mandelmus',sliders:[{key:'apfel',lbl:'Apfel',unit:'g',min:100,max:250,step:25,def:150,ck:0.52,cp:0.003,cc:0.14,cf:0.002},{key:'mandelbutter',lbl:'Mandelmus',unit:'g',min:0,max:40,step:5,def:20,ck:5.98,cp:0.21,cc:0.22,cf:0.54}]},
+      {name:'Skyr + Beeren',sliders:[{key:'skyr',lbl:'Skyr',unit:'g',min:100,max:300,step:50,def:200,ck:0.59,cp:0.10,cc:0.04,cf:0.002},{key:'beeren',lbl:'Beeren',unit:'g',min:50,max:200,step:25,def:100,ck:0.5,cp:0.007,cc:0.11,cf:0.003}]},
+      {name:'Reiswaffeln + Hüttenkäse',sliders:[{key:'reiswaffeln',lbl:'Reiswaffeln',unit:'Stk',min:1,max:5,step:1,def:3,ck:38,cp:0.8,cc:8,cf:0.3},{key:'huettenkaese',lbl:'Hüttenkäse',unit:'g',min:100,max:250,step:25,def:150,ck:0.72,cp:0.12,cc:0.03,cf:0.02}]}
+    ]},
+    {time:'19:30',type:'main',tb:'wb-main',tl:'Hauptmahlzeit',whey:false,alts:[
+      {name:'Hähnchen + Gemüsereis',sliders:[{key:'haehnchen',lbl:'Hähnchenbrust',unit:'g',min:150,max:300,step:25,def:200,ck:1.65,cp:0.31,cc:0,cf:0.036},{key:'reis',lbl:'Basmatireis',unit:'g',min:50,max:150,step:25,def:80,ck:3.5,cp:0.07,cc:0.78,cf:0.005},{key:'gemuese',lbl:'Gemüse',unit:'g',min:100,max:300,step:50,def:200,ck:0.30,cp:0.02,cc:0.06,cf:0.002}]},
+      {name:'Ofengemüse + Hähnchen',sliders:[{key:'haehnchen',lbl:'Hähnchenbrust',unit:'g',min:150,max:300,step:25,def:200,ck:1.65,cp:0.31,cc:0,cf:0.036},{key:'suesskartoffel',lbl:'Süßkartoffel',unit:'g',min:100,max:300,step:50,def:150,ck:0.86,cp:0.016,cc:0.20,cf:0.001},{key:'gemuese',lbl:'Paprika/Zucchini',unit:'g',min:100,max:300,step:50,def:150,ck:0.28,cp:0.018,cc:0.05,cf:0.003}]}
+    ]}
+  ]},
+  {label:'Mi',full:'Mittwoch',training:true,meals:[
+    {time:'07:00',type:'pro',tb:'wb-pro',tl:'Protein-Fokus',whey:false,alts:[
+      {name:'Overnight Oats',sliders:[{key:'hafer',lbl:'Haferflocken',unit:'g',min:40,max:120,step:10,def:80,ck:3.6,cp:0.13,cc:0.58,cf:0.07},{key:'skyr',lbl:'Skyr',unit:'g',min:50,max:250,step:25,def:150,ck:0.59,cp:0.10,cc:0.04,cf:0.002},{key:'hm',lbl:'Hafermilch',unit:'ml',min:100,max:300,step:50,def:150,ck:0.46,cp:0.004,cc:0.07,cf:0.015}]},
+      {name:'Hafer-Pancakes',sliders:[{key:'hafer',lbl:'Haferflocken',unit:'g',min:40,max:120,step:10,def:80,ck:3.6,cp:0.13,cc:0.58,cf:0.07},{key:'quark',lbl:'Magerquark',unit:'g',min:100,max:300,step:50,def:200,ck:0.67,cp:0.12,cc:0.04,cf:0.003},{key:'eier',lbl:'Eier',unit:'Stk',min:1,max:4,step:1,def:2,ck:65,cp:5.5,cc:0.4,cf:4.5}]}
+    ]},
+    {time:'12:30',type:'pre',tb:'wb-pre',tl:'Präbiotisch',whey:false,alts:[
+      {name:'Vollkorn-Wrap + Thunfisch',sliders:[{key:'tortilla',lbl:'Vollkorn-Tortilla',unit:'Stk',min:1,max:2,step:1,def:1,ck:220,cp:6,cc:38,cf:4},{key:'thunfisch',lbl:'Thunfisch (Dose)',unit:'g',min:80,max:200,step:20,def:100,ck:1.16,cp:0.26,cc:0,cf:0.008},{key:'joghurt',lbl:'Joghurt-Dressing',unit:'g',min:0,max:60,step:10,def:20,ck:0.61,cp:0.035,cc:0.045,cf:0.035}]},
+      {name:'Büro-Sandwich',sliders:[{key:'brot',lbl:'Vollkornbrot',unit:'Scheiben',min:1,max:4,step:1,def:2,ck:80,cp:3.5,cc:14,cf:1},{key:'haehnchen',lbl:'Hähnchenbrust',unit:'g',min:80,max:200,step:20,def:120,ck:1.65,cp:0.31,cc:0,cf:0.036},{key:'hummus',lbl:'Hummus',unit:'g',min:0,max:60,step:10,def:20,ck:1.66,cp:0.08,cc:0.14,cf:0.10}]}
+    ]},
+    {time:'17:30',type:'whey',tb:'wb-whey',tl:'Whey Post-Workout',whey:true,alts:[
+      {name:'Whey-Shake',sliders:[{key:'whey',lbl:'Whey-Pulver',unit:'g',min:20,max:50,step:5,def:30,ck:3.7,cp:0.8,cc:0.06,cf:0.05},{key:'hm',lbl:'Hafermilch',unit:'ml',min:150,max:400,step:50,def:300,ck:0.46,cp:0.004,cc:0.07,cf:0.015},{key:'banana',lbl:'Banane',unit:'Stk',min:0,max:2,step:1,def:1,ck:90,cp:1.1,cc:21,cf:0.3}]},
+      {name:'Whey-Joghurt-Bowl',sliders:[{key:'joghurt',lbl:'Joghurt natur',unit:'g',min:100,max:300,step:50,def:150,ck:0.61,cp:0.035,cc:0.045,cf:0.035},{key:'whey',lbl:'Whey-Pulver',unit:'g',min:10,max:30,step:5,def:20,ck:3.7,cp:0.8,cc:0.06,cf:0.05},{key:'beeren',lbl:'Beeren',unit:'g',min:0,max:150,step:25,def:80,ck:0.5,cp:0.007,cc:0.11,cf:0.003}]}
+    ]},
+    {time:'19:30',type:'main',tb:'wb-main',tl:'Hauptmahlzeit',whey:false,alts:[
+      {name:'Pasta Bolognese (Vollkorn)',sliders:[{key:'pasta',lbl:'Vollkorn-Spaghetti',unit:'g',min:60,max:120,step:10,def:80,ck:3.3,cp:0.13,cc:0.63,cf:0.025},{key:'hack',lbl:'Rinderhack 7%',unit:'g',min:100,max:250,step:25,def:150,ck:1.52,cp:0.20,cc:0,cf:0.07},{key:'tomaten',lbl:'Tomatensoße',unit:'g',min:100,max:300,step:50,def:150,ck:0.35,cp:0.017,cc:0.07,cf:0.003}]},
+      {name:'Lachs + Kartoffeln',sliders:[{key:'lachs',lbl:'Lachs',unit:'g',min:100,max:250,step:25,def:150,ck:2.08,cp:0.20,cc:0,cf:0.13},{key:'kartoffeln',lbl:'Kartoffeln',unit:'g',min:100,max:300,step:50,def:200,ck:0.77,cp:0.02,cc:0.17,cf:0.001},{key:'brokkoli',lbl:'Brokkoli',unit:'g',min:100,max:300,step:50,def:150,ck:0.34,cp:0.028,cc:0.07,cf:0.004}]}
+    ]}
+  ]},
+  {label:'Do',full:'Donnerstag',training:false,meals:[
+    {time:'07:00',type:'pro',tb:'wb-pro',tl:'Protein-Fokus',whey:false,alts:[
+      {name:'Overnight Oats',sliders:[{key:'hafer',lbl:'Haferflocken',unit:'g',min:40,max:120,step:10,def:80,ck:3.6,cp:0.13,cc:0.58,cf:0.07},{key:'quark',lbl:'Magerquark',unit:'g',min:100,max:250,step:25,def:200,ck:0.67,cp:0.12,cc:0.04,cf:0.003},{key:'hm',lbl:'Hafermilch',unit:'ml',min:100,max:300,step:50,def:150,ck:0.46,cp:0.004,cc:0.07,cf:0.015}]},
+      {name:'Rührei + Vollkornbrot',sliders:[{key:'eier',lbl:'Eier',unit:'Stk',min:2,max:5,step:1,def:3,ck:65,cp:5.5,cc:0.4,cf:4.5},{key:'brot',lbl:'Vollkornbrot',unit:'Scheiben',min:1,max:4,step:1,def:2,ck:80,cp:3.5,cc:14,cf:1},{key:'avo',lbl:'Avocado',unit:'½',min:0,max:2,step:1,def:1,ck:120,cp:1.5,cc:2,cf:11}]}
+    ]},
+    {time:'12:30',type:'gut',tb:'wb-gut',tl:'Darmflora',whey:false,alts:[
+      {name:'Linsensalat',sliders:[{key:'linsen',lbl:'Linsen (gegart)',unit:'g',min:100,max:250,step:25,def:150,ck:1.16,cp:0.09,cc:0.20,cf:0.004},{key:'feta',lbl:'Feta',unit:'g',min:0,max:60,step:10,def:30,ck:2.64,cp:0.14,cc:0.04,cf:0.21},{key:'olivenoel',lbl:'Olivenöl',unit:'EL',min:0,max:3,step:1,def:1,ck:119,cp:0,cc:0,cf:13.5}]},
+      {name:'Mediterrane Bowl',sliders:[{key:'quinoa',lbl:'Quinoa',unit:'g',min:50,max:150,step:25,def:100,ck:1.2,cp:0.044,cc:0.21,cf:0.019},{key:'kichererbsen',lbl:'Kichererbsen',unit:'g',min:50,max:200,step:25,def:100,ck:1.64,cp:0.09,cc:0.27,cf:0.026},{key:'feta',lbl:'Feta',unit:'g',min:0,max:80,step:10,def:40,ck:2.64,cp:0.14,cc:0.04,cf:0.21}]}
+    ]},
+    {time:'16:00',type:'snack',tb:'wb-snack',tl:'Snack',whey:false,alts:[
+      {name:'Reiswaffeln + Hüttenkäse',sliders:[{key:'reiswaffeln',lbl:'Reiswaffeln',unit:'Stk',min:1,max:5,step:1,def:3,ck:38,cp:0.8,cc:8,cf:0.3},{key:'huettenkaese',lbl:'Hüttenkäse',unit:'g',min:100,max:250,step:25,def:150,ck:0.72,cp:0.12,cc:0.03,cf:0.02}]},
+      {name:'Skyr + Beeren',sliders:[{key:'skyr',lbl:'Skyr',unit:'g',min:100,max:300,step:50,def:200,ck:0.59,cp:0.10,cc:0.04,cf:0.002},{key:'beeren',lbl:'Beeren',unit:'g',min:50,max:200,step:25,def:100,ck:0.5,cp:0.007,cc:0.11,cf:0.003}]}
+    ]},
+    {time:'19:30',type:'main',tb:'wb-main',tl:'Hauptmahlzeit',whey:false,alts:[
+      {name:'Ofengemüse + Hähnchen',sliders:[{key:'haehnchen',lbl:'Hähnchenbrust',unit:'g',min:150,max:300,step:25,def:200,ck:1.65,cp:0.31,cc:0,cf:0.036},{key:'suesskartoffel',lbl:'Süßkartoffel',unit:'g',min:100,max:300,step:50,def:150,ck:0.86,cp:0.016,cc:0.20,cf:0.001},{key:'gemuese',lbl:'Rote Bete/Zucchini',unit:'g',min:100,max:300,step:50,def:150,ck:0.28,cp:0.018,cc:0.05,cf:0.003}]},
+      {name:'Hähnchen + Gemüsereis',sliders:[{key:'haehnchen',lbl:'Hähnchenbrust',unit:'g',min:150,max:300,step:25,def:200,ck:1.65,cp:0.31,cc:0,cf:0.036},{key:'reis',lbl:'Basmatireis',unit:'g',min:50,max:150,step:25,def:80,ck:3.5,cp:0.07,cc:0.78,cf:0.005},{key:'gemuese',lbl:'Gemüse',unit:'g',min:100,max:300,step:50,def:200,ck:0.30,cp:0.02,cc:0.06,cf:0.002}]}
+    ]}
+  ]},
+  {label:'Fr',full:'Freitag',training:true,meals:[
+    {time:'07:00',type:'pro',tb:'wb-pro',tl:'Protein-Fokus',whey:false,alts:[
+      {name:'Overnight Oats',sliders:[{key:'hafer',lbl:'Haferflocken',unit:'g',min:40,max:120,step:10,def:80,ck:3.6,cp:0.13,cc:0.58,cf:0.07},{key:'skyr',lbl:'Skyr',unit:'g',min:50,max:250,step:25,def:150,ck:0.59,cp:0.10,cc:0.04,cf:0.002},{key:'hm',lbl:'Hafermilch',unit:'ml',min:100,max:300,step:50,def:150,ck:0.46,cp:0.004,cc:0.07,cf:0.015}]},
+      {name:'Rührei + Vollkornbrot',sliders:[{key:'eier',lbl:'Eier',unit:'Stk',min:2,max:5,step:1,def:3,ck:65,cp:5.5,cc:0.4,cf:4.5},{key:'brot',lbl:'Vollkornbrot',unit:'Scheiben',min:1,max:4,step:1,def:2,ck:80,cp:3.5,cc:14,cf:1},{key:'avo',lbl:'Avocado',unit:'½',min:0,max:2,step:1,def:1,ck:120,cp:1.5,cc:2,cf:11}]}
+    ]},
+    {time:'12:30',type:'pre',tb:'wb-pre',tl:'Präbiotisch',whey:false,alts:[
+      {name:'Büro-Sandwich + Brühe',sliders:[{key:'brot',lbl:'Roggenbrot',unit:'Scheiben',min:1,max:4,step:1,def:2,ck:80,cp:3.5,cc:14,cf:1},{key:'pute',lbl:'Putenbrust',unit:'g',min:80,max:200,step:20,def:100,ck:1.07,cp:0.24,cc:0,cf:0.01}]},
+      {name:'Vollkorn-Wrap + Thunfisch',sliders:[{key:'tortilla',lbl:'Vollkorn-Tortilla',unit:'Stk',min:1,max:2,step:1,def:1,ck:220,cp:6,cc:38,cf:4},{key:'thunfisch',lbl:'Thunfisch (Dose)',unit:'g',min:80,max:200,step:20,def:100,ck:1.16,cp:0.26,cc:0,cf:0.008}]}
+    ]},
+    {time:'17:30',type:'whey',tb:'wb-whey',tl:'Whey Post-Workout',whey:true,alts:[
+      {name:'Whey-Shake',sliders:[{key:'whey',lbl:'Whey-Pulver',unit:'g',min:20,max:50,step:5,def:30,ck:3.7,cp:0.8,cc:0.06,cf:0.05},{key:'hm',lbl:'Hafermilch',unit:'ml',min:150,max:400,step:50,def:250,ck:0.46,cp:0.004,cc:0.07,cf:0.015},{key:'banana',lbl:'Banane',unit:'Stk',min:0,max:2,step:1,def:1,ck:90,cp:1.1,cc:21,cf:0.3}]},
+      {name:'Whey-Joghurt-Bowl',sliders:[{key:'joghurt',lbl:'Joghurt natur',unit:'g',min:100,max:300,step:50,def:150,ck:0.61,cp:0.035,cc:0.045,cf:0.035},{key:'whey',lbl:'Whey-Pulver',unit:'g',min:10,max:30,step:5,def:20,ck:3.7,cp:0.8,cc:0.06,cf:0.05},{key:'beeren',lbl:'Beeren',unit:'g',min:0,max:150,step:25,def:80,ck:0.5,cp:0.007,cc:0.11,cf:0.003}]}
+    ]},
+    {time:'19:30',type:'main',tb:'wb-main',tl:'Cheat-Mahlzeit',whey:false,alts:[
+      {name:'Pizza (Cheat-Day!)',sliders:[{key:'pizza',lbl:'Pizza',unit:'Stück',min:2,max:6,step:1,def:3,ck:230,cp:9,cc:28,cf:9}]},
+      {name:'Burger selbstgemacht',sliders:[{key:'hack',lbl:'Rinderhack-Patty',unit:'g',min:150,max:300,step:25,def:200,ck:1.52,cp:0.20,cc:0,cf:0.07},{key:'broetchen',lbl:'Vollkornbrötchen',unit:'Stk',min:1,max:2,step:1,def:1,ck:180,cp:6,cc:32,cf:3},{key:'beilagen',lbl:'Salat/Tomate/Zwiebel',unit:'g',min:50,max:200,step:25,def:100,ck:0.25,cp:0.01,cc:0.05,cf:0.002}]}
+    ]}
+  ]},
+  {label:'Sa',full:'Samstag',training:false,meals:[
+    {time:'09:00',type:'gut',tb:'wb-gut',tl:'Darmflora',whey:false,alts:[
+      {name:'Herzhaftes Frühstück',sliders:[{key:'eier',lbl:'Eier',unit:'Stk',min:2,max:5,step:1,def:3,ck:65,cp:5.5,cc:0.4,cf:4.5},{key:'brot',lbl:'Vollkornbrot',unit:'Scheiben',min:1,max:4,step:1,def:2,ck:80,cp:3.5,cc:14,cf:1},{key:'avo',lbl:'Avocado',unit:'½',min:0,max:2,step:1,def:1,ck:120,cp:1.5,cc:2,cf:11}]},
+      {name:'Hafer-Pancakes',sliders:[{key:'hafer',lbl:'Haferflocken',unit:'g',min:40,max:120,step:10,def:80,ck:3.6,cp:0.13,cc:0.58,cf:0.07},{key:'quark',lbl:'Magerquark',unit:'g',min:100,max:300,step:50,def:200,ck:0.67,cp:0.12,cc:0.04,cf:0.003},{key:'eier',lbl:'Eier',unit:'Stk',min:1,max:4,step:1,def:2,ck:65,cp:5.5,cc:0.4,cf:4.5}]}
+    ]},
+    {time:'13:00',type:'pre',tb:'wb-pre',tl:'Präbiotisch',whey:false,alts:[
+      {name:'Mediterrane Linsensuppe',sliders:[{key:'linsen',lbl:'Rote Linsen',unit:'g',min:100,max:300,step:50,def:200,ck:1.16,cp:0.09,cc:0.20,cf:0.004},{key:'gemuese',lbl:'Karotte/Sellerie',unit:'g',min:100,max:300,step:50,def:150,ck:0.30,cp:0.012,cc:0.07,cf:0.002}]},
+      {name:'Mediterrane Bowl',sliders:[{key:'quinoa',lbl:'Quinoa',unit:'g',min:50,max:150,step:25,def:100,ck:1.2,cp:0.044,cc:0.21,cf:0.019},{key:'kichererbsen',lbl:'Kichererbsen',unit:'g',min:50,max:200,step:25,def:100,ck:1.64,cp:0.09,cc:0.27,cf:0.026},{key:'feta',lbl:'Feta',unit:'g',min:0,max:80,step:10,def:40,ck:2.64,cp:0.14,cc:0.04,cf:0.21}]}
+    ]},
+    {time:'16:30',type:'snack',tb:'wb-snack',tl:'Snack',whey:true,alts:[
+      {name:'Whey-Joghurt-Bowl',sliders:[{key:'joghurt',lbl:'Joghurt natur',unit:'g',min:100,max:300,step:50,def:150,ck:0.61,cp:0.035,cc:0.045,cf:0.035},{key:'whey',lbl:'Whey-Pulver',unit:'g',min:10,max:30,step:5,def:20,ck:3.7,cp:0.8,cc:0.06,cf:0.05},{key:'beeren',lbl:'Beeren',unit:'g',min:0,max:150,step:25,def:80,ck:0.5,cp:0.007,cc:0.11,cf:0.003}]},
+      {name:'Obst + Käse',sliders:[{key:'birne',lbl:'Birne/Apfel',unit:'g',min:100,max:250,step:25,def:150,ck:0.52,cp:0.003,cc:0.14,cf:0.002},{key:'kaese',lbl:'Hartkäse',unit:'g',min:20,max:80,step:10,def:40,ck:4.0,cp:0.25,cc:0.02,cf:0.33},{key:'nuesse',lbl:'Walnüsse',unit:'g',min:0,max:30,step:5,def:10,ck:6.5,cp:0.15,cc:0.14,cf:0.65}]}
+    ]},
+    {time:'19:30',type:'main',tb:'wb-main',tl:'Hauptmahlzeit',whey:false,alts:[
+      {name:'Hähnchenschenkel + Spargel',sliders:[{key:'haehnchen',lbl:'Hähnchenschenkel',unit:'g',min:150,max:350,step:25,def:280,ck:1.72,cp:0.18,cc:0,cf:0.11},{key:'spargel',lbl:'Spargel',unit:'g',min:150,max:400,step:50,def:300,ck:0.20,cp:0.022,cc:0.038,cf:0.001},{key:'kartoffeln',lbl:'Kartoffeln',unit:'g',min:100,max:250,step:50,def:150,ck:0.77,cp:0.02,cc:0.17,cf:0.001}]},
+      {name:'Lachs + Kartoffeln + Brokkoli',sliders:[{key:'lachs',lbl:'Lachs',unit:'g',min:100,max:250,step:25,def:180,ck:2.08,cp:0.20,cc:0,cf:0.13},{key:'kartoffeln',lbl:'Kartoffeln',unit:'g',min:100,max:300,step:50,def:200,ck:0.77,cp:0.02,cc:0.17,cf:0.001},{key:'brokkoli',lbl:'Brokkoli',unit:'g',min:100,max:300,step:50,def:150,ck:0.34,cp:0.028,cc:0.07,cf:0.004}]}
+    ]}
+  ]},
+  {label:'So',full:'Sonntag',training:false,meals:[
+    {time:'09:30',type:'gut',tb:'wb-gut',tl:'Darmflora',whey:false,alts:[
+      {name:'Hafer-Pancakes',sliders:[{key:'hafer',lbl:'Haferflocken',unit:'g',min:40,max:120,step:10,def:80,ck:3.6,cp:0.13,cc:0.58,cf:0.07},{key:'quark',lbl:'Magerquark',unit:'g',min:100,max:300,step:50,def:200,ck:0.67,cp:0.12,cc:0.04,cf:0.003},{key:'eier',lbl:'Eier',unit:'Stk',min:1,max:4,step:1,def:2,ck:65,cp:5.5,cc:0.4,cf:4.5}]},
+      {name:'Rührei + Vollkornbrot',sliders:[{key:'eier',lbl:'Eier',unit:'Stk',min:2,max:5,step:1,def:3,ck:65,cp:5.5,cc:0.4,cf:4.5},{key:'brot',lbl:'Vollkornbrot',unit:'Scheiben',min:1,max:4,step:1,def:2,ck:80,cp:3.5,cc:14,cf:1}]}
+    ]},
+    {time:'13:30',type:'main',tb:'wb-main',tl:'Hauptmahlzeit',whey:false,alts:[
+      {name:'Burger selbstgemacht',sliders:[{key:'hack',lbl:'Rinderhack-Patty',unit:'g',min:150,max:300,step:25,def:200,ck:1.52,cp:0.20,cc:0,cf:0.07},{key:'broetchen',lbl:'Vollkornbrötchen',unit:'Stk',min:1,max:2,step:1,def:1,ck:180,cp:6,cc:32,cf:3},{key:'beilagen',lbl:'Rucola/Tomate/Zwiebel',unit:'g',min:50,max:200,step:25,def:100,ck:0.25,cp:0.01,cc:0.05,cf:0.002}]},
+      {name:'Pasta Bolognese',sliders:[{key:'pasta',lbl:'Vollkorn-Spaghetti',unit:'g',min:60,max:120,step:10,def:80,ck:3.3,cp:0.13,cc:0.63,cf:0.025},{key:'hack',lbl:'Rinderhack 7%',unit:'g',min:100,max:250,step:25,def:200,ck:1.52,cp:0.20,cc:0,cf:0.07},{key:'tomaten',lbl:'Tomatensoße',unit:'g',min:100,max:300,step:50,def:150,ck:0.35,cp:0.017,cc:0.07,cf:0.003}]}
+    ]},
+    {time:'16:00',type:'snack',tb:'wb-snack',tl:'Snack',whey:false,alts:[
+      {name:'Skyr + Haferflocken',sliders:[{key:'skyr',lbl:'Skyr',unit:'g',min:100,max:300,step:50,def:200,ck:0.59,cp:0.10,cc:0.04,cf:0.002},{key:'hafer',lbl:'Haferflocken',unit:'g',min:20,max:60,step:10,def:30,ck:3.6,cp:0.13,cc:0.58,cf:0.07},{key:'banana',lbl:'Banane',unit:'Stk',min:0,max:2,step:1,def:1,ck:90,cp:1.1,cc:21,cf:0.3}]},
+      {name:'Apfel + Mandelmus',sliders:[{key:'apfel',lbl:'Apfel',unit:'g',min:100,max:250,step:25,def:150,ck:0.52,cp:0.003,cc:0.14,cf:0.002},{key:'mandelbutter',lbl:'Mandelmus',unit:'g',min:0,max:40,step:5,def:20,ck:5.98,cp:0.21,cc:0.22,cf:0.54}]}
+    ]},
+    {time:'19:30',type:'pre',tb:'wb-pre',tl:'Präbiotisch',whey:false,alts:[
+      {name:'Abend-Salat + Eier',sliders:[{key:'salat',lbl:'Gemischter Salat',unit:'g',min:100,max:300,step:50,def:150,ck:0.20,cp:0.015,cc:0.03,cf:0.003},{key:'eier',lbl:'Hartgekochte Eier',unit:'Stk',min:2,max:5,step:1,def:3,ck:65,cp:5.5,cc:0.4,cf:4.5},{key:'cracker',lbl:'Vollkorncracker',unit:'Stk',min:0,max:6,step:1,def:3,ck:35,cp:1.2,cc:6,cf:1}]},
+      {name:'Hähnchen + Salat',sliders:[{key:'haehnchen',lbl:'Hähnchenbrust',unit:'g',min:150,max:300,step:25,def:150,ck:1.65,cp:0.31,cc:0,cf:0.036},{key:'salat',lbl:'Gemischter Salat',unit:'g',min:100,max:300,step:50,def:200,ck:0.20,cp:0.015,cc:0.03,cf:0.003}]}
+    ]}
+  ]}
+];
+
+// ── WOCHENPLAN STATE ──
+var wpState={};
+var wpActiveDay=0;
+
+function wpKey(d,m,key){return d+'_'+m+'_'+key}
+function wpAltKey(d,m){return 'alt_'+d+'_'+m}
+
+function getWpVal(d,m,key){
+  var k=wpKey(d,m,key);
+  if(wpState[k]!==undefined)return wpState[k];
+  var alt=getWpAlt(d,m);
+  var s=WP_DAYS[d].meals[m].alts[alt].sliders.find(function(s){return s.key===key});
+  return s?s.def:0;
+}
+function getWpAlt(d,m){return wpState[wpAltKey(d,m)]||0}
+
+function calcWpMeal(d,m){
+  var alt=getWpAlt(d,m);
+  var sliders=WP_DAYS[d].meals[m].alts[alt].sliders;
+  var r={kcal:0,p:0,k:0,f:0};
+  sliders.forEach(function(s){
+    var v=getWpVal(d,m,s.key);
+    r.kcal+=v*s.ck; r.p+=v*s.cp; r.k+=v*s.cc; r.f+=v*s.cf;
+  });
+  return {kcal:Math.round(r.kcal),p:Math.round(r.p),k:Math.round(r.k),f:Math.round(r.f)};
 }
 
-function imgNext(id, imgs) {
-  if (!imgState[id]) imgState[id] = 0;
-  imgState[id] = (imgState[id] + 1) % imgs.length;
-  var el = document.getElementById('img-' + id);
-  if (el) { el.src = IMG_BASE + imgs[imgState[id]]; document.getElementById('cnt-' + id).textContent = (imgState[id]+1)+'/'+imgs.length; }
+function calcWpDay(d){
+  var tot={kcal:0,p:0,k:0,f:0};
+  WP_DAYS[d].meals.forEach(function(_,m){
+    var r=calcWpMeal(d,m);
+    tot.kcal+=r.kcal;tot.p+=r.p;tot.k+=r.k;tot.f+=r.f;
+  });
+  return tot;
 }
 
-function imgPrev(id, imgs) {
-  if (!imgState[id]) imgState[id] = 0;
-  imgState[id] = (imgState[id] - 1 + imgs.length) % imgs.length;
-  var el = document.getElementById('img-' + id);
-  if (el) { el.src = IMG_BASE + imgs[imgState[id]]; document.getElementById('cnt-' + id).textContent = (imgState[id]+1)+'/'+imgs.length; }
+function renderWpTabs(){
+  var el=document.getElementById('wp-tabs');
+  if(!el)return;
+  el.innerHTML=WP_DAYS.map(function(d,i){
+    return '<div class="wp-dtab'+(i===wpActiveDay?' active':'')+
+      (d.training?' training':'')+'" onclick="wpSetDay('+i+')">'+d.label+'</div>';
+  }).join('');
+}
+
+function renderWpDay(){
+  var d=wpActiveDay;
+  var day=WP_DAYS[d];
+  var lbl=document.getElementById('wp-day-label');
+  if(lbl)lbl.textContent=day.full+(day.training?' · Trainingstag':'· Ruhetag');
+
+  var html='';
+  day.meals.forEach(function(meal,m){
+    var alt=getWpAlt(d,m);
+    var altData=meal.alts[alt];
+    var mac=calcWpMeal(d,m);
+    var isWheyMeal=meal.whey||(altData.name.indexOf('Whey')>=0);
+
+    html+='<div class="wp-meal-card'+(isWheyMeal?' whey-card':'')+'">'+
+      '<div class="wp-meal-top">'+
+      '<div class="wp-meal-row1"><span class="wp-meal-name" id="wpn_'+d+'_'+m+'">'+altData.name+'</span><span class="wp-meal-time">'+meal.time+' Uhr</span></div>'+
+      '<span class="wp-type-badge '+meal.tb+'">'+meal.tl+'</span>'+
+      '</div>'+
+      '<div class="wp-alt-row">';
+
+    meal.alts.forEach(function(a,ai){
+      html+='<button class="wp-alt-btn'+(ai===alt?' active':'')+'" onclick="wpPickAlt('+d+','+m+','+ai+')">'+a.name+'</button>';
+    });
+    html+='</div>';
+
+    html+='<div class="wp-sliders" id="wpsl_'+d+'_'+m+'">';
+    altData.sliders.forEach(function(s){
+      var v=getWpVal(d,m,s.key);
+      html+='<div class="wp-slider-row">'+
+        '<span class="wp-sl-lbl">'+s.lbl+'</span>'+
+        '<input type="range" min="'+s.min+'" max="'+s.max+'" step="'+s.step+'" value="'+v+'" oninput="wpSlide('+d+','+m+',\''+s.key+'\',this.value)">'+
+        '<span class="wp-sl-val" id="wpsv_'+d+'_'+m+'_'+s.key+'">'+v+s.unit+'</span>'+
+      '</div>';
+    });
+    html+='</div>';
+
+    html+='<div class="wp-macros">'+
+      '<div class="wp-mac"><span class="wp-mac-v" id="wpc_'+d+'_'+m+'">'+mac.kcal+'</span><span class="wp-mac-l">kcal</span></div>'+
+      '<div class="wp-mac"><span class="wp-mac-v" id="wpp_'+d+'_'+m+'">'+mac.p+'g</span><span class="wp-mac-l">Protein</span></div>'+
+      '<div class="wp-mac"><span class="wp-mac-v" id="wpk_'+d+'_'+m+'">'+mac.k+'g</span><span class="wp-mac-l">KH</span></div>'+
+      '<div class="wp-mac"><span class="wp-mac-v" id="wpf_'+d+'_'+m+'">'+mac.f+'g</span><span class="wp-mac-l">Fett</span></div>'+
+    '</div></div>';
+  });
+
+  document.getElementById('wp-meals').innerHTML=html;
+  renderWpSummary(d);
+}
+
+function renderWpSummary(d){
+  var t=calcWpDay(d);
+  var pOk=t.p>=150;
+  var cOk=t.kcal<=2200;
+  var pPct=Math.min(100,Math.round(t.p/165*100));
+  var cPct=Math.min(100,Math.round(t.kcal/2100*100));
+
+  var html='<div class="wp-day-summary">'+
+    '<div class="wp-sum-row">'+
+    '<div class="wp-sum-item"><span class="wp-sum-v" style="color:'+(cOk?'#4ade80':'#fbbf24')+'">'+t.kcal+'</span><span class="wp-sum-l">kcal</span></div>'+
+    '<div class="wp-sum-item"><span class="wp-sum-v" style="color:'+(pOk?'#4ade80':'#fbbf24')+'">'+t.p+'g</span><span class="wp-sum-l">Protein '+(pOk?'✓':'↑')+'</span></div>'+
+    '<div class="wp-sum-item"><span class="wp-sum-v">'+t.k+'g</span><span class="wp-sum-l">KH</span></div>'+
+    '<div class="wp-sum-item"><span class="wp-sum-v">'+t.f+'g</span><span class="wp-sum-l">Fett</span></div>'+
+    '</div>'+
+    '<div class="wp-prog-row"><div class="wp-prog-lbl"><span>Kalorien</span><span>'+t.kcal+' / 2100</span></div><div class="wp-prog-bar"><div class="wp-prog-fill" style="width:'+cPct+'%;background:'+(cOk?'#4ade80':'#fbbf24')+'"></div></div></div>'+
+    '<div class="wp-prog-row"><div class="wp-prog-lbl"><span>Protein</span><span>'+t.p+'g / 165g</span></div><div class="wp-prog-bar"><div class="wp-prog-fill" style="width:'+pPct+'%;background:'+(pOk?'#4ade80':'#fbbf24')+'"></div></div></div>'+
+  '</div>';
+  document.getElementById('wp-summary').innerHTML=html;
+}
+
+function wpSetDay(i){
+  wpActiveDay=i;
+  renderWpTabs();
+  renderWpDay();
+}
+
+function wpPickAlt(d,m,ai){
+  wpState[wpAltKey(d,m)]=ai;
+  // clear old slider vals for this meal
+  var oldKeys=Object.keys(wpState).filter(function(k){return k.startsWith(d+'_'+m+'_')});
+  oldKeys.forEach(function(k){delete wpState[k]});
+  renderWpDay();
+}
+
+function wpSlide(d,m,key,val){
+  wpState[wpKey(d,m,key)]=parseFloat(val);
+  var s=WP_DAYS[d].meals[m].alts[getWpAlt(d,m)].sliders.find(function(s){return s.key===key});
+  var svEl=document.getElementById('wpsv_'+d+'_'+m+'_'+key);
+  if(svEl)svEl.textContent=val+(s?s.unit:'');
+  var mac=calcWpMeal(d,m);
+  var c=document.getElementById('wpc_'+d+'_'+m);var p=document.getElementById('wpp_'+d+'_'+m);
+  var k=document.getElementById('wpk_'+d+'_'+m);var f=document.getElementById('wpf_'+d+'_'+m);
+  if(c)c.textContent=mac.kcal;if(p)p.textContent=mac.p+'g';if(k)k.textContent=mac.k+'g';if(f)f.textContent=mac.f+'g';
+  renderWpSummary(d);
 }
 
 // ── OVERNIGHT OATS RECHNER ──
-var NUT = {
-  haferflocken:{k:3.62,p:0.133}, hafermilch:{k:0.46,p:0.010},
-  skyr:{k:0.63,p:0.111}, magerquark:{k:0.67,p:0.120},
-  erdnussbutter:{k:5.88,p:0.256}, kakao:{k:2.28,p:0.198},
-  honig:{k:3.04,p:0.003}, erdnuesse:{k:5.67,p:0.258},
-  banane:{k:0.89,p:0.011}, zimt:{k:2.47,p:0.040},
-  walnuesse:{k:6.54,p:0.154}, instantkaffee:{k:2.38,p:0.120},
-  mandeln:{k:5.79,p:0.212}, beeren_getr:{k:3.17,p:0.035},
-  vanille:{k:0.50,p:0.010}, beeren_fr:{k:0.57,p:0.007},
-  apfel:{k:0.52,p:0.003}, rosinen:{k:2.99,p:0.031},
-  schoko85:{k:5.98,p:0.080}, kokosmilch:{k:1.97,p:0.020},
-  mango_getr:{k:3.19,p:0.027}, kokosraspeln:{k:6.60,p:0.065},
-  zitrone:{k:0.22,p:0.003}, heidelbeeren:{k:0.57,p:0.007},
+var NUT={
+  haferflocken:{k:3.62,p:0.133},hafermilch:{k:0.46,p:0.010},
+  skyr:{k:0.63,p:0.111},magerquark:{k:0.67,p:0.120},
+  erdnussbutter:{k:5.88,p:0.256},kakao:{k:2.28,p:0.198},
+  honig:{k:3.04,p:0.003},erdnuesse:{k:5.67,p:0.258},
+  banane:{k:0.89,p:0.011},zimt:{k:2.47,p:0.040},
+  walnuesse:{k:6.54,p:0.154},instantkaffee:{k:2.38,p:0.120},
+  mandeln:{k:5.79,p:0.212},beeren_getr:{k:3.17,p:0.035},
+  vanille:{k:0.50,p:0.010},beeren_fr:{k:0.57,p:0.007},
+  apfel:{k:0.52,p:0.003},rosinen:{k:2.99,p:0.031},
+  schoko85:{k:5.98,p:0.080},kokosmilch:{k:1.97,p:0.020},
+  mango_getr:{k:3.19,p:0.027},kokosraspeln:{k:6.60,p:0.065},
+  zitrone:{k:0.22,p:0.003},heidelbeeren:{k:0.57,p:0.007},
 };
-
-var RECIPES = [
-  {name:"🥜 Erdnussbutter-Schoko", desc:"Schmeckt wie Snickers – aber gesund", ings:[
+var RECIPES=[
+  {name:"🥜 Erdnussbutter-Schoko",desc:"Schmeckt wie Snickers – aber gesund",ings:[
     {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
     {key:"hafermilch",label:"Hafermilch",unit:"ml",def:150,min:50,max:300,step:25},
     {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
@@ -549,7 +843,7 @@ var RECIPES = [
     {key:"honig",label:"Honig",unit:"g",def:10,min:0,max:30,step:5},
     {key:"erdnuesse",label:"Erdnüsse gehackt (Topping)",unit:"g",def:15,min:0,max:40,step:5},
   ]},
-  {name:"🍌 Banane-Zimt", desc:"Natürlich süß, kein Zucker nötig", ings:[
+  {name:"🍌 Banane-Zimt",desc:"Natürlich süß, kein Zucker nötig",ings:[
     {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
     {key:"hafermilch",label:"Hafermilch",unit:"ml",def:150,min:50,max:300,step:25},
     {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
@@ -558,7 +852,7 @@ var RECIPES = [
     {key:"zimt",label:"Zimt",unit:"g",def:2,min:0,max:8,step:1},
     {key:"walnuesse",label:"Walnüsse (Topping)",unit:"g",def:15,min:0,max:40,step:5},
   ]},
-  {name:"☕ Kaffee-Kakao (Mocha)", desc:"Morgens Kaffee essen statt trinken", ings:[
+  {name:"☕ Kaffee-Kakao (Mocha)",desc:"Morgens Kaffee essen statt trinken",ings:[
     {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
     {key:"hafermilch",label:"Hafermilch",unit:"ml",def:150,min:50,max:300,step:25},
     {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
@@ -567,7 +861,7 @@ var RECIPES = [
     {key:"kakao",label:"Kakaopulver",unit:"g",def:10,min:0,max:30,step:2},
     {key:"mandeln",label:"Mandelblättchen (Topping)",unit:"g",def:15,min:0,max:40,step:5},
   ]},
-  {name:"🫐 Beeren-Vanille", desc:"Fruchtig-leicht, ideal im Sommer", ings:[
+  {name:"🫐 Beeren-Vanille",desc:"Fruchtig-leicht, ideal im Sommer",ings:[
     {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
     {key:"hafermilch",label:"Hafermilch",unit:"ml",def:150,min:50,max:300,step:25},
     {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
@@ -576,7 +870,7 @@ var RECIPES = [
     {key:"vanille",label:"Vanilleextrakt",unit:"g",def:3,min:0,max:10,step:1},
     {key:"beeren_fr",label:"Frische Beeren (Topping)",unit:"g",def:50,min:0,max:150,step:10},
   ]},
-  {name:"🍎 Apfel-Zimt", desc:"Wie Apfelstrudel, nur kalt", ings:[
+  {name:"🍎 Apfel-Zimt",desc:"Wie Apfelstrudel, nur kalt",ings:[
     {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
     {key:"hafermilch",label:"Hafermilch",unit:"ml",def:150,min:50,max:300,step:25},
     {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
@@ -586,7 +880,7 @@ var RECIPES = [
     {key:"walnuesse",label:"Walnüsse (Topping)",unit:"g",def:15,min:0,max:40,step:5},
     {key:"rosinen",label:"Rosinen (Topping)",unit:"g",def:10,min:0,max:30,step:5},
   ]},
-  {name:"🍫 Triple Schoko", desc:"Für Schoko-Fans", ings:[
+  {name:"🍫 Triple Schoko",desc:"Für Schoko-Fans",ings:[
     {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
     {key:"hafermilch",label:"Hafermilch",unit:"ml",def:150,min:50,max:300,step:25},
     {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
@@ -595,7 +889,7 @@ var RECIPES = [
     {key:"erdnussbutter",label:"Erdnussbutter",unit:"g",def:20,min:0,max:50,step:5},
     {key:"schoko85",label:"Dunkle Schokolade 85% (Topping)",unit:"g",def:10,min:0,max:30,step:5},
   ]},
-  {name:"🥥 Kokos-Mango", desc:"Fühlt sich an wie Urlaub", ings:[
+  {name:"🥥 Kokos-Mango",desc:"Fühlt sich an wie Urlaub",ings:[
     {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
     {key:"hafermilch",label:"Hafermilch",unit:"ml",def:100,min:50,max:200,step:25},
     {key:"kokosmilch",label:"Kokosmilch",unit:"ml",def:50,min:0,max:150,step:25},
@@ -604,7 +898,7 @@ var RECIPES = [
     {key:"mango_getr",label:"Getrocknete Mango",unit:"g",def:25,min:0,max:60,step:5},
     {key:"kokosraspeln",label:"Kokosraspeln (Topping)",unit:"g",def:10,min:0,max:30,step:5},
   ]},
-  {name:"🍋 Zitrone-Heidelbeere", desc:"Erfrischend-leicht", ings:[
+  {name:"🍋 Zitrone-Heidelbeere",desc:"Erfrischend-leicht",ings:[
     {key:"haferflocken",label:"Haferflocken",unit:"g",def:80,min:40,max:150,step:10},
     {key:"hafermilch",label:"Hafermilch",unit:"ml",def:150,min:50,max:300,step:25},
     {key:"skyr",label:"Skyr",unit:"g",def:150,min:0,max:300,step:25},
@@ -614,56 +908,48 @@ var RECIPES = [
     {key:"mandeln",label:"Mandeln (Topping)",unit:"g",def:10,min:0,max:30,step:5},
   ]},
 ];
-
-var curR = 0;
-var rAmounts = {};
-
-function rKey(ri, key) { return ri + '_' + key; }
-
-function getAmt(ri, key) {
-  var k = rKey(ri, key);
-  if (rAmounts[k] !== undefined) return rAmounts[k];
-  var ing = RECIPES[ri].ings.find(function(i){return i.key===key;});
-  return ing ? ing.def : 0;
+var curR=0;
+var rAmounts={};
+function rKey(ri,key){return ri+'_'+key}
+function getAmt(ri,key){
+  var k=rKey(ri,key);
+  if(rAmounts[k]!==undefined)return rAmounts[k];
+  var ing=RECIPES[ri].ings.find(function(i){return i.key===key});
+  return ing?ing.def:0;
 }
-
-function setAmt(ri, key, val) {
-  var ing = RECIPES[ri].ings.find(function(i){return i.key===key;});
-  if (!ing) return;
-  rAmounts[rKey(ri,key)] = Math.min(ing.max, Math.max(ing.min, Number(val)));
-  renderIngs(ri);
-  updateNutrition(ri);
+function setAmt(ri,key,val){
+  var ing=RECIPES[ri].ings.find(function(i){return i.key===key});
+  if(!ing)return;
+  rAmounts[rKey(ri,key)]=Math.min(ing.max,Math.max(ing.min,Number(val)));
+  renderIngs(ri);updateNutrition(ri);
 }
-
-function calcNut(ri) {
-  var kcal=0, prot=0;
+function calcNut(ri){
+  var kcal=0,prot=0;
   RECIPES[ri].ings.forEach(function(ing){
-    var n=NUT[ing.key]; if(!n) return;
+    var n=NUT[ing.key];if(!n)return;
     var a=getAmt(ri,ing.key);
-    kcal+=n.k*a; prot+=n.p*a;
+    kcal+=n.k*a;prot+=n.p*a;
   });
-  return {kcal:Math.round(kcal), prot:Math.round(prot*10)/10};
+  return{kcal:Math.round(kcal),prot:Math.round(prot*10)/10};
 }
-
-function updateNutrition(ri) {
+function updateNutrition(ri){
   var r=calcNut(ri);
   document.getElementById('total-kcal').textContent=r.kcal;
   document.getElementById('total-prot').textContent=r.prot+'g';
   var pp=Math.min(100,Math.round((r.prot/50)*100));
   var kp=Math.min(100,Math.round((r.kcal/800)*100));
-  var pb=document.getElementById('prot-bar'), pl=document.getElementById('prot-lbl');
-  pb.style.width=pp+'%'; pb.style.background=r.prot>=30?'#4ade80':'#fbbf24';
-  pl.textContent=r.prot>=30?'✓ gut':'etwas wenig'; pl.style.color=r.prot>=30?'#4ade80':'#fbbf24';
-  var kb=document.getElementById('kcal-bar'), kl=document.getElementById('kcal-lbl');
-  kb.style.width=kp+'%'; kb.style.background=r.kcal<=600?'#4ade80':'#f87171';
-  kl.textContent=r.kcal<=600?'✓ passt':'etwas viel'; kl.style.color=r.kcal<=600?'#4ade80':'#f87171';
+  var pb=document.getElementById('prot-bar'),pl=document.getElementById('prot-lbl');
+  pb.style.width=pp+'%';pb.style.background=r.prot>=30?'#4ade80':'#fbbf24';
+  pl.textContent=r.prot>=30?'✓ gut':'etwas wenig';pl.style.color=r.prot>=30?'#4ade80':'#fbbf24';
+  var kb=document.getElementById('kcal-bar'),kl=document.getElementById('kcal-lbl');
+  kb.style.width=kp+'%';kb.style.background=r.kcal<=600?'#4ade80':'#f87171';
+  kl.textContent=r.kcal<=600?'✓ passt':'etwas viel';kl.style.color=r.kcal<=600?'#4ade80':'#f87171';
 }
-
-function renderIngs(ri) {
-  var c=document.getElementById('ing-container'); if(!c) return;
+function renderIngs(ri){
+  var c=document.getElementById('ing-container');if(!c)return;
   c.innerHTML=RECIPES[ri].ings.map(function(ing){
-    var a=getAmt(ri,ing.key), n=NUT[ing.key];
-    var ik=n?Math.round(n.k*a):0, ip=n?Math.round(n.p*a*10)/10:0;
+    var a=getAmt(ri,ing.key),n=NUT[ing.key];
+    var ik=n?Math.round(n.k*a):0,ip=n?Math.round(n.p*a*10)/10:0;
     return '<div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #2a2a2a">'+
       '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">'+
       '<div><div style="font-size:.8rem;font-weight:600">'+ing.label+'</div>'+
@@ -679,8 +965,7 @@ function renderIngs(ri) {
       '</div>';
   }).join('');
 }
-
-function selectRecipe(i) {
+function selectRecipe(i){
   curR=i;
   document.querySelectorAll('.rbtn').forEach(function(b,j){
     b.style.background=j===i?'#4a9eff':'#252525';
@@ -688,13 +973,11 @@ function selectRecipe(i) {
   });
   document.getElementById('recipe-name').textContent=RECIPES[i].name;
   document.getElementById('recipe-desc').textContent=RECIPES[i].desc;
-  renderIngs(i);
-  updateNutrition(i);
+  renderIngs(i);updateNutrition(i);
 }
-
-function resetRecipe() {
-  RECIPES[curR].ings.forEach(function(ing){ rAmounts[rKey(curR,ing.key)]=ing.def; });
-  renderIngs(curR); updateNutrition(curR);
+function resetRecipe(){
+  RECIPES[curR].ings.forEach(function(ing){rAmounts[rKey(curR,ing.key)]=ing.def});
+  renderIngs(curR);updateNutrition(curR);
 }
 
 // Build recipe buttons
@@ -704,11 +987,14 @@ RECIPES.forEach(function(r,i){
   b.className='rbtn';
   b.textContent=r.name;
   b.style.cssText='flex-shrink:0;padding:8px 12px;border-radius:20px;border:none;cursor:pointer;font-size:.7rem;font-weight:600;white-space:nowrap;background:'+(i===0?'#4a9eff':'#252525')+';color:'+(i===0?'#fff':'#aaa');
-  b.onclick=function(){selectRecipe(i);};
+  b.onclick=function(){selectRecipe(i)};
   btnContainer.appendChild(b);
 });
-
 selectRecipe(0);
+
+// Init Wochenplan
+renderWpTabs();
+renderWpDay();
 </script>
 </body>
 </html>
